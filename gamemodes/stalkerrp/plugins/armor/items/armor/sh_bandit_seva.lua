@@ -26,8 +26,8 @@ ITEM.res = {
 	["Fall"] = 0.2,
 	["Burn"] = 0.2,
 	["Radiation"] = 0.3,
-	["Chemical"] = 0,
-	["Shock"] = 0.1,
+	["Chemical"] = 0.1,
+	["Shock"] = 0.2,
 	["Psi"] = 0.1,
 }
 
