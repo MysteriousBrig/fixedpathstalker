@@ -35,7 +35,7 @@ ix.char.RegisterVar("EcoRep", {
     bNoDisplay = true
 })
 
-ix.char.RegisterVar("Mobrep", {
+ix.char.RegisterVar("MobRep", {
     field = "mobrep",
     fieldType = ix.type.number,
     default = -5,
@@ -54,7 +54,7 @@ ix.char.RegisterVar("MercRep", {
 
 
 
-ix.command.Add("MyFactioNRep", {
+ix.command.Add("MyFactionRep", {
 	description = "View your standing with established factions.",
 	OnRun = function(self, client)
 		local str = ""
@@ -212,10 +212,13 @@ ix.command.Add("MyFactioNRep", {
             str = str .. "Excellent\n" .. excellentstring .. "\n\n"
         end
 
+
+        return str
+
 	end
 })
 
-ix.command.Add("CharFactionRep", {
+ix.command.Add("CharGetFactionRep", {
 	description = "View given player's faction reputation.",
     AdminOnly = true,
     arguments = 
@@ -224,7 +227,7 @@ ix.command.Add("CharFactionRep", {
 		local str = ""
         local char = target
 
-        str = str .. target .. " has the following reputation:\n"
+        str = str .. target:GetName() .. " has the following reputation:\n"
         str = str .. "Duty: " .. char:GetDutyRep() .. "\n"
         str = str .. "Freedom: " .. char:GetFreedomRep() .. "\n"
         str = str .. "Ukranian Military: " .. char:GetArmyRep() .. "\n"
@@ -250,64 +253,64 @@ ix.command.Add("CharAddFactionRep", {
             return "Please enter a valid positive or negative number."
         end
 
-        if faction.upper == "DUTY" then
+        if string.upper(faction) == "DUTY" then
             char:SetDutyRep(char:GetDutyRep() + amount)
             if amount < 0 then
-                char:Notify("You lose favor with Duty.")
+                char:GetPlayer():Notify("You lose favor with Duty.")
             else
-                char:Notify("You gain favor with Duty.")
+                char:GetPlayer():Notify("You gain favor with Duty.")
             end 
-            return "You gave " .. amount .. " Duty Rep Points to " .. char .. ". They now have " .. char:GetDutyRep().. " points."
+            return "You gave " .. amount .. " Duty Rep Points to " .. char:GetName() .. ". They now have " .. char:GetDutyRep().. " points."
         end
 
-        if faction.upper == "FREEDOM" then
+        if string.upper(faction) == "FREEDOM" then
             char:SetFreedomRep(char:GetFreedomRep() + amount)
             if amount < 0 then
-                char:Notify("You lose favor with Freedom.")
+                char:GetPlayer():Notify("You lose favor with Freedom.")
             else
-                char:Notify("You gain favor with Freedom.")
+                char:GetPlayer():Notify("You gain favor with Freedom.")
             end 
-            return "You gave " .. amount .. " Freedom Rep Points to " .. char .. ". They now have " .. char:GetFreedomRep().. " points."
+            return "You gave " .. amount .. " Freedom Rep Points to " .. char:GetName() .. ". They now have " .. char:GetFreedomRep().. " points."
         end
 
-        if faction.upper == "ARMY" then
+        if string.upper(faction)== "ARMY" then
             char:SetArmyRep(char:GetArmyRep() + amount)
             if amount < 0 then
-                char:Notify("You lose favor with the Ukranian Military.")
+                char:GetPlayer():Notify("You lose favor with the Ukranian Military.")
             else
-                char:Notify("You gain favor with the Ukranian Military.")
+                char:GetPlayer():Notify("You gain favor with the Ukranian Military.")
             end 
-            return "You gave " .. amount .. " Military Rep Points to " .. char .. ". They now have " .. char:GetArmyRep().. " points."
+            return "You gave " .. amount .. " Military Rep Points to " .. char:GetName() .. ". They now have " .. char:GetArmyRep().. " points."
         end
 
-        if faction.upper == "ECO" then
+        if string.upper(faction) == "ECO" then
             char:SetEcoRep(char:GetEcoRep() + amount)
             if amount < 0 then
-                char:Notify("You lose favor with the Ecologists.")
+                char:GetPlayer():Notify("You lose favor with the Ecologists.")
             else
-                char:Notify("You gain favor with the Ecologists.")
+                char:GetPlayer():Notify("You gain favor with the Ecologists.")
             end 
-            return "You gave " .. amount .. " Ecologist Rep Points to " .. char .. ". They now have " .. char:GetEcoRep().. " points."
+            return "You gave " .. amount .. " Ecologist Rep Points to " .. char:GetName() .. ". They now have " .. char:GetEcoRep().. " points."
         end
 
-        if faction.upper == "BRATVA" then
+        if string.upper(faction) == "BRATVA" then
             char:SetMobRep(char:GetMobRep() + amount)
             if amount < 0 then
-                char:Notify("You lose favor with Sultan's Bratva.")
+                char:GetPlayer():Notify("You lose favor with Sultan's Bratva.")
             else
-                char:Notify("You gain favor with Sultan's Bratva.")
+                char:GetPlayer():Notify("You gain favor with Sultan's Bratva.")
             end 
-            return "You gave " .. amount .. " Bratva Rep Points to " .. char .. ". They now have " .. char:GetMobRep().. " points."
+            return "You gave " .. amount .. " Bratva Rep Points to " .. char:GetName() .. ". They now have " .. char:GetMobRep().. " points."
         end
 
-        if faction.upper == "MERC" then
+        if string.upper(faction) == "MERC" then
             char:SetMercRep(char:GetMercRep() + amount)
             if amount < 0 then
-                char:Notify("You lose favor with Blue Eagle.")
+                char:GetPlayer():Notify("You lose favor with Blue Eagle.")
             else
-                char:Notify("You gain favor with Blue Eagle.")
+                char:GetPlayer():Notify("You gain favor with Blue Eagle.")
             end 
-            return "You gave " .. amount .. " Mercenary Rep Points to " .. char .. ". They now have " .. char:GetMercRep().. " points."
+            return "You gave " .. amount .. " Mercenary Rep Points to " .. char:GetName() .. ". They now have " .. char:GetMercRep().. " points."
         end
 
 
