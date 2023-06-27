@@ -69,7 +69,6 @@ function RECIPE:OnCanSee(client)
 		return false
 	end
 
-
 	if (self.postHooks and self.postHooks["OnCanSee"]) then
 		local a, b, c, d, e, f = self.postHooks["OnCanSee"](self, client)
 
@@ -83,9 +82,27 @@ end
 
 function RECIPE:OnCanCraft(client)
 	local character = client:GetCharacter()
+	local inventory = character:GetInventory()
 
 	if (!character) then
 		return false
+	end
+
+	if (self.toolcategory) then
+		
+		local hasToolkit = false
+
+		for k, v in ipairs(toolcategory) 
+			if inventory:HasItem(v) then
+				hasToolkit = true
+			end 
+		end 
+		
+		if (hasToolkit) then
+			return true
+		else 
+			return false, "Missing minimum toolkit level"
+		end
 	end
 
 	if (self.preHooks and self.preHooks["OnCanCraft"]) then
