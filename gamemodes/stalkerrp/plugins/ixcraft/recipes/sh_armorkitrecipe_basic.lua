@@ -1,13 +1,13 @@
 RECIPE.name = "Basic Armor Kit Example Recipe"
 RECIPE.description = "Sample recipe for Basic Armor Kits"
 RECIPE.model = "models/jerry/headtorch.mdl"
-RECIPE.category = "Advanced Gunsmithing"
+RECIPE.category = "Basic Armorsmithing"
 RECIPE.toolkits = {
     "armorkitbasic",
     "armorkitadvanced",
     "armorkitexpert"
 }
-RECIPE.flag = "8"
+RECIPE.flag = "6"
 
 RECIPE.requirements = {
 	["bulb"] = 1,
