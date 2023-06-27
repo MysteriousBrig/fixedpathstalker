@@ -1,7 +1,7 @@
-ITEM.name = "Basic Armorsmith Toolkit"
-ITEM.description = "A set of basic tools used by newer armor technicians."
-ITEM.longdesc = "A set of tools for working on and creating more common armors - sewing kits for stitching, replacement rubber and cloth patches, and kevlar inserts for replacing shredded ones."
-ITEM.model = "models/kek1ch/box_toolkit_1.mdl"
+ITEM.name = "Advanced Armorsmith Toolkit"
+ITEM.description = "A set of tools used by experienced armor technicians."
+ITEM.longdesc = "A set of tools for working on more complex armor systems, involving closed cycles, reinforced plate armor, or more obscure techniques, with more precise devices and tools."
+ITEM.model = "models/kek1ch/box_toolkit_2.mdl"
 ITEM.width = 2
 ITEM.height = 1
 ITEM.category = "Technician"

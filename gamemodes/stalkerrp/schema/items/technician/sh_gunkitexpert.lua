@@ -1,7 +1,7 @@
-ITEM.name = "Basic Armorsmith Toolkit"
-ITEM.description = "A set of basic tools used by newer armor technicians."
-ITEM.longdesc = "A set of tools for working on and creating more common armors - sewing kits for stitching, replacement rubber and cloth patches, and kevlar inserts for replacing shredded ones."
-ITEM.model = "models/kek1ch/box_toolkit_1.mdl"
+ITEM.name = "Expert Gunsmith Toolkit"
+ITEM.description = "Used by master gunsmiths for complex firearms work."
+ITEM.longdesc = "A set of tools for working on mechanically complex or rare firearms, with replacement parts for them to keep the most testy of weapons ticking."
+ITEM.model = "models/kek1ch/box_toolkit_3.mdl"
 ITEM.width = 2
 ITEM.height = 1
 ITEM.category = "Technician"
@@ -17,7 +17,6 @@ ITEM.sound = "stalkersound/inv_repair_kit_use_fast.mp3"
 ITEM.weight = 0.012
 
 function ITEM:GetDescription()
-	local quant = self:GetData("quantity", 1)
 	local str = self.longdesc
 
 	local customData = self:GetData("custom", {})
@@ -28,7 +27,7 @@ function ITEM:GetDescription()
 	if (self.entity) then
 		return self.description
 	else
-        return str
+        return (str)
 	end
 end
 
@@ -121,29 +120,26 @@ ITEM.functions.Clone = {
 	end
 }
 
-ITEM.functions.repairarmor = {
-	name = "Repair Armor",
+
+ITEM.functions.repairgun = {
+	name = "Repair Gun",
 	tip = "useTip",
 	icon = "icon16/stalker/repair.png",
 	isMulti = true,
 	multiOptions = function(item, client)
 		local targets = {}
 		local char = client:GetCharacter()
-		
-		
 		if (char) then
 			local inv = char:GetInventory()
-
 			if (inv) then
 				local items = inv:GetItems()
-
 				for k, v in pairs(items) do
-					if (v.isBodyArmor or v.isHelmet or v.isGasmask) and v:GetData("durability", 0) < 100 then
-					
+					if v.isWeapon and v:GetData("durability", 0) < 10000 then
+
 						local price = v:GetData("RealPrice") or v.price
-						local durability = v:GetData("durability",100)
-						local rubcost = math.Round((price * ((100 - durability)/100)) * 0.75)
-						local duraloss = 100 - durability
+						local durability = v:GetData("durability",10000)
+						local rubcost = math.Round((price * ((10000 - durability)/10000)) * 0.75) -- edits to generic pricing go here and down below as marked
+						local duraloss = ((10000 - durability)/100)
 						
 						table.insert(targets, {
 							name = L("Repair "..v.name.." | Costs: "..rubcost.." rubles"),
@@ -155,16 +151,17 @@ ITEM.functions.repairarmor = {
 				end
 			end
 		end
-
 		return targets
-		end,
-	OnCanRun = function(item)				
+	end,
+
+	OnCanRun = function(item)
 		if item.player:GetFlags("2") then 
-			return (!IsValid(item.entity))
+			return !IsValid(item.entity)
 		else
 			return false
 		end
 	end,
+	
 	OnRun = function(item, data)
 		local client = item.player
 		local char = client:GetCharacter()
@@ -176,42 +173,32 @@ ITEM.functions.repairarmor = {
 			if (data[1]) then
 				if (invItem:GetID() == data[1]) then
 					target = invItem
-
 					break
 				end
 			else
-				client:Notify("No outfit selected.")
+				client:Notify("No item selected.")
 				return false
 			end
 		end
 		
 		if target:GetData("equip") != true then
-			local price = target:GetData("RealPrice") or target.price
-			local durability = target:GetData("durability",100)
-			local rubcost = math.Round((price * ((100 - durability)/100)) * 0.75)
+			local items = client:GetChar():GetInv():GetItems()
 			
-			local duraloss = 100 - durability
-						
-			--[[if duraloss >= 20 and duraloss < 40 then
-				rubcost = math.Round(rubcost * 1.1)
-			elseif duraloss >= 40 and duraloss < 60 then
-				rubcost = math.Round(rubcost * 1.2)
-			elseif duraloss >= 60 and duraloss < 80 then
-				rubcost = math.Round(rubcost * 1.3)
-			elseif duraloss >= 80 then
-				rubcost = math.Round(rubcost * 1.4)
-			end--]]
+			local price = target:GetData("RealPrice") or target.price
+			local durability = target:GetData("durability",10000)
+			local rubcost = math.Round((price * ((10000 - durability)/10000)) * 0.75) -- edits to generic pricing go here and up above as marked
+			local duraloss = ((10000 - durability)/100)
 			
 			if char:HasMoney(rubcost) then
 				char:TakeMoney(rubcost)
-				target:SetData("durability", 100)
+				target:SetData("durability", 10000)
 				client:EmitSound(item.sound or "items/battery_pickup.wav")
 				ix.chat.Send(client, "iteminternal", "uses their "..item.name.." to repair a "..target.name..".", false)
 			else
 				client:Notify("Insufficient Funds")
 				return false
 			end
-				
+			
 			if item:GetData("quantity",100) > 1 then
 				return false
 			else
@@ -223,3 +210,4 @@ ITEM.functions.repairarmor = {
 		end
 	end,
 }
+
