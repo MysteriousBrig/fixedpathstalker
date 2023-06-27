@@ -88,11 +88,11 @@ function RECIPE:OnCanCraft(client)
 		return false
 	end
 
-	if (self.toolcategory) then
+	if (self.toolkits) then
 		
 		local hasToolkit = false
 
-		for k, v in ipairs(toolcategory) do
+		for k, v in ipairs(self.toolkits) do
 			if inventory:HasItem(v) then
 				hasToolkit = true
 			end 
