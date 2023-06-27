@@ -1,5 +1,5 @@
 ITEM.name = "Expert Armorsmith Toolkit"
-ITEM.description = "A set of tools used by master technicians."
+ITEM.description = "A set of tools used by master armor technicians."
 ITEM.longdesc = "A set of tools for working on heavy, very complicated or extremely niche suits - including ones with electrical components and necessary devices to diagnose and test them. No task is out of reach for an armor tech with this kit."
 ITEM.model = "models/kek1ch/box_toolkit_3.mdl"
 ITEM.width = 2
