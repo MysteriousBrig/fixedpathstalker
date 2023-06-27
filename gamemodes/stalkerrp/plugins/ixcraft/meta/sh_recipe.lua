@@ -17,10 +17,6 @@ function RECIPE:GetDescription()
 	return self.description
 end
 
-function RECIPE:GetStation()
-	return self.station or "None"
-end 
-
 function RECIPE:GetSkin()
 	return self.skin
 end
@@ -82,28 +78,11 @@ end
 
 function RECIPE:OnCanCraft(client)
 	local character = client:GetCharacter()
-	local inventory = character:GetInventory()
 
 	if (!character) then
 		return false
 	end
 
-	if (self.toolkits) then
-		
-		local hasToolkit = false
-
-		for k, v in ipairs(self.toolkits) do
-			if inventory:HasItem(v) then
-				hasToolkit = true
-			end 
-		end 
-		
-		if (hasToolkit) then
-			return true
-		else 
-			return false, "Missing minimum toolkit level"
-		end
-	end
 
 	if (self.preHooks and self.preHooks["OnCanCraft"]) then
 		local a, b, c, d, e, f = self.preHooks["OnCanCraft"](self, client)
@@ -117,9 +96,21 @@ function RECIPE:OnCanCraft(client)
 	local bHasItems, bHasTools
 	local missing = ""
 
-	if (self.flag and !character:HasFlags(self.flag)) then
-		return false, "@CraftMissingFlag", self.flag
+	if (self.toolkits) then
+		local hasToolkit = false
+
+		for k, v in ipairs(self.toolkits) do
+			if inventory:HasItem(v) then
+				hasToolkit = true
+			end 
+		end 
+		
+		if (!hasToolkit) then
+			return false, "Missing minimum toolkit level"
+		end
+
 	end
+
 
 	for uniqueID, amount in pairs(self.requirements or {}) do
 		if (inventory:GetItemCount(uniqueID) < amount) then
