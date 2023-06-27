@@ -16,7 +16,7 @@ ix.config.Add("pdaWiringSendTime", 20, "The time it takes for the transaction to
 	category = "PDA Wiring"
 })
 
-ix.config.Add("pdaWiringReputationNeeded", true, "If true, PDA wiring will require a reputation threshold to be used.", nil, {
+ix.config.Add("pdaWiringReputationNeeded", false, "If true, PDA wiring will require a reputation threshold to be used.", nil, {
 	category = "PDA Wiring"
 })
 
