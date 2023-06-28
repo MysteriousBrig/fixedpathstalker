@@ -41,7 +41,7 @@ ITEM.functions.Sell = {
 	sound = "physics/metal/chain_impact_soft2.wav",
 	OnRun = function(item)
 		local client = item.player
-		local sellprice = item.price*0.75
+		local sellprice = item.price*0.25
 		if item:GetData("durability",0) < 9500 then
 			client:Notify("Must be Repaired")
 			return false
@@ -61,7 +61,7 @@ ITEM.functions.Value = {
 	sound = "physics/metal/chain_impact_soft2.wav",
 	OnRun = function(item)
 		local client = item.player
-		local sellprice = item.price*0.75
+		local sellprice = item.price*0.25
 		if item:GetData("durability",0) < 9500 then
 			client:Notify("Must be Repaired")
 			return false

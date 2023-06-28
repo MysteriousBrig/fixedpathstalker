@@ -103,7 +103,7 @@ ITEM.functions.Sell = {
 	OnRun = function(item)
 		local client = item.player
 		local sellprice = item.price
-		sellprice = math.Round(sellprice*0.75)
+		sellprice = math.Round(sellprice*0.25)
 		client:Notify( "Sold for "..(sellprice).." rubles." )
 		client:GetCharacter():GiveMoney(sellprice)
 	end,
@@ -119,7 +119,7 @@ ITEM.functions.Value = {
 	OnRun = function(item)
 		local client = item.player
 		local sellprice = item:GetData("RealPrice") or item.price
-		sellprice = math.Round(sellprice*0.75)
+		sellprice = math.Round(sellprice*0.25)
 		client:Notify( "Item is sellable for "..(sellprice).." rubles." )
 		return false
 	end,
