@@ -20,13 +20,13 @@ ITEM.artifactcontainers = {"1"}
 ITEM.weight = 7
 ITEM.maxArmor = 10
 ITEM.res = {
-	["Bullet"] = 0.3,
-	["Blast"] = 0.3,
-	["Fall"] = 0.1,
+	["Bullet"] = 0.4,
+	["Blast"] = 0.4,
+	["Fall"] = 0.4,
 	["Burn"] = 0,
-	["Radiation"] = 0.2,
-	["Chemical"] = 0.1,
-	["Shock"] = 0.1,
+	["Radiation"] = 0.3,
+	["Chemical"] = 0.2,
+	["Shock"] = 0.0,
 	["Psi"] = 0,
 }
 

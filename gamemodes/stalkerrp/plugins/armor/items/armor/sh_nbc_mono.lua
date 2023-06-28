@@ -21,14 +21,14 @@ ITEM.artifactcontainers = {"3"}
 ITEM.weight = 7
 ITEM.maxArmor = 20
 ITEM.res = {
-	["Bullet"] = 0.2,
-	["Blast"] = 0.2,
-	["Fall"] = 0.2,
-	["Burn"] = 0.2,
-	["Radiation"] = 0.4,
-	["Chemical"] = 0.3,
-	["Shock"] = 0.2,
-	["Psi"] = 0.1,
+	["Bullet"] = 0.4,
+	["Blast"] = 0.4,
+	["Fall"] = 0.4,
+	["Burn"] = 0.4,
+	["Radiation"] = 0.7,
+	["Chemical"] = 0.6,
+	["Shock"] = 0.4,
+	["Psi"] = 0.0,
 }
 
 ITEM.newSkin = 1

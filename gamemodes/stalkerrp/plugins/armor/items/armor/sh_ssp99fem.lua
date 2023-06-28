@@ -26,11 +26,11 @@ ITEM.res = {
 	["Bullet"] = 0.1,
 	["Blast"] = 0.1,
 	["Fall"] = 0.1,
-	["Burn"] = 0.4,
-	["Radiation"] = 0.4,
-	["Chemical"] = 0.4,
-	["Shock"] = 0.4,
-	["Psi"] = 0.3,
+	["Burn"] = 0.7,
+	["Radiation"] = 0.8,
+	["Chemical"] = 0.8,
+	["Shock"] = 0.7,
+	["Psi"] = 0.7,
 }
 
 ITEM.newSkin = 0
