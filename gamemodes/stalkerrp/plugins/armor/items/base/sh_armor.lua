@@ -726,70 +726,41 @@ function ITEM:GetDescription()
 							resistances[k] = resistances[k] + v
 						end
 					end 
-				end
-				
-				if moditem.cc then
-					cc = moditem.cc
-				end
-				
-				if moditem.limbap then
-					if moditem.limbap > limbap then
-						limbap = moditem.limbap
-					end
-				end
-				
-				if moditem.ap then
-					if moditem.ap > bodyap then
-						bodyap = moditem.ap
-					end
-				end
-				
-				if moditem.apbonus then
-					bodyap = bodyap + moditem.apbonus
-				end
+				end	
 			end
 		end
-		
-		if self.Special then
-			local spec = self.Special
-			if istable(spec) then
-				for k,v in pairs(spec) do
-					if string.match(v,"CC") then
-						cc = true
+
+		local character = self:GetOwner():GetCharacter()
+		for k,v in pairs(character:GetInv():GetItems()) do
+			if v.isArtefact and v:GetData("equip") and v.res then
+				for k,v in pairs(v.res) do
+					if resistances[k] then
+						resistances[k] = resistances[k] + v
 					end
-				end
+				end 
 			end
 		end
-		
-		if cc then
-			str = str.."\n\nHas a Closed Cycle system"
-		end
-		
+
 		str = str.."\n\nResistances:"
 		
 		for k,v in pairs(resistances) do
 			if k == "Fall" then
-				str = str.."\n".."Impact"..": "..(v*100).."%"
+				str = str.."\n".."Impact"..": "..(v*10)
 			else
-				str = str.."\n"..k..": "..(v*100).."%"
+				str = str.."\n"..k..": ".. "T".. (v*10)
 			end
 		end
 	end
+
+
+	str = str .. "\n\nArtifact Containers: " .. self.artifactcontainers[1]
 	
-	if self.ballisticrpglevels then
-		if bodyap > 0 or limbap > 0 or headap > 0 then
-			str = str.."\n\nAP Values:"
-			if bodyap > 0 then
-				str = str.."\nTorso: "..bodyap
-			end
-			
-			if limbap > 0 then
-				str = str.."\nLimb: "..limbap
-			end
-			
-			if headap > 0 then
-				str = str.."\nHead: "..headap
-			end
+
+	if mods then
+		str = str .. "\n\nModifications:"
+		for _,v in pairs(mods) do
+			local moditem = ix.item.Get(v[1])
+			str = str .. "\n" .. moditem.name
 		end
 	end
 
