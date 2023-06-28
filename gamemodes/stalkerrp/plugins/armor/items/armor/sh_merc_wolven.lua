@@ -16,17 +16,17 @@ ITEM.isArmor = true
 ITEM.overlayPath = "vgui/overlays/hud_gas"
 ITEM.img = Material("vgui/hud/eo20.png")
 ITEM.noBusiness = true
-ITEM.artifactcontainers = {"3"}
+ITEM.artifactcontainers = {"2"}
 ITEM.weight = 7
 ITEM.maxArmor = 10
 ITEM.res = {
-	["Bullet"] = 0.1,
-	["Blast"] = 0.1,
-	["Fall"] = 0.1,
-	["Burn"] = 0.2,
-	["Radiation"] = 0.2,
-	["Chemical"] = 0.2,
-	["Shock"] = 0.2,
+	["Bullet"] = 0.4,
+	["Blast"] = 0.4,
+	["Fall"] = 0.4,
+	["Burn"] = 0.4,
+	["Radiation"] = 0.3,
+	["Chemical"] = 0.3,
+	["Shock"] = 0.4,
 	["Psi"] = 0,
 }
 

@@ -21,14 +21,14 @@ ITEM.img = Material("vgui/hud/seva.png")
 ITEM.weight = 10
 ITEM.maxArmor = 10
 ITEM.res = {
-	["Bullet"] = 0.1,
-	["Blast"] = 0.1,
-	["Fall"] = 0.1,
-	["Burn"] = 0.3,
-	["Radiation"] = 0.3,
-	["Chemical"] = 0.3,
-	["Shock"] = 0.3,
-	["Psi"] = 0.3,
+	["Bullet"] = 0.4,
+	["Blast"] = 0.4,
+	["Fall"] = 0.4,
+	["Burn"] = 0.6,
+	["Radiation"] = 0.6,
+	["Chemical"] = 0.6,
+	["Shock"] = 0.6,
+	["Psi"] = 0.6,
 }
 
 ITEM.newSkin = 0

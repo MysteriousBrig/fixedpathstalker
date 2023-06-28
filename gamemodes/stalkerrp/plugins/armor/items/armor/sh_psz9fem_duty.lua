@@ -20,14 +20,14 @@ ITEM.noBusiness = true
 ITEM.weight = 7
 ITEM.maxArmor = 20
 ITEM.res = {
-	["Bullet"] = 0.2,
-	["Blast"] = 0.2,
-	["Fall"] = 0.2,
-	["Burn"] = 0.2,
-	["Radiation"] = 0.2,
-	["Chemical"] = 0.2,
-	["Shock"] = 0.2,
-	["Psi"] = 0,
+	["Bullet"] = 0.4,
+	["Blast"] = 0.4,
+	["Fall"] = 0.4,
+	["Burn"] = 0.3,
+	["Radiation"] = 0.4,
+	["Chemical"] = 0.4,
+	["Shock"] = 0.3,
+	["Psi"] = 0.0,
 }
 
 ITEM.newSkin = 0

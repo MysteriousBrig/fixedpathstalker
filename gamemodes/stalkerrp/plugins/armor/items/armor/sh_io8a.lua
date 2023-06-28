@@ -2,7 +2,7 @@ ITEM.name = "\"Eagle\" Elite Mercenary Suit"
 ITEM.model ="models/kek1ch/merc_outfit.mdl"
 ITEM.replacements ="models/nasca/stalker/male_eagle_lone.mdl"
 ITEM.description= "An elite mercenary suit."
-ITEM.longdesc = "A tactical uniform issued to elite Mercenary squads operating in combat areas in the Zone's northern reaches, this outfit boasts better physical protection on top of an even better weight distribution system than its predecessor. Naturally, its price is higher than that of its lighter variant, partly due to more costly materials and supply shortages, but it largely improves on its previous design and is a perfectly serviceable combat uniform.\n\nBallistic Protection:\nSkull: III\nNeck & Face: 0\nTorso: III\nLimbs: IIA\nWeight: 1"
+ITEM.longdesc = "A tactical uniform issued to elite Mercenary squads operating in combat areas in the Zone's northern reaches, this outfit boasts better physical protection on top of an even better weight distribution system than its predecessor. Naturally, its price is higher than that of its lighter variant, partly due to more costly materials and supply shortages, but it largely improves on its previous design and is a perfectly serviceable combat uniform.\n\nBallistic Protection:\nSkull: III\nNeck & Face: 0\nTorso: IIIA\nLimbs: IIA\nWeight: 1"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 80000
@@ -23,11 +23,11 @@ ITEM.res = {
 	["Bullet"] = 0.2,
 	["Blast"] = 0.2,
 	["Fall"] = 0.2,
-	["Burn"] = 0.1,
-	["Radiation"] = 0.2,
-	["Chemical"] = 0,
-	["Shock"] = 0,
-	["Psi"] = 0.1,
+	["Burn"] = 0.3,
+	["Radiation"] = 0.3,
+	["Chemical"] = 2,
+	["Shock"] = 1,
+	["Psi"] = 0.0,
 }
 
 ITEM.newSkin = 0
