@@ -614,8 +614,9 @@ do
 
 			-- total spendable attribute points
 			local totalBar = attributes:Add("ixAttributeBar")
+			local startingpoints = ix.config.Get("attributeStartingPoints")
 			totalBar:SetMax(maximum)
-			totalBar:SetValue(maximum)
+			totalBar:SetValue(startingpoints)
 			totalBar:Dock(TOP)
 			totalBar:DockMargin(2, 2, 2, 2)
 			totalBar:SetText(L("attribPointsLeft"))
@@ -633,7 +634,7 @@ do
 				bar:DockMargin(2, 2, 2, 2)
 				bar:SetText(L(v.name))
 				bar.OnChanged = function(this, difference)
-					if ((total + difference) > maximum) then
+					if (total + difference) > startingpoints then
 						return false
 					end
 
@@ -662,7 +663,7 @@ do
 						count = count + v
 					end
 
-					if (count > (hook.Run("GetDefaultAttributePoints", client, count) or 10)) then
+					if (count > ix.config.Get("attributeStartingPoints", 65)) then
 						return false, "unknownError"
 					end
 				else
