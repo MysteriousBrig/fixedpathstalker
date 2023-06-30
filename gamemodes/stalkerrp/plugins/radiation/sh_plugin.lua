@@ -132,6 +132,7 @@ function playerMeta:setRadiation(amount)
 		-- Less than 200 rads, no effects, make sure to remove all debuffs related to rad posioning.
 	if char:GetRads() < 200 then
 		self:radDebuffHandler("NONE")
+		
 
 		-- 200-399 Rads: Minor Rad Poisoning, -1 END
 	elseif char:GetRads() > 199 and char:GetRads() < 400 then
@@ -224,6 +225,7 @@ else
 end
 
 ix.command.Add("CharSetRadiation", {
+	description = "Set target rads to given number.",
 	adminOnly = true,
 	arguments = {
 		ix.type.character,
@@ -248,6 +250,7 @@ ix.command.Add("CharSetRadiation", {
 })
 
 ix.command.Add("CharAddRadiation", {
+	description = "Add rads to a player.",
 	adminOnly = true,
 	arguments = {
 		ix.type.character,
@@ -266,12 +269,12 @@ ix.command.Add("CharAddRadiation", {
             client:Notify("You have added "..radiation.. " Rads to yourself. You now have " .. target:GetRads() .. " Rads.")
         else
             client:Notify("You have added "..radiation.. " to " .. target:GetName() .. ". They now have " .. target:GetRads() .. " Rads.")
-            target:Notify(client:Name().." has added " .. radiation.. "to your Rads. You now have" .. target:GetRads() .. " Rads.")
         end
 	end
 })
 
 ix.command.Add("CharSetRadImmune", {
+	description = "Set a character as fully immune to radiation.",
 	adminOnly = true,
 	arguments = {
 		ix.type.character,
@@ -289,5 +292,18 @@ ix.command.Add("CharSetRadImmune", {
 		if (target:GetRadImmune() == false) then
 			return client:Notify(target:GetName() .. "has been set to be vulnerable to radiation.")
 		end
+	end
+})
+
+
+ix.command.Add("CharGetRadiation", {
+	description = "Get character's current rad level.",
+	adminOnly = true,
+	arguments = {
+		ix.type.character,
+	},
+	OnRun = function(self, client, target)
+		return target .. " has " .. target:GetRads() .. " rads."
+
 	end
 })
