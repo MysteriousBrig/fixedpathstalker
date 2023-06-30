@@ -1,101 +1,46 @@
 ITEM.name = "Geiger Counter"
-ITEM.model = "models/kek1ch/dev_datchik1.mdl"
+ITEM.model = "models/props_c17/consolebox03a.mdl"
+ITEM.description = "A measuring device to check radiation levels."
+ITEM.longdesc = "Often used by more well-prepared adventurers to check not only the radiation in the air, but their own rad count to measure exposure time and risk."
 ITEM.width = 1
 ITEM.height = 1
 ITEM.category = "Electronics"
 ITEM.price = 1000
-ITEM.isGeiger = true
 ITEM.flag = "1"
-ITEM.equipIcon = Material("materials/vgui/ui/stalker/misc/equip.png")
-ITEM.repairCost = ITEM.price/100*1
-ITEM.weaponCategory = "Geiger Counter"
 
-function ITEM:GetDescription()
-	return "This device detects the radiation levels nearby, alarming you if they increase."
-end
-
-if (CLIENT) then
-	function ITEM:PaintOver(item, w, h)
-		if (item:GetData("equip")) then
-			surface.SetDrawColor(110, 255, 110, 255)
-		else
-			surface.SetDrawColor(255, 110, 110, 255)
-		end
-
-		surface.SetMaterial(item.equipIcon)
-		surface.DrawTexturedRect(w-23,h-23,19,19)
-	end
-end
-
-ITEM.functions.Equip = { -- sorry, for name order.
-	name = "Equip",
-	tip = "useTip",
+ITEM.functions.Use = {
+	name = "Use",
 	icon = "icon16/stalker/equip.png",
 	sound = "stalkersound/inv_dozimetr.ogg",
+	tip = "Check your rads.",
 	OnRun = function(item)
-		local client = item.player
-		local char = client:GetCharacter()
-		client.carryWeapons = client.carryWeapons or {}
 		
-		if item:GetData("equip") then
-			client:NotifyLocalized("You are already equipping a gieger counter detector.")
-
-			return false
-		end
-		
-		if client.carryWeapons[item.weaponCategory] then
-			client:NotifyLocalized("weaponSlotFilled", item.weaponCategory)
-			return false
-		end
-		
-		client.carryWeapons[item.weaponCategory] = item.Name
-
-		item:SetData("equip", true)
-		item.player:SetNetVar("ixhasgeiger", true)
-		item.player:SetData("ixhasgeiger", true)
+		item.player:Notify("Your current rad level is: " ..item.player:GetCharacter():GetRads() .. " rads"  )
 
 		return false
 	end,
 	OnCanRun = function(item)
-		local client = item.player
-
-		return !IsValid(item.entity) and IsValid(client) and item:GetData("equip") != true
-	end
-}
-
-ITEM.functions.EquipUn = { -- sorry, for name order.
-	name = "Unequip",
-	tip = "equipTip",
-	icon = "icon16/stalker/unequip.png",
-	OnRun = function(item)
-		local client = item.player
-		item:SetData("equip", false)
-		item.player:SetNetVar("ixhasgeiger", false)
-		item.player:SetData("ixhasgeiger", false)
-		
-		if client.carryWeapons then
-			client.carryWeapons[item.weaponCategory] = nil
+		if(item.entity) then
+			return false
 		end
-		
-		return false
-	end,
-	OnCanRun = function(item)
-		local client = item.player
-
-		return !IsValid(item.entity) and IsValid(client) and item:GetData("equip") == true and
-			hook.Run("CanPlayerUnequipItem", client, item) != false and item.invID == client:GetCharacter():GetInventory():GetID()
+		return true
 	end
 }
-
 ITEM.functions.Sell = {
 	name = "Sell",
 	icon = "icon16/stalker/sell.png",
 	sound = "physics/metal/chain_impact_soft2.wav",
 	OnRun = function(item)
 		local client = item.player
-		client:Notify( "Sold for "..(item.price).." rubles." )
-		client:GetCharacter():GiveMoney(item.price)
+		local sellprice = item.price * 0.25
 		
+		if item.quantity > 1 then
+			sellprice = ((item.price * 0.25) * (item:GetData("quantity",item.quantity)/item.quantity))
+		end
+		sellprice = math.Round(sellprice)
+		client:Notify( "Sold for "..(sellprice).." rubles." )
+		client:GetCharacter():GiveMoney(sellprice)
+		return true 
 	end,
 	OnCanRun = function(item)
 		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
@@ -108,10 +53,124 @@ ITEM.functions.Value = {
 	sound = "physics/metal/chain_impact_soft2.wav",
 	OnRun = function(item)
 		local client = item.player
-		client:Notify( "Item is sellable for "..(item.price).." rubles." )
+		local sellprice = (item.price * 0.25)
+		
+		if item.quantity > 1 then
+			sellprice = (sellprice * (item:GetData("quantity",item.quantity)/item.quantity))
+		end
+		sellprice = math.Round(sellprice)
+		client:Notify( "Item is sellable for "..(sellprice).." rubles." )
 		return false
 	end,
 	OnCanRun = function(item)
 		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
+	end
+}
+
+function ITEM:GetDescription()
+	local quant = self:GetData("quantity", 1)
+	local str = self.description
+	if self.longdesc then
+		str = str.."\n\n"..(self.longdesc or "")
+	end
+
+	local customData = self:GetData("custom", {})
+	if(customData.desc) then
+		str = customData.desc
+	end
+
+	if (self.entity) then
+		return (self.description)
+	else
+        return (str)
+	end
+end
+
+function ITEM:GetName()
+	local name = self.name
+	
+	local customData = self:GetData("custom", {})
+	if(customData.name) then
+		name = customData.name
+	end
+	
+	return name
+end
+
+ITEM.functions.Custom = {
+	name = "Customize",
+	tip = "Customize this item",
+	icon = "icon16/wrench.png",
+	OnRun = function(item)		
+		ix.plugin.list["customization"]:startCustom(item.player, item)
+		
+		return false
+	end,
+	
+	OnCanRun = function(item)
+		local client = item.player
+		return client:GetCharacter():HasFlags("N") and !IsValid(item.entity)
+	end
+}
+
+ITEM.functions.Inspect = {
+	name = "Inspect",
+	tip = "Inspect this item",
+	icon = "icon16/picture.png",
+	OnClick = function(item, test)
+		local customData = item:GetData("custom", {})
+
+		local frame = vgui.Create("DFrame")
+		frame:SetSize(540, 680)
+		frame:SetTitle(item.name)
+		frame:MakePopup()
+		frame:Center()
+
+		frame.html = frame:Add("DHTML")
+		frame.html:Dock(FILL)
+		
+		local imageCode = [[<img src = "]]..customData.img..[["/>]]
+		
+		frame.html:SetHTML([[<html><body style="background-color: #000000; color: #282B2D; font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif; font-size 16px; text-align: justify;">]]..imageCode..[[</body></html>]])
+	end,
+	OnRun = function(item)
+		return false
+	end,
+	OnCanRun = function(item)
+		local customData = item:GetData("custom", {})
+	
+		if(!customData.img) then
+			return false
+		end
+		
+		if(item.entity) then
+			return false
+		end
+		
+		return true
+	end
+}
+
+ITEM.functions.Clone = {
+	name = "Clone",
+	tip = "Clone this item",
+	icon = "icon16/wrench.png",
+	OnRun = function(item)
+		local client = item.player	
+	
+		client:requestQuery("Are you sure you want to clone this item?", "Clone", function(text)
+			if text then
+				local inventory = client:GetCharacter():GetInventory()
+				
+				if(!inventory:Add(item.uniqueID, 1, item.data)) then
+					client:Notify("Inventory is full")
+				end
+			end
+		end)
+		return false
+	end,
+	OnCanRun = function(item)
+		local client = item.player
+		return client:GetCharacter():HasFlags("N") and !IsValid(item.entity)
 	end
 }
