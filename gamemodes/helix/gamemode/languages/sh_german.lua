@@ -1,6 +1,3 @@
-
--- GERMAN TRANSLATION
-
 NAME = "Deutsch"
 
 LANGUAGE = {
@@ -20,9 +17,9 @@ LANGUAGE = {
     creditManager = "Project Manager",
     creditTester = "Lead Tester",
 
-    chatTyping = "Am Schreiben...",
-    chatTalking = "Am Reden...",
-    chatYelling = "Am Schreien...",
+    chatTyping = "Am schreiben...",
+    chatTalking = "Am reden...",
+    chatYelling = "Am schreien...",
     chatWhispering = "Am Flüstern...",
     chatPerforming = "Am Ausführen...",
     chatNewTab = "Neuer Tab...",
@@ -98,11 +95,11 @@ LANGUAGE = {
     pluginUnloaded = "%s hat Plugin \"%s\" für das Laden eines Mapchange deaktivier.",
     loadedPlugins = "Geladene Plugins",
     unloadedPlugins = "Nicht-Geladene Plugins",
-    on = "Aktiviert",
-    off = "Deaktiviert",
+    on = "On",
+    off = "Off",
     author = "Author",
     version = "Version",
-    characters = "Charaktere",
+    characters = "Charaktäre",
     business = "Geschäft",
     settings = "Einstellungen",
     config = "Konfiguration",
@@ -225,7 +222,7 @@ LANGUAGE = {
     noOwner = "Ungültiger Besitzer!",
     invalidItem = "Ungültiges Item ausgewählt!",
     invalidInventory = "Ungültiges Inventar ausgewählt!",
-    home = "Start",
+    home = "Home",
     charKick = "%s hat Charakter %s gekickt.",
     charBan = "%s hat Charakter %s gebannt.",
     charBanned = "Dieser Charakter ist gebannt.",
@@ -250,7 +247,7 @@ LANGUAGE = {
     vendorSell = "Nur Verkauf",
     maxStock = "Höchster Bestand",
     vendorFaction = "Fraktionseditor",
-    buy = "Kaufen",
+    buy = "Kafuen",
     vendorWelcome = "Wilkommen in meinem Laden, wie kann ich behilflich sein?",
     vendorBye = "Auf Wiedersehen!",
     charSearching = "Du suchst bereits einen anderen Charakter!",
@@ -292,8 +289,8 @@ LANGUAGE = {
     vendorNoMoney = "Dieser Verkäufer kann sich diese Item nicht leiten!",
     vendorNoStock = "Dieser Verkäufer hat das Item nicht mehr!",
     vendorMaxStock = "Dieser Verkäufer hat einen vollen Bestand dieses Items!",
-    contentTitle = "Helix Content fehlt!",
-    contentWarning = "Du hast die Helix-Inhalte nicht installiert. Dies kann dazu führen, dass bestimmte Funktionen fehlen.\nMöchtest du die Workshop-Seite für die Helix-Inhalte öffnen?",
+    contentTitle = "Helix Content Missing",
+    contentWarning = "You do not have the Helix content mounted. This may result in certain features missing.\nWould you like to open the Workshop page for the Helix content?",
     flags = "Berechtigungen",
     mapRestarting = "Die Map wird in %d Sekunden neustarten!",
     chooseTip = "Wähle einen Charakter zum spielen.",
@@ -309,7 +306,7 @@ LANGUAGE = {
     containerNameRemove = "Name des Behälters entfernt.",
     containerInvalid = "Du musst einen Behälter anschauen!",
     wrongPassword = "Falsches Passwort!",
-    respawning = "Wiederbeleben...",
+    respawning = "Respawning...",
     tellAdmin = "Informiere ein Teammitglied über diese Fehler: %s",
 
     mapAdd = "Du hast eine Mapszene hinzugefügt.",

@@ -397,7 +397,7 @@ function GM:InitPostEntity()
 	ix.joinTime = RealTime() - 0.9716
 	ix.option.Sync()
 
-	ix.gui.bars = vgui.Create("ixInfoBarManager")
+	LocalPlayer():SetIK(false)
 end
 
 function GM:NetworkEntityCreated(entity)
@@ -425,7 +425,7 @@ local vignetteAlphaDelta = 0
 local vignetteTraceHeight = Vector(0, 0, 768)
 local blurGoal = 0
 local blurDelta = 0
-local hasVignetteMaterial = !vignette:IsError()
+local hasVignetteMaterial = vignette != "___error"
 
 timer.Create("ixVignetteChecker", 1, 0, function()
 	local client = LocalPlayer()
