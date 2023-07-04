@@ -6,7 +6,5 @@ ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 32000
 ITEM.flag = "A"
-ITEM.buff = "woundheal"
-ITEM.buffval = 1
 ITEM.isArtefact = true
 ITEM.weight = 1.3
