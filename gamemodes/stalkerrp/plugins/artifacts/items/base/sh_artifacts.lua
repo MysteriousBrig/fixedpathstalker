@@ -38,46 +38,12 @@ ITEM:Hook("drop", function(item)
 
     if (item:GetData("equip")) then
         
-        if item.buff == "heal" then 
-            local curheal = character:GetData("ArtiHealAmt") or 0
-            local newheal = (curheal - item.buffval)
-            character:SetData("ArtiHealAmt", newheal)
-        end
+        local buffs = item.buffs
         
-        if item.buff == "woundheal" then
-            local curwheal = character:GetData("WoundHeal") or 0
-            local newwheal = (curwheal - item.buffval)
-            character:SetData("WoundHeal", newwheal)
-        end
-        
-        if item.buff == "antirad" then
-            local curantirad = character:GetData("AntiRads") or 0
-            local newantirad = (curantirad - item.buffval)
-            character:SetData("AntiRads", newantirad)
-        end
-        
-        if item.buff == "end" then
-            local curend = character:GetData("EndBuff") or 0
-            local newend = (curend - item.buffval)
-            character:SetData("EndBuff", newend)
-        end
-        
-        if item.debuff == "rads" then
-            local currads = character:GetData("Rads") or 0
-            local newrads = (currads - item.debuffval) or 0
-            character:SetData("Rads", newrads)
-        end
-        
-        if item.debuff == "end" then
-            local curend = character:GetData("EndRed") or 0
-            local newend = (curend - item.debuffval)
-            character:SetData("EndRed", newend)
-        end
-        
-        if item.buff == "weight" then
-           local curweight = character:GetData("WeightBuff") or 0
-           local newweight = (curweight - item.buffval)
-           character:SetData("WeightBuff",newweight)
+        if (buffs) then
+            for k, v in pairs(buffs) do
+                character:RemoveBoost(item.name, k)
+            end
         end
         
         item:SetData("equip", nil);
@@ -93,56 +59,14 @@ ITEM.functions.Equip =
     OnRun = function(item)
         local client = item.player
 		local character = client:GetCharacter()
-        
-        if item.buff == "heal" then
-            local curheal = character:GetData("ArtiHealAmt") or 0
-			curheal = math.Clamp(curheal,0,1000)
-            local newheal = (curheal + item.buffval)
-            character:SetData("ArtiHealAmt", newheal)
+        local buffs = item.buffs
+
+        if (buffs) then
+            for k, v in pairs(buffs) do
+                character:AddBoost(item.name, k, v)
+            end
         end
-        
-        if item.buff == "woundheal" then
-            local curwheal = character:GetData("WoundHeal") or 0
-			curwheal = math.Clamp(curwheal,0,1000)
-            local newwheal = (curwheal + item.buffval)
-            character:SetData("WoundHeal", newwheal)
-        end
-        
-        if item.buff == "antirad" then
-            local curantirad = character:GetData("AntiRads") or 0
-			curantirad = math.Clamp(curantirad,0,1000)
-            local newantirad = (curantirad + item.buffval)
-            character:SetData("AntiRads", newantirad)
-        end
-        
-        if item.buff == "end" then
-            local curend = character:GetData("EndBuff") or 0
-			curend = math.Clamp(curend,0,1000)
-            local newend = (curend + item.buffval)
-            character:SetData("EndBuff", newend)
-        end
-        
-        if item.debuff == "rads" then
-            local currads = character:GetData("Rads") or 0
-			currads = math.Clamp(currads,0,1000)
-            local newrads = (currads + item.debuffval)
-            character:SetData("Rads", newrads)
-        end
-        
-        if item.debuff == "end" then
-            local curend = character:GetData("EndRed") or 0
-			curend = math.Clamp(curend,0,1000)
-            local newend = (curend + item.debuffval)
-            character:SetData("EndRed", newend)
-        end
-        
-        if item.buff == "weight" then
-           local curweight = character:GetData("WeightBuff") or 0
-		   curweight = math.Clamp(curweight,0,1000)
-           local newweight = (curweight + item.buffval)
-           character:SetData("WeightBuff",newweight)
-        end
-        
+
         item:SetData("equip", true)
         
         return false
@@ -182,47 +106,12 @@ ITEM.functions.UnEquip =
     OnRun = function(item)
         local client = item.player
 		local character = client:GetCharacter()
+        local buffs = item.buffs
         
-        if item.buff == "heal" then
-           local curheal = character:GetData("ArtiHealAmt") or 0
-            local newheal = (curheal - item.buffval)
-            character:SetData("ArtiHealAmt", newheal)
-        end
-        
-        if item.buff == "woundheal" then
-            local curwheal = character:GetData("WoundHeal") or 0
-            local newwheal = (curwheal - item.buffval)
-            character:SetData("WoundHeal", newwheal)
-        end
-        
-        if item.buff == "antirad" then
-            local curantirad = character:GetData("AntiRads") or 0
-            local newantirad = (curantirad - item.buffval)
-            character:SetData("AntiRads", newantirad)
-        end
-        
-        if item.buff == "end" then
-            local curend = character:GetData("EndBuff") or 0
-            local newend = (curend - item.buffval)
-            character:SetData("EndBuff", newend)
-        end
-        
-        if item.debuff == "rads" then
-            local currads = character:GetData("Rads") or 0
-            local newrads = (currads - item.debuffval) or 0
-            character:SetData("Rads", newrads)
-        end
-        
-        if item.debuff == "end" then
-            local curend = character:GetData("EndRed") or 0
-            local newend = (curend - item.debuffval)
-            character:SetData("EndRed", newend)
-        end
-        
-        if item.buff == "weight" then
-           local curweight = character:GetData("WeightBuff") or 0
-           local newweight = (curweight - item.buffval)
-           character:SetData("WeightBuff",newweight)
+        if (buffs) then
+            for k, v in pairs(buffs) do
+                character:RemoveBoost(item.name, k)
+            end
         end
         
         item:SetData("equip", false)
@@ -366,48 +255,13 @@ ITEM.functions.Sell = {
 		
         if (item:GetData("equip")) then
 			
-			if item.buff == "heal" then
-				local curheal = character:GetData("ArtiHealAmt") or 0
-				local newheal = (curheal - item.buffval)
-				character:SetData("ArtiHealAmt", newheal)
-			end
-			
-			if item.buff == "woundheal" then
-				local curwheal = character:GetData("WoundHeal") or 0
-				local newwheal = (curwheal - item.buffval)
-				character:SetData("WoundHeal", newwheal)
-			end
-			
-			if item.buff == "antirad" then
-				local curantirad = character:GetData("AntiRads") or 0
-				local newantirad = (curantirad - item.buffval)
-				character:SetData("AntiRads", newantirad)
-			end
-			
-			if item.buff == "end" then
-				local curend = character:GetData("EndBuff") or 0
-				local newend = (curend - item.buffval)
-				character:SetData("EndBuff", newend)
-			end
-			
-			if item.debuff == "rads" then
-				local currads = character:GetData("Rads") or 0
-				local newrads = (currads - item.debuffval) or 0
-				character:SetData("Rads", newrads)
-			end
-			
-			if item.debuff == "end" then
-				local curend = character:GetData("EndRed") or 0
-				local newend = (curend - item.debuffval)
-				character:SetData("EndRed", newend)
-			end
-			
-			if item.buff == "weight" then
-			   local curweight = character:GetData("WeightBuff") or 0
-			   local newweight = (curweight - item.buffval)
-			   character:SetData("WeightBuff",newweight)
-			end
-			
+			local buffs = item.buffs
+            if (buffs) then
+                for k, v in pairs(buffs) do
+                    character:RemoveBoost(item.name, k)
+                end
+            end
+
 			item:SetData("equip", nil);
 		end;
     end,

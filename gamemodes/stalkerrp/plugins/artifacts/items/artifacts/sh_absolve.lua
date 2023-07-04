@@ -18,3 +18,7 @@ ITEM.res = {
 	["Chemical"] = 0.00,
 	["Psi"] = 0.00,
 }
+
+ITEM.buffs = {
+	["reflex"] = 10
+}
