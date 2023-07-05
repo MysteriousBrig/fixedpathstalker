@@ -10,9 +10,9 @@ RECIPE.toolkits = {
 RECIPE.flag = "6"
 
 RECIPE.requirements = {
-["sunriseparts"] = 1,
+["nbcparts"] = 1,
 ["ducttape"] = 1,
-["ducttape"] = 1,
+["clothscrap"] = 1,
 }
 
 RECIPE.results = {
@@ -24,8 +24,8 @@ RECIPE:PostHook("OnCanCraft", function(recipeTable, client)
 
 	local suit = client:GetCharacter():GetInventory():HasItem("sunrise")
     if (suit) then
-        if (suit.durability < 80) then
-            return false, "Base suit must be at least 80% condition"
+        if (suit:GetData("durability") < 80) then
+            return false, "Base suit must be at least 80 percent condition"
         end
     end
 		
