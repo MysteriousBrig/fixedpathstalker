@@ -741,6 +741,7 @@ function ITEM:GetDescription()
 							resistances[k] = resistances[k] + v
 						end
 					end 
+					
 				end
 			end
 		end 
