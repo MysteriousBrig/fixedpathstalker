@@ -1,18 +1,18 @@
-ITEM.name = "Outfit Sewing Kit"
-ITEM.model = "models/kek1ch/sewing_kit_a.mdl"
-ITEM.description = "Common tools and materials for taking care of damaged outfits."
-ITEM.longdesc = "A light sewing kit consisting of a cloth reel, several steel needles and a pair of scissors. It can be used to sew up bullet holes or ruptures in soft fabrics of outfits. Its practical applications are limited due to the short length of the thread and subpar durability of needles, so the kit will be useless in case of more serious damage. For the same reason, it's compatible with only a handful of materials. Nonetheless, it is strongly advised to always use whatever is available to make the kit more effective."
-ITEM.flag = "3"
+ITEM.name = "Ballistic Tape"
+ITEM.model = "models/kek1ch/armor_repair_fa.mdl"
+ITEM.description = "A roll of kevlar duct tape."
+ITEM.longdesc = "A length of kevlar tape, more durable than the household variant, and suitable for slightly bigger repair jobs, or other projects."
+ITEM.flag = "A"
 ITEM.category = "Technician"
-ITEM.price = 15000
+ITEM.price = 1000
 ITEM.repairAmount = 5
-ITEM.repairTreshhold = 70
-ITEM.maxStack = 3
+ITEM.repairTreshhold = 90
+ITEM.maxStack = 1
 ITEM.sound = "stalkersound/inv_repair_sewing_kit_fast.mp3"
 ITEM.weight = 0.2
  
 ITEM.functions.use = {
-	name = "Stitch up outfit",
+	name = "Tape up outfit",
 	tip = "useTip",
 	icon = "icon16/stalker/repair.png",
 	isMulti = true,

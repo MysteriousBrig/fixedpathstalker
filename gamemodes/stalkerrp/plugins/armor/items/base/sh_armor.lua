@@ -755,7 +755,7 @@ function ITEM:GetDescription()
 
 	str = str .. "\n\nArtifact Containers: " .. self.artifactcontainers[1]
 	
-
+	local mods = self:GetData("mod", {})
 	if mods then
 		str = str .. "\n\nModifications:"
 		for _,v in pairs(mods) do
