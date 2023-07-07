@@ -1,14 +1,25 @@
-ITEM.name = "Ear Muffs"
-ITEM.description = "Reduces the likelihood of the wearer to suffer hearing loss."
+ITEM.name = "Gasmask"
+ITEM.description = "A common mask utilized at least once by a majority if not all Stalkers across the Exclusion Zone. Provides limited protection against Acidic and Radioactive elements."
 ITEM.category = "Upgrades"
-ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
+ITEM.model = "models/shtokerbox/ground_mask_sunrise2.mdl"
 ITEM.width = 2
-ITEM.height = 2
-ITEM.price = 3000
-ITEM.slot = 17
+ITEM.height = 1
+ITEM.price = 3500
+ITEM.slot = 15
 ITEM.flag = "6"
 ITEM.isUpgrade = true
 ITEM.weight = 0.2
+ITEM.res = {
+	["Fall"] = 0.00,
+	["Blast"] = 0.00,
+	["Bullet"] = 0.00,
+	["Shock"] = 0.00,
+	["Burn"] = 0.00,
+	["Radiation"] = 0.1,
+	["Chemical"] = 0.1,
+	["Psi"] = 0.0,
+}
+ITEM.isGasmaskUpg = true
 ITEM.isHelmetUpg = true
 
 -- Slot Numbers Defined
