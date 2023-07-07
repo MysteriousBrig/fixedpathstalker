@@ -1,5 +1,5 @@
 ITEM.name = "Sphere-4 Helmet"
-ITEM.description = "A helmet developed by and utilized by the Ukrainian Military. It features a steel helmet and now standard-issued Gasmask for all Infantry deployed into the Exclusion Zone.\n\nBallistic Protection:\nSkull: IIIA"
+ITEM.description = "A helmet developed by and utilized by the Ukrainian Military. It features a steel helmet and now standard-issued Gasmask for all Infantry deployed into the Exclusion Zone.\n\nBallistic Protection:\nSkull: IIIA\n\nAnomalous Protection:\nRad: +1\nChemical: +1"
 ITEM.category = "Upgrades"
 ITEM.model = "models/shtokerbox/ground_headgear_riothelmet3.mdl"
 ITEM.width = 2

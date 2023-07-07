@@ -1,5 +1,5 @@
 ITEM.name = "Berkut Riot Helmet"
-ITEM.description = "A hefty Helmet with a foldable ballistic-glass face-cover. The Berkut Riot Helmet is most notably utilized by Ukrainian SWAT members and general Law Enforcement during times of civil unrest. Such a design supports a steel helmet and an interior similar to a hardhat, minimalizing damage from blunt items such as thrown bottles and bricks.\n\nBallistic Protection:\nSkull: IIIA\nFace:IIIA"
+ITEM.description = "A hefty Helmet with a foldable ballistic-glass face-cover. The Berkut Riot Helmet is most notably utilized by Ukrainian SWAT members and general Law Enforcement during times of civil unrest. Such a design supports a steel helmet and an interior similar to a hardhat, minimalizing damage from blunt items such as thrown bottles and bricks.\n\nBallistic Protection:\nSkull: IIIA\nFace:IIIA\n\nAnomalous Protection:\nImpact: +1\nPsi: +1"
 ITEM.category = "Upgrades"
 ITEM.model = "models/shtokerbox/ground_headgear_riothelmet2.mdl"
 ITEM.width = 2

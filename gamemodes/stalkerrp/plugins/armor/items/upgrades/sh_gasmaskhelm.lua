@@ -1,5 +1,5 @@
 ITEM.name = "Gasmask"
-ITEM.description = "A common mask utilized at least once by a majority if not all Stalkers across the Exclusion Zone. Provides limited protection against Acidic and Radioactive elements."
+ITEM.description = "A common mask utilized at least once by a majority if not all Stalkers across the Exclusion Zone. Provides limited protection against Acidic and Radioactive elements.\n\nAnomalous Protection: Rad: +1\nChemical: +1"
 ITEM.category = "Upgrades"
 ITEM.model = "models/shtokerbox/ground_mask_sunrise2.mdl"
 ITEM.width = 2

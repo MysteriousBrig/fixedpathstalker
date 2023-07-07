@@ -1,5 +1,5 @@
 ITEM.name = "Tactical Helmet"
-ITEM.description = "A modern, durable ballistic helmet capable of halting even rifle rounds. Known to be carried into the Zone by contracted Mercenaries and general foreign militants. It's made of Kevlar and Carbon-Fiber, and is surprisingly light.\n\nBallistic Protection:\nSkull: III"
+ITEM.description = "A modern, durable ballistic helmet capable of halting even rifle rounds. Known to be carried into the Zone by contracted Mercenaries and general foreign militants. It's made of Kevlar and Carbon-Fiber, and is surprisingly light.\n\nBallistic Protection:\nSkull: III\n\nAnomalous Protection:\nPsi: +1"
 ITEM.category = "Upgrades"
 ITEM.model = "models/shtokerbox/ground_headgear_operatorhelmet7.mdl"
 ITEM.width = 2

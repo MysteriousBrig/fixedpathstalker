@@ -1,5 +1,5 @@
 ITEM.name = "CS-3b Elite Helmet"
-ITEM.description = "A heavy assault Helmet originally designed by the long-since fallen Clear Sky faction. Such a piece of gear was prominent during the faction's assault on the CNPP, which resulted in their eradication. Such a Helmet is said to been worn by only the most trained and experienced members of the Clear Sky faction.\n\nBallistic Protection:\nSkull: III+\nNeck & Face: II"
+ITEM.description = "A heavy assault Helmet originally designed by the long-since fallen Clear Sky faction. Such a piece of gear was prominent during the faction's assault on the CNPP, which resulted in their eradication. Such a Helmet is said to been worn by only the most trained and experienced members of the Clear Sky faction.\n\nBallistic Protection:\nSkull: III+\nNeck & Face: II\n\nAnomalous Protection:\nRad: +3\nChemical: +2\nPsi: +6"
 ITEM.category = "Upgrades"
 ITEM.model = "models/shtokerbox/ground_headgear_cs4.mdl"
 ITEM.width = 2

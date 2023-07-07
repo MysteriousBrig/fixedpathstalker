@@ -1,5 +1,5 @@
 ITEM.name = "Steel Helmet"
-ITEM.description = "An old, metal helmet that can maybe stop a round or two. Primarily used by the grunts of the Ukrainian Military, or general Rookie-Stalkers that picked one up from the Cordon.\n\nBallistic Protection:\nSkull: IIIA"
+ITEM.description = "An old, metal helmet that can maybe stop a round or two. Primarily used by the grunts of the Ukrainian Military, or general Rookie-Stalkers that picked one up from the Cordon.\n\nBallistic Protection:\nSkull: IIIA\n\nAnomalous Protection:\nPsi: +1"
 ITEM.category = "Upgrades"
 ITEM.model = "models/shtokerbox/ground_headgear_rus_helmet2.mdl"
 ITEM.width = 2

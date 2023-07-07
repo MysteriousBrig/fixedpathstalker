@@ -1,5 +1,5 @@
 ITEM.name = "Sphere-12m Tactical Helmet"
-ITEM.description = "A tactical helmet developed by and utilized by the most Elite Special Forces deployed to the Exclusion Zone. It features a titanium ballistic helmet with repeatedly layered, psi-resistant materials on its interior. It also features a reinforced, advanced gasmask that makes for a snug fit.\n\nBallistic Protection:\nSkull: III+\nFace: IIIA"
+ITEM.description = "A tactical helmet developed by and utilized by the most Elite Special Forces deployed to the Exclusion Zone. It features a titanium ballistic helmet with repeatedly layered, psi-resistant materials on its interior. It also features a reinforced, advanced gasmask that makes for a snug fit.\n\nBallistic Protection:\nSkull: III+\nFace: IIIA\n\nAnomalous Protection:\nRad: +2\nChemical: +2\nPsi: +4"
 ITEM.category = "Upgrades"
 ITEM.model = "models/shtokerbox/ground_headgear_pracs.mdl"
 ITEM.width = 2
@@ -17,7 +17,7 @@ ITEM.res = {
 	["Burn"] = 0.00,
 	["Radiation"] = 0.2,
 	["Chemical"] = 0.2,
-	["Psi"] = 0.5,
+	["Psi"] = 0.4,
 }
 ITEM.isGasmaskUpg = true
 ITEM.isHelmetUpg = true

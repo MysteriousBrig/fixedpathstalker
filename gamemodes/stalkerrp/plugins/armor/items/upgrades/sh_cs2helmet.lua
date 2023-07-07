@@ -1,5 +1,5 @@
 ITEM.name = "CS-2 Patrol Helmet"
-ITEM.description = "An armored Helmet originally designed by the long-since eradicated Clear Sky faction. Such a piece of gear is rumored to be coated in a specially engineered Artifact-Coating, which makes it more resistant to anomaly related Hazards.\n\nBallistic Protection:\nSkull: IIIA\nNeck & Face: II"
+ITEM.description = "An armored Helmet originally designed by the long-since eradicated Clear Sky faction. Such a piece of gear is rumored to be coated in a specially engineered Artifact-Coating, which makes it more resistant to anomaly related Hazards.\n\nBallistic Protection:\nSkull: IIIA\nNeck & Face: II\n\nAnomalous Protection:\nRad: +1\nChemical: +1\nPsi: +2"
 ITEM.category = "Upgrades"
 ITEM.model = "models/shtokerbox/ground_headgear_cs2.mdl"
 ITEM.width = 2

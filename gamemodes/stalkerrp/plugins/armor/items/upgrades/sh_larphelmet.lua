@@ -1,5 +1,5 @@
 ITEM.name = "L.A.R.P Headset"
-ITEM.description = "Lightweight, Adaptive, Resilient, Protective Headset Kit. Such a headgear is rumored to be brought in exclusively by Contracted Operators from the West, sporting a high-grade Night-Vision goggle system, and heavily reinforced ballistic material. \n\nBallistic Protection:\nSkull: III+"
+ITEM.description = "Lightweight, Adaptive, Resilient, Protective Headset Kit. Such a headgear is rumored to be brought in exclusively by Contracted Operators from the West, sporting a high-grade Night-Vision goggle system, and heavily reinforced ballistic material. \n\nBallistic Protection:\nSkull: III+\n\nAnomalous Protection:\nPsi: +2"
 ITEM.category = "Upgrades"
 ITEM.model = "models/shtokerbox/ground_headgear_operatorhelmet3.mdl"
 ITEM.width = 2

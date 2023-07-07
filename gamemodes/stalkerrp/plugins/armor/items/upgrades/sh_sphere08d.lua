@@ -1,5 +1,5 @@
 ITEM.name = "Sphere-08d Helmet"
-ITEM.description = "A tactical helmet developed by and utilized by Special Forces deployed by the Ukrainian Government. It features a ballistic helmet with layered, psi-resistant materials on its interior. It also features a standard, built-in gasmask that makes for a snug fit. This variant seems to have been altered by DUTY, its gasmask having been reinforced with kevlar materials, and its filters upgraded partially.\n\nBallistic Protection:\nSkull: III\nNeck & Face: II"
+ITEM.description = "A tactical helmet developed by and utilized by Special Forces deployed by the Ukrainian Government. It features a ballistic helmet with layered, psi-resistant materials on its interior. It also features a standard, built-in gasmask that makes for a snug fit. This variant seems to have been altered by DUTY, its gasmask having been reinforced with kevlar materials, and its filters upgraded partially.\n\nBallistic Protection:\nSkull: III\nNeck & Face: II\n\nAnomalous Protection:\nRad: +2\nChemical: +1\nPsi: +2"
 ITEM.category = "Upgrades"
 ITEM.model = "models/kek1ch/helm_tactic_dolg.mdl"
 ITEM.width = 2

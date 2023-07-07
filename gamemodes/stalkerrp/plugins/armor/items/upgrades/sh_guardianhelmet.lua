@@ -1,5 +1,5 @@
 ITEM.name = "Guardian Helmet"
-ITEM.description = "A tactical helmet developed by and utilized by Special Forces deployed by the Ukrainian Government. It features a ballistic helmet with layered, psi-resistant materials on its interior. It also features a standard, built-in gasmask that makes for a snug fit. This variant seems to have been altered by FREEDOM, its gasmask's filters containing an engineered mixture of artifact dust.\n\nBallistic Protection:\nSkull: III"
+ITEM.description = "A tactical helmet developed by and utilized by Special Forces deployed by the Ukrainian Government. It features a ballistic helmet with layered, psi-resistant materials on its interior. It also features a standard, built-in gasmask that makes for a snug fit. This variant seems to have been altered by FREEDOM, its gasmask's filters containing an engineered mixture of artifact dust.\n\nBallistic Protection:\nSkull: III\n\nAnomalous Protection:\nRad: +2\nChemical: +2\nPsi: +3"
 ITEM.category = "Upgrades"
 ITEM.model = "models/kek1ch/helm_tactic_dolg.mdl"
 ITEM.width = 2

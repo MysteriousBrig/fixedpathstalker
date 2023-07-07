@@ -1,5 +1,5 @@
 ITEM.name = "CS-3 Assault Helmet"
-ITEM.description = "A heavy assault Helmet originally designed by the long-since fallen Clear Sky faction. Such a piece of gear was prominent during the faction's assault on the CNPP, which resulted in their eradication. Said gear piece is also said to be coated in a special cocktail of re-engineered artifacts to offer protection against anomalies and especially Psionic energy.\n\nBallistic Protection:\nSkull: III\nNeck & Face: II"
+ITEM.description = "A heavy assault Helmet originally designed by the long-since fallen Clear Sky faction. Such a piece of gear was prominent during the faction's assault on the CNPP, which resulted in their eradication. Said gear piece is also said to be coated in a special cocktail of re-engineered artifacts to offer protection against anomalies and especially Psionic energy.\n\nBallistic Protection:\nSkull: III\nNeck & Face: II\n\nAnomalous Protection:\nRad: +2\nChemical: +1\nPsi: +4"
 ITEM.category = "Upgrades"
 ITEM.model = "models/shtokerbox/ground_headgear_cs1.mdl"
 ITEM.width = 2

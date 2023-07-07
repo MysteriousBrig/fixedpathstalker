@@ -1,5 +1,5 @@
 ITEM.name = "Altyn Helmet"
-ITEM.description = "An old, Soviet helmet sporting a ballistic facemask. It's made of layered Titanium, and has a ballistic-glass visor. Such a helmet provides minimal protection against anomalies, but offers a fair bit of ballistic protection.\n\nBallistic Protection:\nSkull: IIIA\nHead: IIIA"
+ITEM.description = "An old, Soviet helmet sporting a ballistic facemask. It's made of layered Titanium, and has a ballistic-glass visor. Such a helmet provides minimal protection against anomalies, but offers a fair bit of ballistic protection.\n\nBallistic Protection:\nSkull: IIIA\nHead: IIIA\n\nAnomalous Protection:\nPsi: +1"
 ITEM.category = "Upgrades"
 ITEM.model = "models/shtokerbox/ground_headgear_atlyn.mdl"
 ITEM.width = 2

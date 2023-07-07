@@ -1,5 +1,5 @@
 ITEM.name = "Heavily Reinforced Altyn Helmet"
-ITEM.description = "An anomalous hunk of Zone-Forged alloys. Most likely containing a mixture of artifacts, steel, and titanium, this Altyn Helmet offers superior ballistic protection than most helmets across the Exclusion Zone. Known to be utilized only by the heaviest-equipped fighters of the Monolith Faction.\n\nBallistic Protection:\nSkull: III\nNeck & Face: III"
+ITEM.description = "An anomalous hunk of Zone-Forged alloys. Most likely containing a mixture of artifacts, steel, and titanium, this Altyn Helmet offers superior ballistic protection than most helmets across the Exclusion Zone. Known to be utilized only by the heaviest-equipped fighters of the Monolith Faction.\n\nBallistic Protection:\nSkull: III\nNeck & Face: III\n\nAnomalous Protection:\nRad: +1\nChemical: +1\nPsi: +1"
 ITEM.category = "Upgrades"
 ITEM.model = "models/shtokerbox/ground_headgear_atlyn.mdl"
 ITEM.width = 2

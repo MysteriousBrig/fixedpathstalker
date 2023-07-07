@@ -1,5 +1,5 @@
 ITEM.name = "Respirator"
-ITEM.description = "A respirator commonly utilized when handling paint, chemicals, and other materials known to emit toxic or hazardous fumes. This one seems to have been partially repurposed as a piece of a Rookie-Stalker's kit."
+ITEM.description = "A respirator commonly utilized when handling paint, chemicals, and other materials known to emit toxic or hazardous fumes. This one seems to have been partially repurposed as a piece of a Rookie-Stalker's kit.\n\nAnomalous Protection:\nChemical: +1"
 ITEM.category = "Upgrades"
 ITEM.model = "models/shtokerbox/ground_mask_halfmask.mdl"
 ITEM.width = 1
