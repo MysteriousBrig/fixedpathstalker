@@ -95,9 +95,11 @@ ITEM.functions.Upgrade = {
     
     OnCanRun = function(item)
         local char = item.player:GetChar()
-        if(char:HasFlags("6")) then
+        if(item.IsGasMaskUpg or item.isHelmetUpg) then
             return (!IsValid(item.entity))
-        else    
+        else if (char:HasFlags("6")) then
+            return (!IsValid(item.entity))
+        else
             return false
         end
     end,
@@ -118,7 +120,7 @@ ITEM.functions.Upgrade = {
                 local items = inv:GetItems()
 
                 for k, v in pairs(items) do
-                    if v.isBodyArmor and item.isArmorUpg then
+                    if v.isBodyArmor and item.isArmorUpg and  then
                         table.insert(targets, {
                             name = L(v.name),
                             data = {v:GetID()},
