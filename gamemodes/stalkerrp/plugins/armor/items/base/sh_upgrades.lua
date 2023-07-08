@@ -95,7 +95,7 @@ ITEM.functions.Upgrade = {
     
     OnCanRun = function(item)
         local char = item.player:GetChar()
-        if(item.IsGasMaskUpg or item.isHelmetUpg) then
+        if(item.slot == 15) then
             return (!IsValid(item.entity))
         else if (char:HasFlags("6")) then
             return (!IsValid(item.entity))
