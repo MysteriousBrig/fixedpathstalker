@@ -95,11 +95,9 @@ ITEM.functions.Upgrade = {
     
     OnCanRun = function(item)
         local char = item.player:GetChar()
-        if(item.slot == 15) then
+        if(item.slot == 15 or char:HasFlags("6")) then
             return (!IsValid(item.entity))
-        else if (char:HasFlags("6")) then
-            return (!IsValid(item.entity))
-        else
+        else    
             return false
         end
     end,
@@ -120,7 +118,7 @@ ITEM.functions.Upgrade = {
                 local items = inv:GetItems()
 
                 for k, v in pairs(items) do
-                    if v.isBodyArmor and item.isArmorUpg and  then
+                    if v.isBodyArmor and item.isArmorUpg then
                         table.insert(targets, {
                             name = L(v.name),
                             data = {v:GetID()},

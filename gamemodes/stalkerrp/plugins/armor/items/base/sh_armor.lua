@@ -54,6 +54,8 @@ ITEM.functions.RemoveUpgrade = {
 	for k, v in pairs(item:GetData("mod", {})) do
 		local attTable = ix.item.list[v[1]]
 		local niceName = attTable:GetName()
+
+		if (attTable.slot == 15 or item.player:GetChar():HasFlags("6")) then
 		table.insert(targets, {
 			name = niceName,
 			data = {k},
@@ -69,13 +71,6 @@ end,
 		if item:GetData("equip") then
 			return false
 		end
-		
-        local char = item.player:GetChar()
-        if(char:HasFlags("6")) then
-            return (!IsValid(item.entity))
-		else 
-			return false
-        end
 	end,
 	OnRun = function(item, data)
 		local client = item.player
