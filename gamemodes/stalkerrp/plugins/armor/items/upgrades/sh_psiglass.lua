@@ -1,5 +1,5 @@
 ITEM.name = "Psi-Glass Headset"
-ITEM.description = "A developmental, fragile headgear device capable of emitting a frequency that partially cancels out and weakens Psionic energy. Such a spectacle of Technology is rumored to be a Prototype of Professor Sakharo's Psi-Helmet, though this is merely a speculation as the devices hold somewhat similar design and function. It also possesses the ability to measure and properly gauge Psionic-related threats.\n\nAnomalous Protection:\nPsi: +3"
+ITEM.description = "A developmental, fragile headgear device capable of emitting a frequency that partially cancels out and weakens Psionic energy. Such a spectacle of Technology is rumored to be a Prototype of Professor Sakharo's Psi-Helmet, though this is merely a speculation as the devices hold somewhat similar design and function. It also possesses the ability to measure and properly gauge Psionic-related threats.\n\nAnomalous Protection:\nPsi: +5"
 ITEM.category = "Upgrades"
 ITEM.model = "models/operator_google.mdl"
 ITEM.width = 1
@@ -17,7 +17,7 @@ ITEM.res = {
 	["Burn"] = 0.00,
 	["Radiation"] = 0.0,
 	["Chemical"] = 0.0,
-	["Psi"] = 0.3,
+	["Psi"] = 0.5,
 }
 ITEM.isGasmaskUpg = true
 ITEM.isHelmetUpg = true
