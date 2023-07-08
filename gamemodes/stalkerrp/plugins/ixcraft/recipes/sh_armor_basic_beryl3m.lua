@@ -1,6 +1,6 @@
-RECIPE.name = "NBC Suit"
-RECIPE.description = "Remove some armoring from a Sunrise suit and use some salvaged hazmat gear to make an anomalous exploration suit."
-RECIPE.model = "models/kek1ch/stalker_outfit.mdl"
+RECIPE.name = "Beryl-3M"
+RECIPE.description = "Retrofit an outdated military service uniform with some armor to bring it up to a modern standard."
+RECIPE.model = "models/kek1ch/spec_sold_outfit.mdl"
 RECIPE.category = "Basic Armorsmithing"
 RECIPE.toolkits = {
     "armorkitbasic",
@@ -10,20 +10,21 @@ RECIPE.toolkits = {
 RECIPE.flag = "6"
 
 RECIPE.requirements = {
-["sunrise"] = 1,
-["nbcparts"] = 1,
+["beriil1"] = 1,
+["b3parts"] = 1,
 ["ducttape"] = 1,
-["clothscrap"] = 1,
+["metalscrap"] = 3,
+["clothscrap"] = 3,
 }
 
 RECIPE.results = {
-	["nbc"] = 1
+	["berill3m"] = 1
 
 }
 
 RECIPE:PostHook("OnCanCraft", function(recipeTable, client)
 
-	local suit = client:GetCharacter():GetInventory():HasItem("sunrise")
+	local suit = client:GetCharacter():GetInventory():HasItem("berill1")
     if (suit) then
         if (suit:GetData("durability") < 80) then
             return false, "Base suit must be at least 80 percent condition"

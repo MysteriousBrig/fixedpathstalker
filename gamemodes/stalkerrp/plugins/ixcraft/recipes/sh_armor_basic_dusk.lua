@@ -1,5 +1,5 @@
-RECIPE.name = "NBC Suit"
-RECIPE.description = "Remove some armoring from a Sunrise suit and use some salvaged hazmat gear to make an anomalous exploration suit."
+RECIPE.name = "Dusk Suit"
+RECIPE.description = "Reinforce the armor of a Sunrise to make it more fit for the Zone's mutant and human dangers."
 RECIPE.model = "models/kek1ch/stalker_outfit.mdl"
 RECIPE.category = "Basic Armorsmithing"
 RECIPE.toolkits = {
@@ -11,13 +11,13 @@ RECIPE.flag = "6"
 
 RECIPE.requirements = {
 ["sunrise"] = 1,
-["nbcparts"] = 1,
+["duskparts"] = 1,
 ["ducttape"] = 1,
-["clothscrap"] = 1,
+["metalscrap"] = 2,
 }
 
 RECIPE.results = {
-	["nbc"] = 1
+	["dusk"] = 1
 
 }
 
