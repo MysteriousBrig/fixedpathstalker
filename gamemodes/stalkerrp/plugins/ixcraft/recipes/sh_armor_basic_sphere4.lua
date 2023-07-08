@@ -18,7 +18,7 @@ RECIPE.requirements = {
 
 
 RECIPE.results = {
-	["canvaslayerr"] = 1
+	["sphere4"] = 1
 
 }
 

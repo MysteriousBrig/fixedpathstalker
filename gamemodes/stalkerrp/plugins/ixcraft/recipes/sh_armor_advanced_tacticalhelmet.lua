@@ -11,7 +11,7 @@ RECIPE.flag = "6"
 
 RECIPE.requirements = {
 ["steelhelm"] = 1,
-["clothscraps"] = 4,
+["clothscrap"] = 4,
 ["kevlarscrap"] = 3,
 ["ballistictape"] = 1,
 }

@@ -14,7 +14,7 @@ RECIPE.requirements = {
 }
 
 RECIPE.results = {
-	["reinforcedalytn"] = 1
+	["reinforcedaltyn"] = 1
 
 }
 
