@@ -60,9 +60,10 @@ ITEM.functions.RemoveUpgrade = {
 			name = niceName,
 			data = {k},
 		})
+		end 
     end
     return targets
-end,
+	end,
 	OnCanRun = function(item)
 		if (table.Count(item:GetData("mod", {})) <= 0) then
 			return false
