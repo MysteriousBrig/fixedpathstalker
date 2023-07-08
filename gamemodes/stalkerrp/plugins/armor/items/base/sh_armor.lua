@@ -732,7 +732,7 @@ function ITEM:GetDescription()
 			end
 		end
 
-		!IsValid(item.entity) then
+		if !IsValid(self.entity) then
 			local character = self:GetOwner():GetCharacter()
 			for k,v in pairs(character:GetInv():GetItems()) do
 				if v.isArtefact and v:GetData("equip") and v.res then
@@ -741,7 +741,6 @@ function ITEM:GetDescription()
 							resistances[k] = resistances[k] + v
 						end
 					end 
-					
 				end
 			end
 		end 
