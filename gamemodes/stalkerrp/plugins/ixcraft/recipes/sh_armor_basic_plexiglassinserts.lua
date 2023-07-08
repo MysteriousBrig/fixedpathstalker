@@ -10,7 +10,7 @@ RECIPE.toolkits = {
 RECIPE.flag = "6"
 
 RECIPE.requirements = {
-["plexiglassscraps"] = 5,
+["plexiglasscrap"]= 5,
 ["ducttape"] = 1,
 }
 

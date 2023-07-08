@@ -11,7 +11,7 @@ RECIPE.flag = "6"
 
 RECIPE.requirements = {
 ["fireball"] = 1,
-["crysalthorn"] = 1,
+["crystalthorn"] = 1,
 ["flash"] = 1,
 ["meatchunk"] = 1,
 }

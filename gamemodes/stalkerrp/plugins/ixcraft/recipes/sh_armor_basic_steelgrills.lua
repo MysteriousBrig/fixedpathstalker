@@ -10,7 +10,7 @@ RECIPE.toolkits = {
 RECIPE.flag = "6"
 
 RECIPE.requirements = {
-["metalmeshs"] = 5,
+["metalmesh"] = 5,
 ["ducttape"] = 1,
 }
 

@@ -12,7 +12,7 @@ RECIPE.flag = "6"
 RECIPE.requirements = {
 ["psz9_duty"] = 1,
 ["sevaparts"] = 2,
-["armorplatescrap"] = 1,
+["armorplatingscrap"] = 1,
 ["ballistictape"] = 1,
 ["armorpackage"] = 1,
 }

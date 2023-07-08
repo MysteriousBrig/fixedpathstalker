@@ -13,7 +13,7 @@ RECIPE.requirements = {
 ["cs1a"] = 1,
 ["cs2parts"] = 1,
 ["ducttape"] = 1,
-["plexiglassscrap"] = 3,
+["plexiglasscrap"] = 3,
 ["clothscrap"] = 3,
 ["rubberscrap"] = 3,
 }
