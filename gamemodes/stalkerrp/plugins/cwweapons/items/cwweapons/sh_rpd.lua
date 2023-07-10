@@ -1,6 +1,6 @@
 ITEM.name = "RPD"
 ITEM.description = "A soviet designed light machine gun chambered for 7.62x39mm."
-ITEM.longdesc = "The RPD is a 7.62x39mm light machine gun developed in the Soviet Union by Vasily Degtyaryov for the 7.62x39mm M43 intermediate cartridge. It was created as a replacement for the DP machine gun chambered for the 7.62x54mmR round, and is the precursor of most squad automatic weapons. It was later succeeded in Soviet service by the RPK."
+ITEM.longdesc = "The RPD is a 7.62x39mm light machine gun developed in the Soviet Union by Vasily Degtyaryov for the 7.62x39mm M43 intermediate cartridge. It was created as a replacement for the DP machine gun chambered for the 7.62x54mmR round, and is the precursor of most squad automatic weapons. It was later succeeded in Soviet service by the RPK.\n\n-This Weapon is Heavy, meaning it adds +1 Weight when Equipped.\n\nShots per round: 7"
 ITEM.model = "models/silver/stalker/weapons/w_rpd.mdl"
 ITEM.class = "cw_sil_rpd"
 ITEM.weaponCategory = "primary "

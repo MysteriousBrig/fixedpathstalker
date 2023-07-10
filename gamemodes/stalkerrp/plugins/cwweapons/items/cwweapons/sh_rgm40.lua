@@ -1,6 +1,6 @@
 ITEM.name = "RGM-40 Kastet"
 ITEM.description= "A Russian single-shot standalone grenade launcher."
-ITEM.longdesc = "The RGM-40 Kastet grenade launcher is a standalone version of the Russian GP-30 grenade launcher with a telescoping stock, AK pistol grip, and flip up target sights. It is a sungle-shot weapon with a self cocking trigger mechanism, and offers a high degree of commonality with the GP-30. It uses standard 40mm VOG-25 fragmentation grenades."
+ITEM.longdesc = "The RGM-40 Kastet grenade launcher is a standalone version of the Russian GP-30 grenade launcher with a telescoping stock, AK pistol grip, and flip up target sights. It is a sungle-shot weapon with a self cocking trigger mechanism, and offers a high degree of commonality with the GP-30. It uses standard 40mm VOG-25 fragmentation grenades.\n\n-This Weapon is designated as a Secondary, meaning it can used while Stunned. It will probably break your wrist.\n\n-Shots per round: 1"
 ITEM.model = "models/silver/stalker/weapons/w_rgm40_item.mdl"
 ITEM.class = "cw_sil_rgm40"
 ITEM.weaponCategory = "sidearm"

@@ -1,5 +1,5 @@
 ITEM.name = "M240B"
-ITEM.description = "The M240 has been used by the United States Armed Forces since the late 1970s. It is used extensively by infantry, most often in rifle companies, as well as on ground vehicles, watercraft and aircraft. Despite being heavier than some comparable weapons it is highly regarded for reliability and its standardization among NATO members is a major advantage. Fires 7.62x51 Rounds from Belts."
+ITEM.description = "The M240 has been used by the United States Armed Forces since the late 1970s. It is used extensively by infantry, most often in rifle companies, as well as on ground vehicles, watercraft and aircraft. Despite being heavier than some comparable weapons it is highly regarded for reliability and its standardization among NATO members is a major advantage. Fires 7.62x51 Rounds from Belts.\n\n-This Weapon is Heavy, meaning it adds +1 Weight when Equipped.\n\nShots per round: 6"
 ITEM.model = "models/weapons/m240b/w_m249.mdl"
 ITEM.class = "cw_sil_m240"
 ITEM.weaponCategory = "primary"

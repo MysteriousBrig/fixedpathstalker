@@ -1,5 +1,5 @@
 ITEM.name = "DP28"
-ITEM.description = "The Degtyaryov machine gun or DP-27 is a light machine gun firing the 7.62x54mmR cartridge that was primarily used by the Soviet Union. Besides being the standard Soviet infantry light machine gun during World War II, with various modifications it was used in aircraft as a flexible defensive wepaon, and itequipped almost all Soviet tanks in WWII as either a flexible bow machine gun or a co-axial machine gun controlled by the gunner. Uses 7.62x54mmR."
+ITEM.description = "The Degtyaryov machine gun or DP-27 is a light machine gun firing the 7.62x54mmR cartridge that was primarily used by the Soviet Union. Besides being the standard Soviet infantry light machine gun during World War II, with various modifications it was used in aircraft as a flexible defensive wepaon, and itequipped almost all Soviet tanks in WWII as either a flexible bow machine gun or a co-axial machine gun controlled by the gunner. Uses 7.62x54mmR.\n\n-This Weapon is Heavy, meaning it adds +1 Weight when Equipped.\n\nShots per round: 6"
 ITEM.model = "models/weapons/w_ro2_dp28.mdl"
 ITEM.class = "cw_sil_dp28"
 ITEM.weaponCategory = "primary "

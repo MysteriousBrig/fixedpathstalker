@@ -1,5 +1,5 @@
 ITEM.name = "RPG-7"
-ITEM.longdesc = "The RPG-7 is a portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.\nIt—along with its predecessor, the RPG-2—were designed by the Soviet Union; it is now manufactured by the Russian company Bazalt.\nThe weapon has the GRAU index 6G3. "
+ITEM.longdesc = "The RPG-7 is a portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.\nIt—along with its predecessor, the RPG-2—were designed by the Soviet Union; it is now manufactured by the Russian company Bazalt.\nThe weapon has the GRAU index 6G3.\n\n-This Weapon is Heavy, meaning it adds +1 Weight when Equipped.\n\nShots per round: 1"
 ITEM.description = "Multi-use rocket propelled grenade launcher."
 ITEM.model = "models/weapons/w_rpg7.mdl"
 ITEM.class = "cw_kk_ins2_rpg"

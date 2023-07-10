@@ -1,6 +1,6 @@
 ITEM.name = "SR-1 Gyurza"
 ITEM.description= "A Russian handgun that fires 9x21mm."
-ITEM.longdesc = "Initially this gun was designed to meet Russian Army requirements for a high capacity pistol with effective range of no less than 50 meters.\nTo achieve such characteristics, a new cartridge was developed – SP-10 (9×21) with AP steel core bullets, designed to deal with targets in bulletproof vests or hiding in cars etc (capable of near to 100% penetration of 30 layers of Kevlar plus up to 2.8mm titanium plate at 100 meters).\n\nAmmo: 9x21mm\nMagazine Capacity: 18"
+ITEM.longdesc = "Initially this gun was designed to meet Russian Army requirements for a high capacity pistol with effective range of no less than 50 meters. To achieve such characteristics, a new cartridge was developed, 9x21mm, with AP steel core bullets, designed to deal with targets in bulletproof vests or hiding in cars etc.\n\nAmmo: 9x21mm\nMagazine Capacity: 18\n\n-This weapon is a Secondary, meaning it may be used even when Stunned.\n\n-This weapon is designated as Light, meaning it can be reloaded using 4s of Movement speed instead of a full action.\n\n-Shots per round: 4"
 ITEM.model = "models/weapons/gyurza/w_gyurza.mdl"
 ITEM.class = "cw_sil_gyurza"
 ITEM.weaponCategory = "sidearm"
