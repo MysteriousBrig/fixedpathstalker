@@ -1,6 +1,6 @@
 ITEM.name = "Makarov PM"
 ITEM.description= "A Russian steel-framed police pistol that fires 9x18 Makarov."
-ITEM.longdesc = "The Makarov is the replacement for the Tokarev pistol.\nIt's a cheap, compact and reliable choice, but it's not very comfortable and has a smaller magazine than other handguns of same weight category.\n\nAmmo: 9x18mm\nMagazine Capacity: 8"
+ITEM.longdesc = "The Makarov is the replacement for the Tokarev pistol.\nIt's a cheap, compact and reliable choice, but it's not very comfortable and has a smaller magazine than other handguns of same weight category.\n\nAmmo: 9x18mm\nMagazine Capacity: 8\n\n This weapon is a Secondary, meaning it may be used even when Stunned.\nThis weapon is designated as Light, meaning it can be reloaded using 4s of Movement speed instead of a full action."
 ITEM.model = "models/silver/stalker/weapons/w_pm.mdl"
 ITEM.class = "cw_sil_pm"
 ITEM.weaponCategory = "sidearm"
