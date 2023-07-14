@@ -17,7 +17,7 @@ RECIPE.requirements = {
 }
 
 RECIPE.results = {
-	["pb6"] = 1
+	["pb6p9"] = 1
 }
 
 RECIPE:PostHook("OnCanCraft", function(recipeTable, client)

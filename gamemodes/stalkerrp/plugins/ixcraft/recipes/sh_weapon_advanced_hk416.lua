@@ -10,7 +10,7 @@ RECIPE.flag = "7"
 
 RECIPE.requirements = {
     ["m4a1"] = 1,
-    ["weaponpartnatorifle"] = 3,
+    ["weaponpartsnatorifle"] = 3,
     ["weaponpartssynthetic"] = 1,
     ["screws"] = 3,
 }
