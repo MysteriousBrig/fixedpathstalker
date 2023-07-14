@@ -718,7 +718,7 @@ function ITEM:GetDescription()
 		end
 
 		if(customData.impact) then
-			resistances["Impact"] = customData.impact
+			resistances["Fall"] = customData.impact
 			resistances["Shock"] = customData.shock
 			resistances["Burn"] = customData.burn
 			resistances["Chemical"] = customData.chemical
