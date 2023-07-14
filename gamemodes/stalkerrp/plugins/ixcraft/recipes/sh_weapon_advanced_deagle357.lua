@@ -9,7 +9,7 @@ RECIPE.toolkits = {
 RECIPE.flag = "7"
 
 RECIPE.requirements = {
-["weaponpartsnatomallarms"] = 3,
+["weaponpartsnatosmallarms"] = 3,
 ["screws"] = 2,
 }
 
