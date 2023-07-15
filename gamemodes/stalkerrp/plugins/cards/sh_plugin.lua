@@ -33,7 +33,7 @@ PLUGIN.CardMisc = {
 }
 
 PLUGIN.CardProperties = {
-  ["models/props_c17/paper01.mdl"] = {
+  ["models/kek1ch/cards.mdl"] = {
     "A_clubs",
     "A_hearts",
     "A_diamonds",
@@ -66,7 +66,7 @@ PLUGIN.CardProperties = {
     "8_spades"
   },
 
-  ["models/props_c17/paper01.mdl"] = {
+  ["models/kek1ch/cards.mdl"] = {
     "8_hearts",
     "8_diamonds",
     "9_clubs",
@@ -153,7 +153,7 @@ function PLUGIN:LoadedCards()
             end
         end
 
-        return "models/props_c17/paper01.mdl", 0, "models/props_c17/paper01.mdl", Color(0, 0, 0, 255)
+        return "models/kek1ch/cards.mdl", 0, "models/kek1ch/cards.mdl", Color(0, 0, 0, 255)
     end
 
     for k, v in pairs(self.cards or {}) do
@@ -183,7 +183,7 @@ function PLUGIN:LoadedCards()
     ITEM.description = "A deck of 54 imported playing cards that use the suits - clubs (♣), diamonds (♦), hearts (♥) and spades (♠)."
     ITEM.longdesc = "A second hand deck of 54 playing cards"
     ITEM.img = ix.util.GetMaterial("materials/vgui/hud/misc/cards/back.png")
-    ITEM.model = "models/props_c17/paper01.mdl"
+    ITEM.model = "models/kek1ch/cards.mdl"
     ITEM.width = 1
     ITEM.height = 1
 end

@@ -1,6 +1,6 @@
 local PLUGIN = PLUGIN
 ITEM.name = "Deck Cards Base"
-ITEM.model = "models/props_c17/paper01.mdl"
+ITEM.model = "models/kek1ch/cards.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 0

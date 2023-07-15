@@ -32,7 +32,7 @@ function ITEM:GetDescription()
 end
 
 function ITEM:DrawEntity(entity)
-    entity:SetModelScale(0.7)
+    entity:SetModelScale(1)
     entity:DrawModel()
 end
 
