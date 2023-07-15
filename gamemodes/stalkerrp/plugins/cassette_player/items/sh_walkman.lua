@@ -32,20 +32,6 @@ function ITEM:GetDescription()
 	return str
 end
 
-if (CLIENT) then
-	function ITEM:PopulateTooltip(tooltip)
-		if !self.entity then
-			
-
-			ix.util.PropertyDesc(tooltip, "Rare Item", Color(200, 200, 200))
-			ix.util.PropertyDesc(tooltip, "Electronic Device", Color(200, 200, 200))
-			ix.util.PropertyDesc(tooltip, "Batteries Included", Color(200, 200, 200))
-
-			tooltip:SizeToContents()
-		end
-	end
-end
-
 ITEM.functions.play = {
     name = "Play Tape",
     tip = "useTip",
