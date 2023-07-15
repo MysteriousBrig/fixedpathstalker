@@ -39,6 +39,14 @@ surface.CreateFont("stalkertitlefont", {
 	weight = 500
 })
 
+surface.CreateFont("stalkerregularchatfont", {
+	font = "alsina",
+	size = ScreenScale(9),
+	extended = true,
+	weight = 500,
+	antialias = true
+})
+
 local color = {}
 color["$pp_colour_addr"] = 0
 color["$pp_colour_addg"] = 0
