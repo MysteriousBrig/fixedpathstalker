@@ -31,7 +31,7 @@ end
 if (CLIENT) then
     function ITEM:PaintOver(item, w, h)
         local count = item:GetData("cards") and #item:GetData("cards") or 54
-        draw.SimpleTextOutlined(tonumber(count) .. "/54", "stalkerregularinvfont", 3, h - 1, color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_BOTTOM, 1, color_black)
+        draw.SimpleTextOutlined(tonumber(count) .. "/54", "stalkerregularfont", 3, h - 1, color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_BOTTOM, 1, color_black)
     end
 end
 
