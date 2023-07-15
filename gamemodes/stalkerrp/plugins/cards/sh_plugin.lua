@@ -33,7 +33,7 @@ PLUGIN.CardMisc = {
 }
 
 PLUGIN.CardProperties = {
-  ["models/cards/card1.mdl"] = {
+  ["models/props_c17/paper01.mdl"] = {
     "A_clubs",
     "A_hearts",
     "A_diamonds",
@@ -66,7 +66,7 @@ PLUGIN.CardProperties = {
     "8_spades"
   },
 
-  ["models/cards/card2.mdl"] = {
+  ["models/props_c17/paper01.mdl"] = {
     "8_hearts",
     "8_diamonds",
     "9_clubs",
@@ -153,7 +153,7 @@ function PLUGIN:LoadedCards()
             end
         end
 
-        return "models/cards/card1.mdl", 0, "models/props_pipes/GutterMetal01a", Color(0, 0, 0, 255)
+        return "models/props_c17/paper01.mdl", 0, "models/props_c17/paper01.mdl", Color(0, 0, 0, 255)
     end
 
     for k, v in pairs(self.cards or {}) do
@@ -167,8 +167,8 @@ function PLUGIN:LoadedCards()
 
         local ITEM = ix.item.Register("cards_" .. k, "base_card", false, nil, true)
         ITEM.name = v
-        ITEM.description = "An individual playing card that appears to be apart of a deck of 54 imported French playing cards."
-        ITEM.longdesc = "An individual playing card that appears to have one of its corners slightly bent with some of the pattern being scratched off a little. The card appears to be in not the best condition as it has came from a deck that has been used by various STALKERs."
+        ITEM.description = "An individual playing card that appears to be apart of a deck of 54 playing cards."
+        ITEM.longdesc = "An individual playing card that appears to have one of its corners slightly bent with some of the pattern being scratched off a little. The card appears to be in not the best condition as it has came from a deck that has been used by various individuals."
         ITEM.material = itemmat
         ITEM.img = ix.util.GetMaterial("materials/vgui/hud/misc/cards/" .. k .. ".png")
         ITEM.model = itemmdl
@@ -180,10 +180,10 @@ function PLUGIN:LoadedCards()
 
     local ITEM = ix.item.Register("cards_deck_cards", "base_deck_cards", false, nil, true)
     ITEM.name = "French Playing Cards"
-    ITEM.description = "A deck of 54 imported French playing cards that use the french suits - clubs (♣), diamonds (♦), hearts (♥) and spades (♠)."
-    ITEM.longdesc = "A second hand deck of 54 French playing cards which were brought into the Zone and used by many STALKERs. Each suit contains three face cards and the deck sizes tend to vary. STALKERs tend to play various popular international card games such as Poker and Blackjack. Some STALKERs have managed to make their own card games, the games being local to the Zone."
+    ITEM.description = "A deck of 54 imported playing cards that use the suits - clubs (♣), diamonds (♦), hearts (♥) and spades (♠)."
+    ITEM.longdesc = "A second hand deck of 54 playing cards"
     ITEM.img = ix.util.GetMaterial("materials/vgui/hud/misc/cards/back.png")
-    ITEM.model = "models/lostsignalproject/items/misc/cards.mdl"
+    ITEM.model = "models/props_c17/paper01.mdl"
     ITEM.width = 1
     ITEM.height = 1
 end

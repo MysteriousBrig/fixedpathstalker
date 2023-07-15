@@ -1,6 +1,6 @@
 local PLUGIN = PLUGIN
 ITEM.name = "Cards Base"
-ITEM.model = "models/kek1ch/access_card.mdl"
+ITEM.model = "models/lostsignalproject/items/quest/keycard.mdl"
 ITEM.material = "models/debug/debugwhite"
 ITEM.width = 1
 ITEM.height = 1
@@ -9,6 +9,7 @@ ITEM.description = ""
 ITEM.longdesc = ""
 ITEM.category = "Cards"
 ITEM.isCard = true
+ITEM.nobusiness = true
 
 function ITEM:GetDescription()
     local quant = self:GetData("quantity", self.ammoAmount or self.quantity or 0)
@@ -37,7 +38,6 @@ end
 
 ITEM.functions.Flip = {
     name = "Flip the card",
-    icon = "icon16/stalker/scrap.png",
     OnRun = function(itemTable)
         local client = itemTable.player
         local vStart = client:GetShootPos()
