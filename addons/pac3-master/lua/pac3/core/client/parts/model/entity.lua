@@ -11,7 +11,7 @@ PART.ManualDraw = true
 PART.HandleModifiersManually = true
 PART.Icon = 'icon16/brick.png'
 PART.Group = "entity"
-PART.is_model_part = false
+PART.is_entity_part = true
 
 BUILDER:StartStorableVars()
 	:SetPropertyGroup("generic")
@@ -168,7 +168,13 @@ function PART:OnShow()
 		end
 	end
 
-	if not (self.old_model == self:GetModel()) then
+	if not self.real_model then 
+		self.real_model = ent:GetModel() 
+	end
+
+	if not (self.old_model == self:GetModel()) or 
+	(pac.LocalHands:IsValid() and ent == pac.LocalHands
+	and not (self.real_model == pac.LocalHands:GetModel())) then
 		self.old_model = self:GetModel()
 		self:SetModel(self:GetModel())
 	end
@@ -194,7 +200,7 @@ function PART:RealSetModel(path)
 	if not ent:IsValid() then return end
 
 	ent:SetModel(path)
-
+	self.real_model = path
 	self:RefreshModel()
 end
 
