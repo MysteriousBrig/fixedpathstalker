@@ -53,7 +53,9 @@ BUILDER:StartStorableVars()
 BUILDER:EndStorableVars()
 
 -- redirect
-function PART:SetOutputTarget(part)
+function PART:SetOutputTargetPart(part)
+	if not part:IsValid() then return end
+	self.SetOutputTargetPartUID = ""
 	self:SetTargetPart(part)
 end
 
@@ -534,6 +536,11 @@ PART.Inputs.voice_volume = function(self)
 	return ply:VoiceVolume()
 end
 
+PART.Inputs.voice_volume_scale = function(self)
+	local ply = self:GetPlayerOwner()
+	return ply:GetVoiceVolumeScale()
+end
+
 do -- light amount
 	local ColorToHSV = ColorToHSV
 	local render = render
@@ -793,9 +800,11 @@ function PART:SetExpression(str)
 		if ok then
 			self.ExpressionFunc = res
 			self.ExpressionError = nil
+			self:SetError()
 		else
 			self.ExpressionFunc = true
 			self.ExpressionError = res
+			self:SetError(res)
 		end
 	end
 end
@@ -816,9 +825,11 @@ function PART:OnHide()
 		if self.AffectChildren then
 			for _, part in ipairs(self:GetChildren()) do
 				part:SetEventTrigger(self, false)
+				part.proxy_hide = nil
 			end
 		elseif part:IsValid() then
 			part:SetEventTrigger(self, false)
+			part.proxy_hide = nil
 		end
 	end
 end
@@ -849,7 +860,7 @@ local function set(self, part, x, y, z, children)
 					end
 
 					-- we want any nested proxies to think twice before they decide to enable themselves
-					part:CallRecursive("OnThink")
+					part:CallRecursiveOnClassName("proxy", "OnThink")
 
 					part:SetEventTrigger(self, b)
 
@@ -928,7 +939,8 @@ function PART:OnThink()
 
 		if x and not isnumber(x) then x = 0 end
 		if y and not isnumber(y) then y = 0 end
-		if z and not isnumber(y) then z = 0 end
+		if z and not isnumber(z) then z = 0 end
+
 
 		if self.Additive then
 			if x then

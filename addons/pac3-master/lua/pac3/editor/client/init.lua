@@ -203,6 +203,8 @@ function pace.Panic()
 		end
 	end
 
+	pace.SafeRemoveSpecialPanel()
+
 	for i, ent in ipairs(ents.GetAll()) do
 		if ent:IsValid() then
 			ent.pac_onuse_only = nil
@@ -361,6 +363,7 @@ do
 		local lastViewPos, lastViewAngle, lastTargetPos
 
 		timer.Create("pac_in_editor", 0.25, 0, function()
+			if not pace.Active then return end
 			if not pace.current_part:IsValid() then return end
 			local pos, ang = pace.GetViewPos(), pace.GetViewAngles()
 			local target_pos = pace.mctrl.GetWorldPosition()
@@ -380,7 +383,7 @@ do
 
 	net.Receive("pac_in_editor_posang", function()
 		local ply = net.ReadEntity()
-		if not ply:IsValid() then return end
+		if not IsValid( ply ) then return end
 
 		local pos = net.ReadVector()
 		local ang = net.ReadAngle()

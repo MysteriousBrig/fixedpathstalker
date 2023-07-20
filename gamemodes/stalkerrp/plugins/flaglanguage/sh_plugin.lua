@@ -4,18 +4,22 @@ PLUGIN.author = "army"
 PLUGIN.description = "Adds three languages that are able to be used."
 
 local languages = {
-    ["E"] = "English",
+    ["Z"] = "Russian",
     ["X"] = "Polish",
-    ["Z"] = "Russian"
+    ["Y"] = "English",
+    ["G"] = "German",
+    ["J"] = "Japanese",
+    ["L"] = "Spanish",
+    ["K"] = "French"
 }
 
 local languageChatTypes = {}
 
-local function OnLanguageChatAdd(lang, meta, speaker, text)
+local function OnLanguageChatAdd(lang, flag, meta, speaker, text)
     local localCharacter = LocalPlayer():GetCharacter()
     local characterName = hook.Run("GetCharacterName", speaker, meta.uniqueID) or speaker:GetName()
 
-    if localCharacter:HasFlags(lang) then
+    if localCharacter:HasFlags(flag) then
         chat.AddText(meta.GetColor(), string.format(meta.format,
             characterName, lang, text
         ))
@@ -43,14 +47,14 @@ for flag, lang in pairs(languages) do
         end,
         CanHear = ix.config.Get("chatRange", 280),
         CanSay = function(self, speaker, text)
-            if speaker:GetCharacter():HasFlags(lang) then
+            if speaker:GetCharacter():HasFlags(flag) then
                 return
-            else ix.util.Notify("You can't speak this language!", client)
+            else player:Notify("You can't speak this language!")
                 return false
             end
         end,
         OnChatAdd = function(self, speaker, text)
-            OnLanguageChatAdd(lang, self, speaker, text)
+            OnLanguageChatAdd(lang, flag, self, speaker, text)
         end
     })
 
@@ -67,14 +71,14 @@ for flag, lang in pairs(languages) do
         end,
         CanHear = ix.config.Get("chatRange", 280) * 0.25,
         CanSay = function(self, speaker, text)
-            if speaker:GetCharacter():HasFlags(lang) then
+            if speaker:GetCharacter():HasFlags(flag) then
                 return
-            else ix.util.Notify("You can't speak this language!", client)
+            else player:Notify("You can't speak this language!")
                 return false
             end
         end,
         OnChatAdd = function(self, speaker, text)
-            OnLanguageChatAdd(lang, self, speaker, text)
+            OnLanguageChatAdd(lang, flag, self, speaker, text)
         end,
     })
 
@@ -91,14 +95,14 @@ for flag, lang in pairs(languages) do
         end,
         CanHear = ix.config.Get("chatRange", 280) * 2,
         CanSay = function(self, speaker, text)
-        if speaker:GetCharacter():HasFlags(lang) then
+        if speaker:GetCharacter():HasFlags(flag) then
                 return
-            else ix.util.Notify("You can't speak this language!", client)
+            else player:Notify("You can't speak this language!")
                 return false
             end
         end,
         OnChatAdd = function(self, speaker, text)
-            OnLanguageChatAdd(lang, self, speaker, text)
+            OnLanguageChatAdd(lang, flag, self, speaker, text)
         end,
     })
 

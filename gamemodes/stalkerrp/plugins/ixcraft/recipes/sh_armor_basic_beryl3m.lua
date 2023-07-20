@@ -10,7 +10,7 @@ RECIPE.toolkits = {
 RECIPE.flag = "6"
 
 RECIPE.requirements = {
-["beriil1"] = 1,
+["berill1"] = 1,
 ["b3parts"] = 1,
 ["ducttape"] = 1,
 ["metalscrap"] = 3,

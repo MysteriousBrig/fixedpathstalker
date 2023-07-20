@@ -66,6 +66,8 @@ function emut.MutateEntity(owner, class_name, ent, ...)
 	end
 
 	if SERVER then
+		if pace.IsBanned(owner) then return end
+
 		if not override_enabled then
 			if owner:IsPlayer() and not emut.registered_mutators[class_name].cvar:GetBool() then
 				pac.Message(owner, "tried to set size when it's disabled")
@@ -102,7 +104,7 @@ function emut.MutateEntity(owner, class_name, ent, ...)
 	end
 
 	if CLIENT then
-		if owner == LocalPlayer() and not suppress_send_to_server then
+		if owner == LocalPlayer() and not suppress_send_to_server then 
 			net.Start("pac_entity_mutator")
 				net.WriteString(class_name)
 				net.WriteEntity(ent)

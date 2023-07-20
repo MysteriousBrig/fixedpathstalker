@@ -694,6 +694,10 @@ function ITEM:GetDescription()
 		str = customData.desc
 	end
 	
+	if (customData.longdesc) then
+		str = str.. "\n\n" ..customData.longdesc 
+	end
+
 	if self.res then
 		
 		
@@ -712,6 +716,16 @@ function ITEM:GetDescription()
 				resistances[k] = resistances[k] + v
 			end
 		end
+
+		if(customData.impact) then
+			resistances["Fall"] = customData.impact
+			resistances["Shock"] = customData.shock
+			resistances["Burn"] = customData.burn
+			resistances["Chemical"] = customData.chemical
+			resistances["Psi"] = customData.psi
+			resistances["Radiation"] = customData.radiation
+		end
+	
 		
 		if mods then
 			for x,y in pairs(mods) do
