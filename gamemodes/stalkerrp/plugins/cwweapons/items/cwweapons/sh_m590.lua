@@ -1,5 +1,5 @@
 ITEM.name = "M590"
-ITEM.description = "The Mossberg 590 is a variant of the Mossberg 500 series, specifically made to be easier to field strip for cleaning, as well as being simpler to repair internal damage. Fires 12 Gauge shells."
+ITEM.description = "The Mossberg 590 is a variant of the Mossberg 500 series, specifically made to be easier to field strip for cleaning, as well as being simpler to repair internal damage. Fires 12 Gauge shells.\n\nShots per round: 2"
 ITEM.model = "models/weapons/ethereal/w_m590.mdl"
 ITEM.class = "cw_sil_m590"
 ITEM.weaponCategory = "secondary"

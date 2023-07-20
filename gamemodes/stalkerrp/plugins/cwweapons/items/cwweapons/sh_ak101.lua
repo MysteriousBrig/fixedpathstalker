@@ -1,6 +1,6 @@
 ITEM.name = "AK-101"
 ITEM.description= "A Russian-designed assault rifle chambered for 5.56x45mm."
-ITEM.longdesc = "The AK-101 is designed for the world export market, using the NATO standard 5.56x45mm cartridge.\nThe AK-101 is marketed at those looking for a weapon that combines the logistical compatibility and familiarity of the 5.56×45mm NATO round with the reliability of a Kalashnikov.\nThe design of this rifle is similar to the AK-74.\n\nAmmo: 5.56x45mm\nMagazine Capacity: 30"
+ITEM.longdesc = "The AK-101 is designed for the world export market, using the NATO standard 5.56x45mm cartridge.\nThe AK-101 is marketed at those looking for a weapon that combines the logistical compatibility and familiarity of the 5.56×45mm NATO round with the reliability of a Kalashnikov.\nThe design of this rifle is similar to the AK-74.\n\nAmmo: 5.56x45mm\nMagazine Capacity: 30\n\n-Shots per round: 6"
 ITEM.model = "models/silver/stalker/weapons/w_ak101.mdl"
 ITEM.class = "cw_sil_ak101"
 ITEM.weaponCategory = "primary"

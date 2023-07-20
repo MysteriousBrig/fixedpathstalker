@@ -1,6 +1,6 @@
 ITEM.name = "AEK-973"
 ITEM.description = "A Russian assault rifle. Fires 7.62x39mm."
-ITEM.longdesc = "The AEK-973 is an experimental assault rifle released around the same time as the AN-94 'Abakan'.\nThe AN-94 was chosen over it, but it was still put into limited production.\nIt has a built-in recoil compensator, meaning its recoil is felt much less by the user.\nIt's a rare specimen since it was only given out to a few select groups of the military.\n\nAmmo: 7.62x39mm \nMagazine Capacity: 30"
+ITEM.longdesc = "The AEK-973 is an experimental assault rifle released around the same time as the AN-94 'Abakan'.\nThe AN-94 was chosen over it, but it was still put into limited production.\nIt has a built-in recoil compensator, meaning its recoil is felt much less by the user.\nIt's a rare specimen since it was only given out to a few select groups of the military.\n\nAmmo: 7.62x39mm\n\n-Shots per round: 7"
 ITEM.model = "models/silver/stalker/weapons/w_aek973.mdl"
 ITEM.class = "cw_sil_aek973"
 ITEM.weaponCategory = "primary" 

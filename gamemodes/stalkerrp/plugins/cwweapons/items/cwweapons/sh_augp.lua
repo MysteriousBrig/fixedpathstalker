@@ -1,6 +1,6 @@
 ITEM.name = "Steyr AUG A3 Para"
 ITEM.description= "A bull-pup submachine gun. Fires 9x19mm."
-ITEM.longdesc = "The AUG is an Austrian assault rifle designed around the 60-70's and remains a viable solution to this day. \nIt's a bullpup configuration rifle, the magazine behind the handguard results in a shorter length. \nIt's not fully ambidextrious, but it can be changed for left-hand shooters if one changes the bolt with one that has the extractor and ejector on the other side.\n\nAmmo: 9x19mm \nMagazine Capacity: 25"
+ITEM.longdesc = "The AUG is an Austrian assault rifle designed around the 60-70's and remains a viable solution to this day. \nIt's a bullpup configuration rifle, the magazine behind the handguard results in a shorter length. \nIt's not fully ambidextrious, but it can be changed for left-hand shooters if one changes the bolt with one that has the extractor and ejector on the other side.\n\nAmmo: 9x19mm \nMagazine Capacity: 25\n\n-Shots per round: 9"
 ITEM.model = "models/silver/stalker/weapons/w_augp.mdl"
 ITEM.class = "cw_sil_augp"
 ITEM.weaponCategory = "primary"

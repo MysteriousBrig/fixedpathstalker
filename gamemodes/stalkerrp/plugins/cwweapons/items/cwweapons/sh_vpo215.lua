@@ -1,5 +1,5 @@
 ITEM.name = "VPO-215"
-ITEM.description = "The VPO-215 is a Russian bolt-action rifle developed by Molot, primarily used for hunting. Chambered in 7.62x39mm."
+ITEM.description = "The VPO-215 is a Russian bolt-action rifle developed by Molot, primarily used for hunting. Chambered in 7.62x39mm.\n\n-Shots per round: 1"
 ITEM.model = "models/silver/stalker/weapons/w_vpo215.mdl"
 ITEM.class = "cw_sil_vpo215"
 ITEM.weaponCategory = "primary"

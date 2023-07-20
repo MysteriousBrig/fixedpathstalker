@@ -1,6 +1,6 @@
 ITEM.name = "HK MP5A4"
 ITEM.description= "A black submachinegun. Fires 9x19mm."
-ITEM.longdesc = "The MP5 is an iconic German submachinegun developed in the 1960s, known for it's reliability and effectiveness.\nThe MP5 differentiates from other submachineguns because it fires from a closed bolt.\nIt uses the same operating mechanism as the G3 rifle which has made it one of the most accurate submachineguns in the world.\n\nAmmo: 9x19mm\nMagazine Capacity: 30"
+ITEM.longdesc = "The MP5 is an iconic German submachinegun developed in the 1960s, known for it's reliability and effectiveness.\nThe MP5 differentiates from other submachineguns because it fires from a closed bolt.\nIt uses the same operating mechanism as the G3 rifle which has made it one of the most accurate submachineguns in the world.\n\nAmmo: 9x19mm\nMagazine Capacity: 30\n\n-This weapon is marked as Light, meaning it can be reloaded using 4s of Movement instead of a full action.\n\n-Shots per round: 8"
 ITEM.model = "models/weapons/ethereal/w_mp5a4.mdl"
 ITEM.class = "cw_sil_mp5a4"
 ITEM.weaponCategory = "secondary"

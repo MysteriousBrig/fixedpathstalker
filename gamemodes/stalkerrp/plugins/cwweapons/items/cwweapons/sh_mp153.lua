@@ -1,5 +1,5 @@
 ITEM.name = "MP-153"
-ITEM.description = "The MP-153 is a Russian semi-automatic shotgun developed in the late 1990s from the IZh-81M."
+ITEM.description = "The MP-153 is a Russian semi-automatic shotgun developed in the late 1990s from the IZh-81M.\n\n-Shots per round: 3"
 ITEM.model = "models/silver/outbreak/weapons/w_mp153_new.mdl"
 ITEM.class = "cw_sil_mp153"
 ITEM.weaponCategory = "secondary"

@@ -1,6 +1,6 @@
 ITEM.name = "OTs-14 Groza"
 ITEM.description= "A soviet-designed bullpup assault rifle chambered for 7.62x39mm."
-ITEM.longdesc = "The OTs-14 Groza is a Russian selective fire bullpup assault rifle chambered for the 7.62×39mm round. It was developed in the 1990s at the TsKIB SOO (Central Design and Research Bureau of Sporting and Hunting Arms) in Tula, Russia.\n\nAmmo: 7.62x39mm\nMagazine Capacity: 30"
+ITEM.longdesc = "The OTs-14 Groza is a Russian selective fire bullpup assault rifle chambered for the 7.62×39mm round. It was developed in the 1990s at the TsKIB SOO (Central Design and Research Bureau of Sporting and Hunting Arms) in Tula, Russia.\n\nAmmo: 7.62x39mm\nMagazine Capacity: 30\n\nShots per round: 7"
 ITEM.model = "models/weapons/ethereal/item_groza1.mdl"
 ITEM.class = "cw_kk_ins2_groza1"
 ITEM.weaponCategory = "primary"

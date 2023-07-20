@@ -1,5 +1,5 @@
 ITEM.name = "Item 62 Gauss Rifle"
-ITEM.longdesc = "A super-accurate hi-tech weapon known as item 62, this rifle was developed in secret laboratories located inside the Zone.\nThe weapon operates by accelerating bullets to extremely high speeds using a system of electromagnets, which provides incredible stopping power with virtually no recoil.\nThe weapon is powered by using capsulated artifact fragments in the batteries.\n\nAmmo: Batteries? \nMagazine Capacity: 10"
+ITEM.longdesc = "A super-accurate hi-tech weapon known as item 62, this rifle was developed in secret laboratories located inside the Zone.\nThe weapon operates by accelerating bullets to extremely high speeds using a system of electromagnets, which provides incredible stopping power with virtually no recoil.\nThe weapon is powered by using capsulated artifact fragments in the batteries.\n\nAmmo: Batteries? \nMagazine Capacity: 10\n\n-This Weapon is Heavy, meaning it adds +1 Weight when Equipped.\n\nShots per round: 1"
 ITEM.description = "Zone produced coil gun, uses batteries."
 ITEM.model = "models/silver/stalker/weapons/w_gauss_rifle.mdl"
 ITEM.class = "cw_sil_gauss"

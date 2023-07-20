@@ -1,5 +1,5 @@
 ITEM.name = "MP7"
-ITEM.description = "The Heckler & Koch MP7 (Maschinenpistole 7) is a German personal defence weapon (PDW) designed and manufactured by Heckler & Koch (H&K) and chambered for the HK 4.6×30mm cartridge."
+ITEM.description = "The Heckler & Koch MP7 (Maschinenpistole 7) is a German personal defence weapon (PDW) designed and manufactured by Heckler & Koch (H&K) and chambered for the HK 4.6×30mm cartridge.\n\n-This weapon is marked as Light, meaning it can be reloaded using 4s of Movement instead of a full action.\n\n-Shots per round: 9"
 ITEM.model = "models/weapons/ethereal/w_mp7.mdl"
 ITEM.class = "cw_sil_mp7"
 ITEM.weaponCategory = "secondary"

@@ -1,6 +1,6 @@
 ﻿ITEM.name = "AKM"
 ITEM.description= "A soviet-designed assault rifle chambered for 7.62x39mm."
-ITEM.longdesc = "The AKM is an assault rifle firing the 7.62×39mm Soviet intermediate cartridge.\nDespite being replaced in the late 1970s by the AK-74 the AKM is still in service in some Russian Army reserve and second-line units and several east European countries.\nIt is fairly easy to come by in the Zone and is favoured by many experienced stalkers because of the punch it packs.\n\nAmmo: 7.62x39mm\nMagazine Capacity: 30"
+ITEM.longdesc = "The AKM is an assault rifle firing the 7.62×39mm Soviet intermediate cartridge.\nDespite being replaced in the late 1970s by the AK-74 the AKM is still in service in some Russian Army reserve and second-line units and several east European countries.\nIt is fairly easy to come by in the Zone and is favoured by many experienced stalkers because of the punch it packs.\n\nAmmo: 7.62x39mm\nMagazine Capacity: 30\n\n-Shots per round: 6"
 ITEM.model = "models/silver/stalker/weapons/w_akm.mdl"
 ITEM.class = "cw_sil_akm"
 ITEM.weaponCategory = "primary"

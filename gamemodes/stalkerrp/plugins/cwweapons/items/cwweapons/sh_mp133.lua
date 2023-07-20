@@ -1,5 +1,5 @@
 ITEM.name = "MP-133"
-ITEM.description = "The MP-133 is a Russian pump-action shotgun developed in the late 1990s from the IZh-81."
+ITEM.description = "The MP-133 is a Russian pump-action shotgun developed in the late 1990s from the IZh-81.\n\n-Shots per round: 2"
 ITEM.model = "models/silver/stalker/weapons/w_mp133.mdl"
 ITEM.class = "cw_sil_mp133"
 ITEM.weaponCategory = "secondary"

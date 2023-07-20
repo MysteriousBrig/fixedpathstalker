@@ -1,6 +1,6 @@
 ITEM.name = "Mosin Nagant (Custom)"
 ITEM.description= "An old bolt action rifle mostly made out of wood. Fires 7.62x54mm."
-ITEM.longdesc = "The Mosin Nagant is an old bolt action design with it's origins in the Russian Empire, 1891.\nIt was used extensively as the official service rifle for multiple states and remains in arsenals of guerillas and other formations that needs to utilize a reliable, powerful and cheap rifle.\nIt's especially popular with the hunters in the Zone as the large bullet takes a wild animal out in a single shot.\nThis one has been stripped apart and rebuilt using western parts for increased versatality.\n\nAmmo: 7.62x54mm\nMagazine Capacity: 10"
+ITEM.longdesc = "The Mosin Nagant is an old bolt action design with it's origins in the Russian Empire, 1891.\nIt was used extensively as the official service rifle for multiple states and remains in arsenals of guerillas and other formations that needs to utilize a reliable, powerful and cheap rifle.\nIt's especially popular with the hunters in the Zone as the large bullet takes a wild animal out in a single shot.\nThis one has been stripped apart and rebuilt using western parts for increased versatality.\n\nAmmo: 7.62x54mm\nMagazine Capacity: 10\n\n-Shots per round: 1"
 ITEM.model = "models/silver/stalker/weapons/w_mosin_unique.mdl"
 ITEM.class = "cw_sil_mosin_unique"
 ITEM.weaponCategory = "primary"

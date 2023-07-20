@@ -1,6 +1,6 @@
 ITEM.name = "FN SCAR-L"
 ITEM.description = "A assault rifle that fires 5.56x45mm rounds."
-ITEM.longdesc = "The FN SCAR (Special Operations Forces Combat Assault Rifle) is a family of gas-operated automatic rifles developed by Belgian manufacturer FN Herstal in 2004. The 'L' stands for light.\n\nAmmo: 5.56x45mm\nMagazine Capacity: 30"
+ITEM.longdesc = "The FN SCAR (Special Operations Forces Combat Assault Rifle) is a family of gas-operated automatic rifles developed by Belgian manufacturer FN Herstal in 2004. The 'L' stands for light.\n\nAmmo: 5.56x45mm\nMagazine Capacity: 30\n\n-Shots per round: 8"
 ITEM.model = "models/silver/stalker/weapons/w_scarl.mdl"
 ITEM.class = "cw_sil_scarl"
 ITEM.weaponCategory = "primary"

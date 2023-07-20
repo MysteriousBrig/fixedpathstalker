@@ -1,6 +1,6 @@
 ITEM.name = "AEK-919k"
 ITEM.description = "A Russian submachine gun. Fires 9x18mm."
-ITEM.longdesc = "The AEK-919K Kashtan is a Russian select-fire submachine gun, chambered for 9x18mm Makarov rounds, developed by the Kovrov Mechanical Plant"
+ITEM.longdesc = "The AEK-919K Kashtan is a Russian select-fire submachine gun, chambered for 9x18mm Makarov rounds, developed by the Kovrov Mechanical Plant.\n\n-This weapon is designated as Light, meaning it can be reloaded for 4s of movement instead of a full action.\n\n-Shots per round: 9"
 ITEM.model = "models/silver/stalker/weapons/w_aek919k.mdl"
 ITEM.class = "cw_sil_aek919k"
 ITEM.weaponCategory = "secondary"

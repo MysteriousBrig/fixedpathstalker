@@ -1,5 +1,5 @@
 ITEM.name = "MTs-255"
-ITEM.description = "The MTs255 is a Russian shotgun fed by a 5-round internal revolving cylinder. It is produced by the TsKIB SOO, Central Design and Research Bureau of Sporting and Hunting Arms. The MTs255 is unique in that the forearm extends nearly all the way back to the cylinder. The shotgun is reloaded in a manner consistent with that of most modern revolvers, by unlocking the cylinder, and swinging it away from the frame to the left and down."
+ITEM.description = "The MTs255 is a Russian shotgun fed by a 5-round internal revolving cylinder. It is produced by the TsKIB SOO, Central Design and Research Bureau of Sporting and Hunting Arms. The MTs255 is unique in that the forearm extends nearly all the way back to the cylinder. The shotgun is reloaded in a manner consistent with that of most modern revolvers, by unlocking the cylinder, and swinging it away from the frame to the left and down.\n\n-Shots per round: 3"
 ITEM.model = "models/weapons/mc255/w_mc255.mdl"
 ITEM.class = "cw_sil_mts255"
 ITEM.weaponCategory = "secondary"
