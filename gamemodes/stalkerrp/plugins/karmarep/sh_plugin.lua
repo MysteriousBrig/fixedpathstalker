@@ -3,13 +3,32 @@ PLUGIN.name = "Reputation"
 PLUGIN.author = "Verne?"
 PLUGIN.desc = "Reputation System"
 
+ix.char.RegisterVar("SkillPoints", {
+    field = "skillpoints",
+    fieldType = ix.type.number,
+    default = 0,
+    isLocal = true,
+    bNoDisplay = true
+})
+
+
 PLUGIN.repDefs = {
-	{"Rookie", 0},
-	{"Experienced", 2000},
-	{"Professional", 15000},
-	{"Veteran", 60000},
-    {"Expert", 130000},
-	{"Master", 200000},
+	{"Rookie 1", 1000},
+	{"Rookie 2", 3000},
+	{"Rookie 3", 5000},
+	{"Experienced 1", 7000},
+    {"Experienced 2", 9000},
+	{"Experienced 3", 11000},
+	{"Professional 1", 13000},
+    {"Professional 2", 15000},
+	{"Professional 3", 17000},
+	{"Veteran 1", 19000},
+    {"Veteran 2", 21000},
+	{"Veteran 3", 23000},
+	{"Expert 1", 25000},
+	{"Expert 2", 27000},
+    {"Expert 3", 29000},
+	{"Master", 31000},
 }
 
 local playerMeta = FindMetaTable("Player")

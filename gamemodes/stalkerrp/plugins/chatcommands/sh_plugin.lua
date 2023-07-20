@@ -138,3 +138,60 @@ ix.chat.Register("pm", {
 	filter = "pm",
 	deadCanChat = true
 })
+
+-- Set name without notifying server
+ix.command.Add("CharSetNameSilent", {
+	description = "Set a character name without notifying other players.",
+	adminOnly = true,
+	arguments = {
+		ix.type.character,
+		bit.bor(ix.type.text, ix.type.optional)
+	},
+	OnRun = function(self, client, target, newName)
+		-- display string request panel if no name was specified
+		if (newName:len() == 0) then
+			return client:RequestString("@chgName", "@chgNameDesc", function(text)
+				ix.command.Run(client, "CharSetName", {target:GetName(), text})
+			end, target:GetName())
+		end
+		target:SetName(newName:gsub("#", "#​"))
+	end
+})
+
+ix.command.Add("PlyTransferSilent", {
+	description = "Set a character's faction without notifying other players.",
+	adminOnly = true,
+	arguments = {
+		ix.type.character,
+		ix.type.text
+	},
+	OnRun = function(self, client, target, name)
+		local faction = ix.faction.teams[name]
+
+		if (!faction) then
+			for _, v in pairs(ix.faction.indices) do
+				if (ix.util.StringMatches(L(v.name, client), name)) then
+					faction = v
+
+					break
+				end
+			end
+		end
+
+		if (faction) then
+			local bHasWhitelist = target:GetPlayer():HasWhitelist(faction.index)
+			if (bHasWhitelist) then
+				target.vars.faction = faction.uniqueID
+				target:SetFaction(faction.index)
+
+				if (faction.OnTransferred) then
+					faction:OnTransferred(target)
+				end
+			else
+				return "@charNotWhitelisted", target:GetName(), L(faction.name, client)
+			end
+		else
+			return "@invalidFaction"
+		end
+	end
+})

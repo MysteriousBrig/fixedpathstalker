@@ -215,6 +215,10 @@ function ITEM:GetDescription()
 	if(customData.desc) then
 		str = customData.desc
 	end
+
+	if (customData.longdesc) then
+		str = str.. "\n\n" ..customData.longdesc 
+	end
 	
 	if atts then
 		for k,v in pairs(atts) do
