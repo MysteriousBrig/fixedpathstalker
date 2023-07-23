@@ -1,7 +1,7 @@
 ITEM.name = "Moody"
 ITEM.model = "models/spitball_medium.mdl"
 ITEM.description = "A vaguely orb-shaped glass artifact with a sickly yellow tint."
-ITEM.longdesc = "An unusual glassy orb with a notable yellow tint. Looking into the orb appears to amplify the emotions of those that stare into it, according to current mood."
+ITEM.longdesc = "An unusual glassy orb with a notable yellow tint. Simply carrying this little trinket without properly containing it within a Lead-Lined Container leads to very amplified emotions by its carrier, often resulting in unexplainable mood shifts and actions."
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 4000
