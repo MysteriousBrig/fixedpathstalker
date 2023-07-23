@@ -3,13 +3,33 @@ PLUGIN.name = "Reputation"
 PLUGIN.author = "Verne?"
 PLUGIN.desc = "Reputation System"
 
+ix.char.RegisterVar("SkillPoints", {
+    field = "skillpoints",
+    fieldType = ix.type.number,
+    default = 0,
+    isLocal = true,
+    bNoDisplay = true
+})
+
+
 PLUGIN.repDefs = {
-	{"Rookie", 0},
-	{"Experienced", 2000},
-	{"Professional", 15000},
-	{"Veteran", 60000},
-    {"Expert", 130000},
-	{"Master", 200000},
+	{"Tourist", 0},
+	{"Rookie 1", 1000},
+	{"Rookie 2", 4000},
+	{"Rookie 3", 9000},
+	{"Experienced 1", 16000},
+    {"Experienced 2", 25000},
+	{"Experienced 3", 36000},
+	{"Professional 1", 48000},
+    {"Professional 2", 62000},
+	{"Professional 3", 78000},
+	{"Veteran 1", 90000},
+    {"Veteran 2", 120000},
+	{"Veteran 3", 155000},
+	{"Expert 1", 180000},
+	{"Expert 2", 250000},
+    {"Expert 3", 300000},
+	{"Master", 400000},
 }
 
 local playerMeta = FindMetaTable("Player")
@@ -117,16 +137,29 @@ ix.command.Add("charaddreputation", {
 	},
 	OnRun = function(self, client, target, reputation)
 		local target = ix.util.FindPlayer(target)
+		local initiallevel = 0
+		local newlevel = 0
 		local reputation = tonumber(reputation)
+		
 
+		local oldrank = target:getCurrentRankName()
 		target:addReputation(reputation)
+		local newrank = target:getCurrentRankName()
 
+		
 		if client == target then
             client:Notify("You have added "..reputation.." to your reputation.")
         else
             client:Notify("You have added "..reputation.." to "..target:Name().."'s reputation.")
             target:Notify(client:Name().." has added "..reputation.." to your reputation.")
         end
+
+
+		if newrank != oldrank then 
+			target:Notify("You've reached the rank of " .. newrank .. " and gained 5 skillpoints!")
+			target:GetCharacter():SetSkillPoints(target:GetCharacter():GetSkillPoints() + 5)
+
+		end 
 	end
 })
 
@@ -185,3 +218,147 @@ ix.command.Add("charrepnameremove", {
         end
 	end
 }) 
+
+
+ix.command.Add("CharAddSkillpoints", {
+    description = "Add skill points to a character.",
+    adminOnly = true,
+    arguments = {
+    ix.type.character, 
+    ix.type.number},
+    OnRun = function(self, client, target, points)
+        local currentpoints = target:GetSkillPoints()
+        target:SetSkillPoints(currentpoints + points)
+        client:Notify(target:GetName() .. " now has " .. tostring(currentpoints + points .. " skill points."))
+    end
+})
+
+ix.command.Add("SpendSkillpoints", {
+    description = "Spend some of your skill points on your attributes.",
+    arguments = {
+    ix.type.string, 
+    ix.type.number},
+    OnRun = function(self, client, skill, pointstospend)
+        char = client:GetCharacter()
+        currentpoints = char:GetSkillPoints()
+        skill = string.upper(skill)
+
+        if (currentpoints == 0) then
+            client:Notify("You don't have any skillpoints to spend.")
+            return
+        end 
+
+        if (pointstospend < 0) then
+            client:Notify("Cannot spend a negative number of points.")
+            return
+        end 
+
+        if (currentpoints < pointstospend) then
+            client:Notify("You don't have enough skillpoints to upgrade your skill to that level.")
+            return
+        end 
+
+        if (skill == "STRENGTH") then
+            currentlevel = char:GetAttribute("strength")
+            if (currentlevel >= 50) then
+                client:Notify("That attribute is already at max level!")
+                return
+            end 
+            if (currentlevel + pointstospend > 50) then
+                client:Notify("You cannot raise an attribute above 50.")
+                return
+            end 
+            char:UpdateAttrib("strength", pointstospend)
+            char:SetSkillPoints(currentpoints - pointstospend)
+            client:Notify("Successfully upgraded Strength from " .. currentlevel .. " to " .. char:GetAttribute("strength") .. ".\n Skillpoints remaining: " .. char:GetSkillPoints())
+            return
+        end 
+
+        if (skill == "FORTITUDE") then
+            currentlevel = char:GetAttribute("fortitude")
+            if (currentlevel >= 50) then
+                client:Notify("That attribute is already at max level!")
+                return
+            end 
+            if (currentlevel + pointstospend > 50) then
+                client:Notify("You cannot raise an attribute above 50.")
+                return
+            end 
+            char:UpdateAttrib("fortitude", pointstospend)
+            char:SetSkillPoints(currentpoints - pointstospend)
+            client:Notify("Successfully upgraded Fortitude from " .. currentlevel .. " to " .. char:GetAttribute("fortitude") .. ".\n Skillpoints remaining: " .. char:GetSkillPoints())
+            return
+        end 
+
+        if (skill == "FORTUNE") then
+            currentlevel = char:GetAttribute("fortune")
+            if (currentlevel >= 50) then
+                client:Notify("That attribute is already at max level!")
+                return
+            end 
+            if (currentlevel + pointstospend > 50) then
+                client:Notify("You cannot raise an attribute above 50.")
+                return
+            end 
+            char:UpdateAttrib("fortune", pointstospend)
+            char:SetSkillPoints(currentpoints - pointstospend)
+            client:Notify("Successfully upgraded Fortune from " .. currentlevel .. " to " .. char:GetAttribute("fortune") .. ".\n Skillpoints remaining: " .. char:GetSkillPoints())
+            return
+        end 
+
+        if (skill == "REFLEX") then
+            currentlevel = char:GetAttribute("reflex")
+            if (currentlevel >= 50) then
+                client:Notify("That attribute is already at max level!")
+                return
+            end 
+            if (currentlevel + pointstospend > 50) then
+                client:Notify("You cannot raise an attribute above 50.")
+                return
+            end 
+            char:UpdateAttrib("reflex", pointstospend)
+            char:SetSkillPoints(currentpoints - pointstospend)
+            client:Notify("Successfully upgraded Reflex from " .. currentlevel .. " to " .. char:GetAttribute("reflex") .. ".\n Skillpoints remaining: " .. char:GetSkillPoints())
+            return
+        end 
+
+
+        if (skill == "OBSERVATION") then
+            currentlevel = char:GetAttribute("observation")
+            if (currentlevel >= 50) then
+                client:Notify("That attribute is already at max level!")
+                return
+            end 
+            if (currentlevel + pointstospend > 50) then
+                client:Notify("You cannot raise an attribute above 50.")
+                return
+            end 
+            char:UpdateAttrib("observation", pointstospend)
+            char:SetSkillPoints(currentpoints - pointstospend)
+            client:Notify("Successfully upgraded Observation from " .. currentlevel .. " to " .. char:GetScience() .. ".\n Skillpoints remaining: " .. char:GetSkillPoints())
+            return
+        end 
+
+        client:Notify("That attribute doesn't exist! Valid Options: Strength, Reflex, Observation, Fortune, Fortitude")
+        return
+
+    end
+})
+
+ix.command.Add("MyProgress", {
+	description = "View your current level, skill points, and progress.",
+	OnRun = function(self, client)
+		local str = ""
+        local char = client:GetCharacter()
+        local rep = client:getReputation()
+
+	
+	
+        
+        str = str .. "Rank: " .. client:getCurrentRankName() .. "\n"
+        str = str .. "Total Reputation: " .. client:getReputation()  .. "\n"
+        str = str .. "Skillpoints: " ..char:GetSkillPoints() .. " \n"
+        return str
+	end
+})
+
