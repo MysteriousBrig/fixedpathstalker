@@ -1,27 +1,33 @@
-ITEM.name = "Cash Stash"
-ITEM.description= "A bundle of rubles bound together with a rubber band."
-ITEM.longdesc = "You'll need to count it to see how much is bound together."
-ITEM.model = "models/illusion/eftcontainers/roubles.mdl"
-ITEM.width = 1
+ITEM.name = "Medium Armor Scraps"
+ITEM.description= "A piece salvaged from a medium armor suit."
+ITEM.longdesc = "A chunk from a more specialized anomaly or combat suit that can be salvaged by an Armor Tech for use in their own projects."
+ITEM.useflag = "6"
+ITEM.model = "models/kek1ch/armor_repair_pro.mdl"
+ITEM.width = 2
 ITEM.height = 1
 ITEM.category = "Kits"
 ITEM.itemsForcedDrop = {}
 ITEM.items[1] = {
-	dropAmount = 1, --How many times it will roll for drop
+	dropAmount = 3, --How many times it will roll for drop
 	dropRareChance = 30, --chances for the rarer drops
-	dropVeryRareChance = 15,
+	dropVeryRareChance = 20,
 	itemsCommon = {
-		{"bagrubles", {["quantity"] = 100}}, 
-		{"bagrubles", {["quantity"] = 200}},
-		{"bagrubles", {["quantity"] = 300}},
+		{"clothscrap"},
+		{"canvasscrap"},
+		{"kevlarscrap"},
+		{"rubberscrap"},
 	},
 	itemsRare = {
-		{"bagrubles", {["quantity"] = 500}}, 
-		{"bagrubles", {["quantity"] = 750}}, 
+		{"armorplatingscrap"},
+		{"fibreglasscrap"},
+		{"metalmesh"},
+		{"metalscrap"},
+		{"plexiglassscrap"},
+
 
 	},
 	itemsVeryRare = {
-		{"bagrubles", {["quantity"] = 1000}}, 
+		{"ceramicscrap"},
 	}
 
 
