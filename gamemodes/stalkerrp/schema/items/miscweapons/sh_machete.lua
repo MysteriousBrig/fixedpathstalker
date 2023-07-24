@@ -1,9 +1,9 @@
 ITEM.name = "Machete"
-ITEM.description = "One handed machete for cutting dense vegetation or tissue."
+ITEM.description = "One handed machete for cutting dense vegetation or tissue.\n\nAttacks:\n\n-Reflex based Slash attack, No Modifier, causes Moderate Bleeds.\n\n-Strength based Chop attack, -10 Strength, causes Heavy Bleeds, deals extra damage."
 ITEM.model = "models/weapons/tfa_nmrih/w_me_machete.mdl"
 ITEM.class = "tfa_nmrih_machete"
 ITEM.weaponCategory = "melee"
-ITEM.price = 1500
+ITEM.price = 2000
 ITEM.flag = "1"
 ITEM.height = 2
 ITEM.width = 1
@@ -14,7 +14,7 @@ ITEM.weight = 3
 ITEM.modifier = 5
 ITEM.isPLWeapon = true
 ITEM.Dmg = "1d10+2"
-ITEM.Pen = 2
+ITEM.Pen = 1.2
 ITEM.Special = "UnBal, Tool"
 
 

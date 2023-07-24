@@ -6,3 +6,4 @@ ITEM.flag = "1"
 ITEM.price = 350
 ITEM.width = 1
 ITEM.height = 1
+ITEM.weight = 0

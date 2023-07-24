@@ -1,5 +1,5 @@
 ITEM.name = "Sledgehammer"
-ITEM.description = "A heavy tool for demolition of structures or faces."
+ITEM.description = "A heavy tool for demolition of structures or faces.\n\nAttacks:\n\n-Strength based Bash attack, -10 Strength.\n\n-Strength based Overhead-Slam, -20 Strength, deals massive amounts of damage."
 ITEM.model = "models/weapons/tfa_nmrih/w_me_sledge.mdl"
 ITEM.class = "tfa_nmrih_sledge"
 ITEM.weaponCategory = "melee"
@@ -10,7 +10,7 @@ ITEM.width = 1
 ITEM.category = "Tools"
 ITEM.canAttach = false
 ITEM.repairCost = ITEM.price/100*1
-ITEM.weight = 3
+ITEM.weight = 10
 ITEM.modifier = 5
 ITEM.isPLWeapon = true
 ITEM.Dmg = "1d10+2"
