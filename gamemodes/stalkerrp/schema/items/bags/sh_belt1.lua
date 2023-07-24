@@ -1,5 +1,6 @@
 ITEM.name = "Utility Belt"
 ITEM.description = "A workman's belt for carrying tools, usually used by rookies however to keep vital supplies close at hand."
+ITEM.carryweight = 2
 ITEM.width = 3
 ITEM.height = 1
 ITEM.invWidth = 4

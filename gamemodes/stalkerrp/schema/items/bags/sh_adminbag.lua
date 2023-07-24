@@ -1,5 +1,6 @@
 ITEM.name = "Admin Backpack"
 ITEM.description = "A bag with absurd carrying space meant for admin / debug use."
+ITEM.carryweight = 99
 ITEM.width = 2
 ITEM.height = 2
 ITEM.invWidth = 15

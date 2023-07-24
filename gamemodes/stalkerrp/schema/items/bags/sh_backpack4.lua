@@ -1,5 +1,6 @@
 ITEM.name = "Zone Survival Backpack"
 ITEM.description = "A backpack. Featuring large compartments for storage of items, as well as being very comfortable."
+ITEM.carryweight = 6
 ITEM.width = 2
 ITEM.height = 2
 ITEM.invWidth = 5

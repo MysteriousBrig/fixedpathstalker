@@ -84,6 +84,12 @@ ITEM.functions.Equip = {
 		item:SetData("equip", true)
 		item.player:AddPart(item.uniqueID, item)
 
+
+		if item.carryweight then
+			local currentweight = item.player:GetData("carry", 0)
+			item.player:SetData("carry", currnetweight + item.carryweight) 
+		end 
+
 		if (item.attribBoosts) then
 			for k, v in pairs(item.attribBoosts) do
 				char:AddBoost(item.uniqueID, k, v)
@@ -107,6 +113,8 @@ ITEM.functions.EquipUn = { -- sorry, for name order.
 	icon = "icon16/stalker/unequip.png",
 	OnRun = function(item)
 		item:RemovePart(item.player)
+
+
 
 		return false
 	end,
@@ -183,8 +191,13 @@ function ITEM:GetDescription()
 		str = customData.desc
 	end
 
+	
+	if item.carryweight then
+		str = str .. "\n\n Carryweight Bonus: " ..item.carryweight.. "kg" 
+	end 
+
 	if (self.entity) then
-		return (self.description .. "\n \nDurability: " .. math.floor(self:GetData("durability", 100)) .. "%")
+		return (self.description)
 	else
         return (str)
 	end
@@ -318,6 +331,11 @@ function ITEM:RemovePart(client)
 			char:RemoveBoost(self.uniqueID, k)
 		end
 	end
+
+	if item.carryweight then
+		local currentweight = item.player:GetData("carry", 0)
+		item.player:SetData("carry", currnetweight - item.carryweight) 
+	end 
 
 	self:OnUnequipped()
 end
