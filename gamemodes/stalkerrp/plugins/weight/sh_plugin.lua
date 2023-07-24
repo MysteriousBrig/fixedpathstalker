@@ -9,7 +9,7 @@ ix.config.Add("maxWeight", 25, "The maximum weight in Kilograms someone can carr
 	category = "Weight"
 })
 
-ix.config.Add("maxOverWeight", 5, "The maximum amount of weight in Kilograms they can go over their weight limit, this should be less than maxWeight to prevent issues.", nil, {
+ix.config.Add("maxOverWeight", 2, "The maximum amount of weight in Kilograms they can go over their weight limit, this should be less than maxWeight to prevent issues.", nil, {
 	data = {min = 1, max = 100},
 	category = "Weight"
 })
