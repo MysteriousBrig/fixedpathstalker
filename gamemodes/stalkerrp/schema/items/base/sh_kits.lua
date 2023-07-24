@@ -204,7 +204,7 @@ ITEM.functions.Open = {
     OnCanRun = function(item)
 
 		if item.useflag then
-			return item.player:GetCharacter():HasFlags(item.useflag) and !isValid(item.entity)
+			return item.player:GetCharacter():HasFlags(item.useflag) and !IsValid(item.entity)
 		else
         	return !IsValid(item.entity)
 		end 
