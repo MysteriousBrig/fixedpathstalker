@@ -1,7 +1,7 @@
 ITEM.name = "Droplet"
 ITEM.model = "models/nasca/etherealsrp_artifacts/droplet.mdl"
 ITEM.description = "Looks like tears."
-ITEM.longdesc = "This artifact forms in thermal anomalies under very high temperatures. Its body is made of a compound with a glassy surface covered in cracks, formed into the shape of a tear. It neutralizes radiation absorbed by the wearer.\n\n-+1 Rad\n- -10 Fortitude"
+ITEM.longdesc = "This artifact forms in thermal anomalies under very high temperatures. Its body is made of a compound with a glassy surface covered in cracks, formed into the shape of a tear. It neutralizes radiation absorbed by the wearer.\n\n-+1 Rad\n-20 Fortitude"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 6200
@@ -19,5 +19,5 @@ ITEM.res = {
 	["Psi"] = 0.00,
 }
 ITEM.buffs = {
-	["fortitude"] = -10,
+	["fortitude"] = -20,
 }
