@@ -5,14 +5,13 @@ ITEM.description = "A set of TB-3 Armor worn among tyrants."
 ITEM.longdesc = "These suits were for the longest time effectively a joke among the Bandits, not for lack of potential but for the simple fact that no gang leader, however powerful, could ever maintain a suit of TB-3 armor long enough to use it effectively, exoskeleton or otherwise. After the breakdown of the Alliance Wars however, numerous sets of TB-3 armor began to float into the hands of the Zone's most powerful and dangerous miscreants. \n\nBallistic Protection:\nSkull: III+\nNeck & Face: II\nTorso: IV\nLimbs: III\nWeight: 5"
 ITEM.width = 2
 ITEM.height = 4
-ITEM.price = 295000
+ITEM.price = 150000
 ITEM.flag = "A"
 ITEM.br = 0.6
 ITEM.fbr = 11
 ITEM.ar = 0.2
 ITEM.far = 3
 ITEM.isGasmask = true
-ITEM.isHelmet = true
 ITEM.isArmor = true
 ITEM.overlayPath = "vgui/overlays/hud_merc"
 ITEM.img = Material("vgui/hud/xm40.png")
@@ -33,5 +32,5 @@ ITEM.res = {
 
 ITEM.newSkin = 0
 ITEM.bodyGroups = {
-	["Servomotors"] = 1,
+	["Servomotors"] = 0,
 }

@@ -4,7 +4,7 @@ ITEM.description = "Spikey artifact, but quite small."
 ITEM.longdesc = "Draws out radiation through the use of pricking the user’s skin, no matter if armor is worn or not. When worn will cause bleeding.\n\nRads -2\nBleeding +1"
 ITEM.width = 1
 ITEM.height = 1
-ITEM.price = 1000
+ITEM.price = 2400
 ITEM.flag = "A"
 ITEM.isArtefact = true
 ITEM.weight = 0.3
@@ -15,6 +15,6 @@ ITEM.res = {
 	["Shock"] = 0.00,
 	["Burn"] = 0.00,
 	["Radiation"] = 0.20,
-	["Chemical"] = 0.00,
+	["Chemical"] = 0.10,
 	["Psi"] = 0.00,
 }
