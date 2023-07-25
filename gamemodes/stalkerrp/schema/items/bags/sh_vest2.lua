@@ -8,7 +8,7 @@ ITEM.invHeight = 4
 ITEM.flag = "1"
 ITEM.price = 6000
 ITEM.model = "models/stalker/outfit/bandit2.mdl"
-ITEM.outfitCategory = "vest"
+ITEM.weaponCategory = "vest"
 ITEM.exRender = true
 --[[  {
 	pos = Vector(0, 0, 200),

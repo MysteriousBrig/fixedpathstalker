@@ -12,7 +12,7 @@ ITEM.height = 2
 ITEM.invWidth = 4
 ITEM.invHeight = 2
 ITEM.isBag = true
-ITEM.outfitCategory = "backpack"
+ITEM.weaponCategory = "backpack"
 ITEM.pacData = {}
 ITEM.equipIcon = Material("materials/vgui/ui/stalker/misc/equip.png")
 ITEM.functions.View = {
@@ -72,7 +72,7 @@ ITEM.functions.Equip = {
 				local itemTable = ix.item.instances[v.id]
 				
 				if itemTable then
-					if (v.outfitCategory == item.outfitCategory and itemTable:GetData("equip")) then
+					if (v.weaponCategory == item.weaponCategory and itemTable:GetData("equip")) then
 						item.player:Notify("You're already equipping this kind of outfit")
 
 						return false
