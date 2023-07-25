@@ -1,11 +1,11 @@
 ITEM.name = "Geiger Counter"
-ITEM.model = "models/props_c17/consolebox03a.mdl"
+ITEM.model = "models/illusion/eftcontainers/geigercounter.mdl"
 ITEM.description = "A measuring device to check radiation levels."
 ITEM.longdesc = "Often used by more well-prepared adventurers to check not only the radiation in the air, but their own rad count to measure exposure time and risk."
 ITEM.width = 1
 ITEM.height = 1
 ITEM.category = "Electronics"
-ITEM.price = 1000
+ITEM.price = 2500
 ITEM.flag = "1"
 
 ITEM.functions.Use = {

@@ -7,5 +7,5 @@ ITEM.height = 1
 ITEM.price = 25000
 ITEM.flag = "1"
 ITEM.value = ITEM.price*1*1
-ITEM.weight = 20
+ITEM.weight = 8
 ITEM.quantity = 1
