@@ -175,6 +175,11 @@ ITEM.functions.Value = {
 
 ITEM:Hook("drop", function(item)
 	if (item:GetData("equip")) then
+		char = item.player:GetCharacter()
+		if item.carryweight then
+			local currentweight = char:GetData("weightBonus", 0)
+			char:SetData("weightBonus", currentweight - item.carryweight) 
+		end 
 		item:RemovePart(item.player)
 	end
 end)
