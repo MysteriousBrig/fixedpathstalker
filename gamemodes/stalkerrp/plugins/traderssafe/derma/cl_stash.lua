@@ -75,10 +75,7 @@ local PANEL = {}
 		end
 
 		for k, _ in pairs(LocalPlayer():GetCharacter():getStash()) do
-			local item = ix.item.instances[k]
-			PrintTable(ix.item.instances)
-			PrintTable(LocalPlayer():GetCharacter():getStash())
-			
+			local item = ix.item.instances[k]			
 			self.stash:addItem(item.uniqueID, item)
 		end
 	end
