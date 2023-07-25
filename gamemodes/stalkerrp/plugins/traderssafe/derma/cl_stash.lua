@@ -58,7 +58,7 @@ local PANEL = {}
 
 	function PANEL:setStash()		
 		self.stash.title.Think = function()
-			self.stash.title:SetText(L("Trader's Stash", 0, 50).." ("..LocalPlayer():GetCharacter():getNumStash().."/"..LocalPlayer():GetCharacter():getMaxStash()..")")
+			self.stash.title:SetText(L("Personal Stash", 0, 50).." ("..LocalPlayer():GetCharacter():getNumStash().."/"..LocalPlayer():GetCharacter():getMaxStash()..")")
 		end
 		self.stash.items:Clear()
 		self.inv.items:Clear()
@@ -75,10 +75,7 @@ local PANEL = {}
 		end
 
 		for k, _ in pairs(LocalPlayer():GetCharacter():getStash()) do
-			local item = ix.item.instances[k]
-			PrintTable(ix.item.instances)
-			PrintTable(LocalPlayer():GetCharacter():getStash())
-			
+			local item = ix.item.instances[k]			
 			self.stash:addItem(item.uniqueID, item)
 		end
 	end
