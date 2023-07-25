@@ -33,12 +33,15 @@ else
 	function ENT:onShouldDrawEntityInfo()
 		return true
 	end
-
-	function ENT:onDrawEntityInfo(alpha)
-		local position = self:LocalToWorld(self:OBBCenter()):ToScreen()
-		local x, y = position.x, position.y
-
-		ix.util.DrawText(L"Safe", x, y, ColorAlpha(ix.config.Get("color"), alpha), 1, 1, nil, alpha * 0.65)
-		ix.util.DrawText(L"OOC safe used by admins", x, y + 16, ColorAlpha(color_white, alpha), 1, 1, "ixSmallFont", alpha * 0.65)
+	if (CLIENT) then
+		function ENT:OnPopulateEntityInfo(tooltip)
+			surface.SetFont("ixIconsSmall")
+		
+			local title = tooltip:AddRow("name")
+			title:SetImportant()
+			title:SetText("Personal Stash")
+			title:SetBackgroundColor(ix.config.Get("color"))
+			title:SizeToContents()    
+		end
 	end
 end
