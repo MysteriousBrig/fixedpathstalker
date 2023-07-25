@@ -86,8 +86,8 @@ ITEM.functions.Equip = {
 
 
 		if item.carryweight then
-			local currentweight = item.player:GetData("carry", 0)
-			item.player:SetData("carry", currnetweight + item.carryweight) 
+			local currentweight = char:GetData("weightBonus", 0)
+			char:SetData("weightBonus", currentweight + item.carryweight) 
 		end 
 
 		if (item.attribBoosts) then
@@ -193,7 +193,7 @@ function ITEM:GetDescription()
 
 	
 	if self.carryweight then
-		str = str .. "\n\n Carryweight Bonus: " ..item.carryweight.. "kg" 
+		str = str .. "\n\n Carryweight Bonus: " ..self.carryweight.. "kg" 
 	end 
 
 	if (self.entity) then
@@ -333,8 +333,8 @@ function ITEM:RemovePart(client)
 	end
 
 	if item.carryweight then
-		local currentweight = item.player:GetData("carry", 0)
-		item.player:SetData("carry", currnetweight - item.carryweight) 
+		local currentweight = char:GetData("weightBonus", 0)
+		char:SetData("weightBonus", currentweight - item.carryweight) 
 	end 
 
 	self:OnUnequipped()

@@ -296,14 +296,14 @@ ix.command.Add("CharSetRadImmune", {
 })
 
 
-ix.command.Add("CharGetRadiation", {
+ix.command.Add("CharCheckRadiation", {
 	description = "Get character's current rad level.",
 	adminOnly = true,
 	arguments = {
 		ix.type.character,
 	},
 	OnRun = function(self, client, target)
-		return target .. " has " .. target:GetRads() .. " rads."
+		return target .. " has " .. target:GetCharacter():GetRads() .. " rads."
 
 	end
 })
