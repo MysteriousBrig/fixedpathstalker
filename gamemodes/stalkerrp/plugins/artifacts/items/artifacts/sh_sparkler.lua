@@ -1,7 +1,7 @@
 ITEM.name = "Sparkler"
 ITEM.model ="models/nasca/etherealsrp_artifacts/sparkler.mdl"
 ITEM.description = "Silky in appearance. Artifact."
-ITEM.longdesc = "One of the most common artifacts with electrostatic properties, this artifact is nonetheless valued by scientists. It has the ability to smooth fluctuations in electric field density.\n\n-2 Electric\n+5 Fortitude"
+ITEM.longdesc = "One of the most common artifacts with electrostatic properties, this artifact is nonetheless valued by scientists. It has the ability to smooth fluctuations in electric field density.\n\n-2 Electric\n+10 Fortitude"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 5300
@@ -19,5 +19,5 @@ ITEM.res = {
 }
 ITEM.weight = 0.75
 ITEM.buffs = {
-	["fortitude"] = 5,
+	["fortitude"] = 10,
 }

@@ -1,9 +1,9 @@
 ITEM.name = "Flashlight"
-ITEM.description = "A crowbar for prying open objects."
+ITEM.description = "A long, handheld flashlight. Useful for illuminating dark areas."
 ITEM.model = "models/hgn/srp/items/flashlight.mdl"
 ITEM.class = "weapon_flashlight"
 ITEM.weaponCategory = "tertiary"
-ITEM.price = 1000
+ITEM.price = 500
 ITEM.flag = "1"
 ITEM.height = 1
 ITEM.width = 2
