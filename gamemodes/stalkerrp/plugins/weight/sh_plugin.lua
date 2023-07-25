@@ -105,7 +105,7 @@ if (CLIENT) then
 				local character = LocalPlayer():GetCharacter()
 				local carry = character:GetData("carry", 0) + math.Clamp((character:GetAttribute("strength", 0) * StrhMulti), 0, 60 )
 				local color = ix.config.Get("color")
-				local maxWeight = ix.config.Get("maxWeight", 30) + math.Clamp((character:GetAttribute("strength", 0) * StrhMulti), 0, 60 )
+				local maxWeight = ix.config.Get("maxWeight", 30) + character:GetData("weightBonus", 0) + math.Clamp((character:GetAttribute("strength", 0) * StrhMulti), 0, 60 )
 
 				local w, h = panel:GetSize()
 
