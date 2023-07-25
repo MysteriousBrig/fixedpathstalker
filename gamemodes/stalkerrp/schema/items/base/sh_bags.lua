@@ -12,7 +12,7 @@ ITEM.height = 2
 ITEM.invWidth = 4
 ITEM.invHeight = 2
 ITEM.isBag = true
-ITEM.outfitCategory = "backpack"
+ITEM.weaponCategory = "backpack"
 ITEM.pacData = {}
 ITEM.equipIcon = Material("materials/vgui/ui/stalker/misc/equip.png")
 ITEM.functions.View = {
@@ -72,7 +72,7 @@ ITEM.functions.Equip = {
 				local itemTable = ix.item.instances[v.id]
 				
 				if itemTable then
-					if (itemTable.pacData and v.outfitCategory == item.outfitCategory and itemTable:GetData("equip")) then
+					if (v.weaponCategory == item.weaponCategory and itemTable:GetData("equip")) then
 						item.player:Notify("You're already equipping this kind of outfit")
 
 						return false
@@ -83,6 +83,12 @@ ITEM.functions.Equip = {
 
 		item:SetData("equip", true)
 		item.player:AddPart(item.uniqueID, item)
+
+
+		if item.carryweight then
+			local currentweight = char:GetData("weightBonus", 0)
+			char:SetData("weightBonus", currentweight + item.carryweight) 
+		end 
 
 		if (item.attribBoosts) then
 			for k, v in pairs(item.attribBoosts) do
@@ -107,6 +113,8 @@ ITEM.functions.EquipUn = { -- sorry, for name order.
 	icon = "icon16/stalker/unequip.png",
 	OnRun = function(item)
 		item:RemovePart(item.player)
+
+
 
 		return false
 	end,
@@ -167,6 +175,11 @@ ITEM.functions.Value = {
 
 ITEM:Hook("drop", function(item)
 	if (item:GetData("equip")) then
+		char = item.player:GetCharacter()
+		if item.carryweight then
+			local currentweight = char:GetData("weightBonus", 0)
+			char:SetData("weightBonus", currentweight - item.carryweight) 
+		end 
 		item:RemovePart(item.player)
 	end
 end)
@@ -183,8 +196,13 @@ function ITEM:GetDescription()
 		str = customData.desc
 	end
 
+	
+	if self.carryweight then
+		str = str .. "\n\n Carryweight Bonus: " ..self.carryweight.. "kg" 
+	end 
+
 	if (self.entity) then
-		return (self.description .. "\n \nDurability: " .. math.floor(self:GetData("durability", 100)) .. "%")
+		return (self.description)
 	else
         return (str)
 	end
@@ -318,6 +336,11 @@ function ITEM:RemovePart(client)
 			char:RemoveBoost(self.uniqueID, k)
 		end
 	end
+
+	if item.carryweight then
+		local currentweight = char:GetData("weightBonus", 0)
+		char:SetData("weightBonus", currentweight - item.carryweight) 
+	end 
 
 	self:OnUnequipped()
 end

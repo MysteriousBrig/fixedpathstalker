@@ -1,5 +1,6 @@
 ITEM.name = "Loot Belt"
 ITEM.description = "A zone-made belt with several slots stitched on. Favored by stalkers and bandits for carrying extra loot or magazines."
+ITEM.carryweight = 4
 ITEM.width = 3
 ITEM.height = 1
 ITEM.invWidth = 6

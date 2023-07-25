@@ -1,5 +1,6 @@
 ITEM.name = "Tactical Belt"
 ITEM.description = "A professionally made tactical belt, a must for any would-be operators. Keeps plenty of ammo, grenades, or whatever else you need."
+ITEM.carryweight = 6
 ITEM.width = 3
 ITEM.height = 1
 ITEM.invWidth = 8

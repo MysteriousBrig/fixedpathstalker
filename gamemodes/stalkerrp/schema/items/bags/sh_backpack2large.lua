@@ -1,5 +1,6 @@
 ITEM.name = "Large Modern Military Backpack (USA)"
 ITEM.description = "A large backpack. Features compartments for easy storage of your valuables."
+ITEM.carryweight = 8
 ITEM.width = 2
 ITEM.height = 2
 ITEM.invWidth = 5
