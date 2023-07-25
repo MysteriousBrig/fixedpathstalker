@@ -192,7 +192,7 @@ function ITEM:GetDescription()
 	end
 
 	
-	if item.carryweight then
+	if self.carryweight then
 		str = str .. "\n\n Carryweight Bonus: " ..item.carryweight.. "kg" 
 	end 
 
