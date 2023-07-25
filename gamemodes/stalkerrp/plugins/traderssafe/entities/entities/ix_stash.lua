@@ -8,7 +8,7 @@ ENT.RenderGroup 		= RENDERGROUP_BOTH
 
 if (SERVER) then
 	function ENT:Initialize()
-		self:SetModel("models/kek1ch/dev_rukzak.mdl")
+		self:SetModel("models/hgn/srp/items/backpack-1.mdl")
 		self:PhysicsInit(SOLID_VPHYSICS)
 		self:SetMoveType(MOVETYPE_VPHYSICS)
 		self:SetUseType(SIMPLE_USE)

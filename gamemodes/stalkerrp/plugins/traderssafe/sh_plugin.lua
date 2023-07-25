@@ -53,7 +53,7 @@ if (SERVER) then
 		local savedTable = self:GetData() or {}
 
 		for k, v in ipairs(savedTable) do
-			local stash = ents.Create("nut_stash")
+			local stash = ents.Create("ix_stash")
 			stash:SetPos(v.pos)
 			stash:SetAngles(v.ang)
 			stash:Spawn()
@@ -71,7 +71,7 @@ if (SERVER) then
 		local savedTable = {}
 
 		for k, v in ipairs(ents.GetAll()) do
-			if (v:GetClass() == "nut_stash") then
+			if (v:GetClass() == "ix_stash") then
 				table.insert(savedTable, {pos = v:GetPos(), ang = v:GetAngles()})
 			end
 		end

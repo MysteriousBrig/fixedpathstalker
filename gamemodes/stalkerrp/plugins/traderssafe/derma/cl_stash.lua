@@ -58,7 +58,7 @@ local PANEL = {}
 
 	function PANEL:setStash()		
 		self.stash.title.Think = function()
-			self.stash.title:SetText(L("Trader's Stash", 0, 50).." ("..LocalPlayer():GetCharacter():getNumStash().."/"..LocalPlayer():GetCharacter():getMaxStash()..")")
+			self.stash.title:SetText(L("Personal Stash", 0, 50).." ("..LocalPlayer():GetCharacter():getNumStash().."/"..LocalPlayer():GetCharacter():getMaxStash()..")")
 		end
 		self.stash.items:Clear()
 		self.inv.items:Clear()
