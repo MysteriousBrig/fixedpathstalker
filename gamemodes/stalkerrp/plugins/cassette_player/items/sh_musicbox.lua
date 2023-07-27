@@ -3,11 +3,6 @@ ITEM.description = "A music box that plays a collection of songs."
 ITEM.model = "models/mosi/fallout4/props/junk/bobbypinbox.mdl"
 ITEM.width = 1
 ITEM.height = 1
-ITEM.iconCam = {
-	pos = Vector(73, 2.9500000476837, 200),
-	ang = Angle(110.06369781494, 2.2929935455322, 4.5859870910645),
-	fov = 2.17
-}
 ITEM.exRender = true
 ITEM.price = 1000
 ITEM.weight = 1.12
