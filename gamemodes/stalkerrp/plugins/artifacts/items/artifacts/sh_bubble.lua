@@ -1,7 +1,7 @@
 ITEM.name = "Bubble"
 ITEM.model ="models/nasca/etherealsrp_artifacts/bubble.mdl"
 ITEM.description = "A green artifact."
-ITEM.longdesc = "A compound composed of several hollow organic formations, this artifact emits a gaseous suvstance that is harmless to the body, but neutralizes radioactive particles within. It is highly effective, making it incredibly valuable to stalkers.\n\nRads +4"
+ITEM.longdesc = "A compound composed of several hollow organic formations, this artifact emits a gaseous suvstance that is harmless to the body, but neutralizes radioactive particles within. It is highly effective, making it incredibly valuable to stalkers.\n\n+4 Radiation Protection"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 175000

@@ -1,7 +1,7 @@
 ITEM.name = "Wrenched"
 ITEM.model ="models/nasca/etherealsrp_artifacts/wrenched.mdl"
 ITEM.description = "Bizarre, whalelike artifact."
-ITEM.longdesc = "A strangely shaped artifact resulting from gravitational anomalies, this artifact acts as a sponge absorbing radioactive particles both from the environment and the body of its user.\n\nRads -3\n-1 Impact"
+ITEM.longdesc = "A strangely shaped artifact resulting from gravitational anomalies, this artifact acts as a sponge absorbing radioactive particles both from the environment and the body of its user.\n\n+3 Radiation Protection\n-1 Impact"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 39000
