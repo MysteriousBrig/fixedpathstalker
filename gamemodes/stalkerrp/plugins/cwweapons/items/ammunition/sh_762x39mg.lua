@@ -9,5 +9,5 @@ ITEM.longdesc = "7.62x39 Full Metal Jacket is one the most commonly used types o
 ITEM.price = 2025
 ITEM.img = Material("vgui/hud/762x39.png")
 ITEM.flag = "A"
-ITEM.weight = 0.025
+ITEM.weight = 1.7
 ITEM.isAmmo = true

@@ -8,5 +8,5 @@ ITEM.flag = "1"
 ITEM.price = 600
 ITEM.width = 1
 ITEM.height = 1
-ITEM.weight = 0.23
+ITEM.weight = 0.5
 ITEM.isAmmo = true

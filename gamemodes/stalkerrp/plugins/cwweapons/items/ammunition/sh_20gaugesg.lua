@@ -12,5 +12,5 @@ ITEM.img = Material("vgui/hud/12gaugesg.png")
 ITEM.Range = 20
 ITEM.Dmg = 1
 ITEM.Pen = 5
-ITEM.weight = 0.05
+ITEM.weight = 0.5
 ITEM.isAmmo = true

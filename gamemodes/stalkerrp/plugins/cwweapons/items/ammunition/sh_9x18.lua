@@ -7,5 +7,5 @@ ITEM.longdesc = "This 9x18mm round contains full metal jacket rounds with a stee
 ITEM.price = 200
 ITEM.flag = "1"
 ITEM.img = Material("vgui/hud/9x18.png")
-ITEM.weight = 0.016
+ITEM.weight = 0.16
 ITEM.isAmmo = true
