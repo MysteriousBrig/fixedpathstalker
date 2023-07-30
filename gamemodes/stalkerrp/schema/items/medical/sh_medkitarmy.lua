@@ -7,10 +7,10 @@ ITEM.height = 1
 ITEM.category = "Medical"
 ITEM.restore = 4
 ITEM.sound = "stalkersound/inv_bandage.mp3"
-ITEM.price = "5000"
+ITEM.price = "650"
 ITEM.flag = "1"
 ITEM.quantity = 3
-ITEM.weight = 0.3
+ITEM.weight = 0.5
 ITEM.stopsBleed = true
 
 local function stopBleed(item)

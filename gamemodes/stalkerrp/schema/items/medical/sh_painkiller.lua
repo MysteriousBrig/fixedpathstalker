@@ -7,10 +7,10 @@ ITEM.width = 1
 ITEM.height = 1
 ITEM.category = "Medical"
 ITEM.sound = "stalker/interface/inv_eat_pills_effect.ogg"
-ITEM.price = "1100"
+ITEM.price = "200"
 ITEM.flag = "1"
-ITEM.quantity = 4
-ITEM.weight = 0.01
+ITEM.quantity = 3
+ITEM.weight = 0.1
 
 function ITEM:GetDescription()
 	if (!self.entity or !IsValid(self.entity)) then
