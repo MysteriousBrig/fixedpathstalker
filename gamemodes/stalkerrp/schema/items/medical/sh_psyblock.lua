@@ -1,8 +1,8 @@
 ITEM.name = "Psi-Block"
 ITEM.model = "models/stalker/item/medical/psy_pills.mdl"
-ITEM.description = "Drug designed to protect the body from nervous overload by means of strong emotions or psy-attacks. +1 Psy protection tier (max total 2) for 1 hour. Makes user sluggish (+1 second staggered/stunned) for the duration."
+ITEM.description = "Drug designed to protect the body from nervous overload by means of strong emotions or psy-attacks. Makes the user incredibly sluggish and slow-thinking."
 ITEM.category = "Medical"
-ITEM.price = 6000
+ITEM.price = 2500
 ITEM.flag = "1"
 
 ITEM.functions.Use = {

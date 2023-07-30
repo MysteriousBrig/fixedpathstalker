@@ -1,7 +1,7 @@
 ITEM.name = "Jellyfish"
 ITEM.model = "models/nasca/etherealsrp_artifacts/jellyfish.mdl"
 ITEM.description = "Cone artifact. Brown in appearance."
-ITEM.longdesc = "This gravitational artifact attracts and absorbs radioactive particles, reducing the effects of radiation on the body. It is very common in the Zone and is unofficially used outside the Zone for treating acute radiation sickness in exceptional circumstances.\n\n+1 Rads\n-1 Impact"
+ITEM.longdesc = "This gravitational artifact attracts and absorbs radioactive particles, reducing the effects of radiation on the body. It is very common in the Zone and is unofficially used outside the Zone for treating acute radiation sickness in exceptional circumstances.\n\n+1 Radiation Protection\n-1 Impact"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 6000

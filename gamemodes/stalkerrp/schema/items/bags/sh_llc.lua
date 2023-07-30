@@ -6,6 +6,7 @@ ITEM.flag = "1"
 ITEM.price = 2500
 ITEM.width = 1
 ITEM.height = 2
+ITEM.weight = 5
 ITEM.invWidth = 1
 ITEM.invHeight = 1
 ITEM.isBaggable = true

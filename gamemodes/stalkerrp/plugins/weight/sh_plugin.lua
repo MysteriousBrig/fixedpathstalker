@@ -34,7 +34,7 @@ function ix.weight.WeightString(weight, imperial)
 	end
 end
 
-local StrhMulti = 0.8 -- multiplier goes from 0.1 to 1
+local StrhMulti = 0.6 -- multiplier goes from 0.1 to 1
 
 function ix.weight.CanCarry(weight, carry) -- Calculate if you are able to carry something.
 	local max = ix.config.Get("maxWeight", 30) + ix.config.Get("maxOverWeight", 5)

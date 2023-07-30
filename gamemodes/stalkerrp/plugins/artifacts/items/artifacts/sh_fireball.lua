@@ -1,7 +1,7 @@
 ITEM.name = "Fireball"
 ITEM.model ="models/nasca/etherealsrp_artifacts/fireball.mdl"
 ITEM.description = "A ball of fire. Artifact."
-ITEM.longdesc = "A crystal-like artifact formed in thermal anomalies, this artifact maintains a temperature of 75 degrees Fahrenheit at all times within a small radius, seemingly regardless of surrounding factors. It does not burn the user, though it does emit radiation.\n\n+2 Rad\n-2 Thermal."
+ITEM.longdesc = "A crystal-like artifact formed in thermal anomalies, this artifact maintains a temperature of 75 degrees Fahrenheit at all times within a small radius, seemingly regardless of surrounding factors. It does not burn the user, though it does emit radiation.\n\n+2 Radiation Protection\n-2 Thermal."
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 12000

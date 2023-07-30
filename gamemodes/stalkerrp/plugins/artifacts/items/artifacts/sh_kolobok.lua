@@ -1,7 +1,7 @@
 ITEM.name = "Kolobok"
 ITEM.model = "models/nasca/etherealsrp_artifacts/kolobok.mdl"
 ITEM.description = "Very spikey artifact."
-ITEM.longdesc = "Rarely forming in anomalous areas contaminated by chemicals, this artifact is able to heal many wounds in a matter of minutes. It is rumored that this artifact interacts with the genetic code of the user, though how and what it does in this capacity is undetermined.\n\nRads T3 Rad\nDecreases wound state per round, -20 Reflex when healing."
+ITEM.longdesc = "Rarely forming in anomalous areas contaminated by chemicals, this artifact is able to heal many wounds in a matter of minutes. It is rumored that this artifact interacts with the genetic code of the user, though how and what it does in this capacity is undetermined.\n\n-T3 Rad\n-Decreases wound state per round, -20 Reflex when healing."
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 100000

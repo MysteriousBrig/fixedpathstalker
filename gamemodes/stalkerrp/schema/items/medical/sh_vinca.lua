@@ -6,10 +6,10 @@ ITEM.width = 1
 ITEM.height = 1
 ITEM.category = "Medical"
 ITEM.sound = "stalker/interface/inv_eat_pills_effect.ogg"
-ITEM.price = "2000"
+ITEM.price = "600"
 ITEM.flag = "1"
-ITEM.quantity = 4
-ITEM.weight = 0.01
+ITEM.quantity = 3
+ITEM.weight = 0.2
 ITEM.stopsBleed = true
 
 function ITEM:GetDescription()
