@@ -145,7 +145,7 @@ function PLUGIN:EntityTakeDamage(target, dmginfo)
 				--damages durability for all equipped res items
 				for k, v in pairs(resItems) do
 					local curDura = v:GetData("durability", 100)
-					local duraDamage = (dmg/10)
+					local duraDamage = 0 -- None of that, now
 					local newDura = math.Round(math.Clamp(curDura - duraDamage, 0, 100))
 					v:SetData("durability", newDura)
 				end

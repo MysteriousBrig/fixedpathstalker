@@ -15,21 +15,21 @@ ix.char.RegisterVar("SkillPoints", {
 PLUGIN.repDefs = {
 	{"Tourist", 0},
 	{"Rookie 1", 1000},
-	{"Rookie 2", 4000},
-	{"Rookie 3", 9000},
-	{"Experienced 1", 16000},
-    {"Experienced 2", 25000},
-	{"Experienced 3", 36000},
-	{"Professional 1", 48000},
-    {"Professional 2", 62000},
-	{"Professional 3", 78000},
-	{"Veteran 1", 90000},
-    {"Veteran 2", 120000},
-	{"Veteran 3", 155000},
-	{"Expert 1", 180000},
-	{"Expert 2", 250000},
-    {"Expert 3", 300000},
-	{"Master", 400000},
+	{"Rookie 2", 2000},
+	{"Rookie 3", 3000},
+	{"Experienced 1", 5000},
+    {"Experienced 2", 6500},
+	{"Experienced 3", 8000},
+	{"Professional 1", 11000},
+    {"Professional 2", 15000},
+	{"Professional 3", 20000},
+	{"Veteran 1", 26000},
+    {"Veteran 2", 32000},
+	{"Veteran 3", 40000},
+	{"Expert 1", 80000},
+	{"Expert 2", 125000},
+    {"Expert 3", 175000},
+	{"Master", 300000},
 }
 
 local playerMeta = FindMetaTable("Player")
@@ -335,7 +335,7 @@ ix.command.Add("SpendSkillpoints", {
             end 
             char:UpdateAttrib("observation", pointstospend)
             char:SetSkillPoints(currentpoints - pointstospend)
-            client:Notify("Successfully upgraded Observation from " .. currentlevel .. " to " .. char:GetScience() .. ".\n Skillpoints remaining: " .. char:GetSkillPoints())
+            client:Notify("Successfully upgraded Observation from " .. currentlevel .. " to " .. char:GetAttribute("observation") .. ".\n Skillpoints remaining: " .. char:GetSkillPoints())
             return
         end 
 
