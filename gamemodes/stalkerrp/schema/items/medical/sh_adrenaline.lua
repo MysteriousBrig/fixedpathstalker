@@ -6,9 +6,9 @@ ITEM.width = 1
 ITEM.height = 1
 ITEM.category = "Medical"
 ITEM.quantity = 1
-ITEM.price = "1250"
+ITEM.price = "2750"
 ITEM.flag = "1"
-ITEM.sound = "items/smallmedkit1.wav"
+ITEM.sound = "stalker/interface/inv_stim_3p2.ogg"
 ITEM.weight = 0.05
 
 ITEM.functions.use = {

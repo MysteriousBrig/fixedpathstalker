@@ -1,6 +1,6 @@
-ITEM.name = "UU-ORS Autoinjector"
+ITEM.name = "X-Serum Autoinjector"
 ITEM.description = "A highly advanced Combat-Stimulant."
-ITEM.longdesc = "The Universal Union Overwatch Regenerative Stimulant is a top of the line, experimental combat-stimulant utilized by ranking Overwatch Soldiers. It provides subtle increase in performance to standard OTA Personnel, however to standard humans it sends their bodies into highly advanced corkscrew."
+ITEM.longdesc = "A highly advanced and nearly beyond Science drug developed and produced in the depths of now Abandoned X-Labs. The X-Serum Project is a whispered rumor that long ago, Scientists broke down the very basis of the Human Soul into an injectable substance. Its effects, unknown. Those are just tall-tales, though."
 ITEM.model = "models/carlsmei/escapefromtarkov/medical/sj1.mdl"
 ITEM.width = 1
 ITEM.height = 1

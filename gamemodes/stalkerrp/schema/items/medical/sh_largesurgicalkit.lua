@@ -5,11 +5,11 @@ ITEM.model = "models/carlsmei/escapefromtarkov/medical/survival_first_aid_rollup
 ITEM.width = 4
 ITEM.height = 2
 ITEM.category = "Medical"
-ITEM.price = "1000"
+ITEM.price = "4500"
 ITEM.flag = "1"
 ITEM.quantity = 8
 ITEM.sound = "items/smallmedkit1.wav"
-ITEM.weight = 0.05
+ITEM.weight = 6
 
 ITEM.functions.use = {
 	name = "Use",

@@ -5,10 +5,10 @@ ITEM.model = "models/illusion/eftcontainers/carmedkit.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.category = "Medical"
-ITEM.quantity = 3
-ITEM.price = "4000"
+ITEM.quantity = 4
+ITEM.price = "400"
 ITEM.flag = "1"
-ITEM.sound = "items/smallmedkit1.wav"
+ITEM.sound = "stalkersound/inv_bandage.mp3"
 ITEM.weight = 0.05
 
 ITEM.functions.use = {
