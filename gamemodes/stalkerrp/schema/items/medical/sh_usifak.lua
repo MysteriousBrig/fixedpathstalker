@@ -1,14 +1,14 @@
-ITEM.name = "U.S Army IFAK"
-ITEM.description = "A medkit once used by U.S Soldiers."
-ITEM.longdesc = "An Individual First Aid Kit, or IFAK, was once utilized by the U.S Military as standard issue to treat wounds in the field. It contains various treatment supplies for containing bleed-wounds and reducing pain."
+ITEM.name = "Foreign IFAK"
+ITEM.description = "A Medkit Utilized by a Foreign Entity."
+ITEM.longdesc = "An Individual First Aid Kit, or IFAK, primarily imported and utilized Mercenaries. It features advanced medical items per kit, capable of at least stabilizing the worst wounds in the field."
 ITEM.model = "models/illusion/eftcontainers/ifak.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.category = "Medical"
-ITEM.quantity = 4
-ITEM.price = "4000"
+ITEM.quantity = 5
+ITEM.price = "900"
 ITEM.flag = "1"
-ITEM.sound = "items/smallmedkit1.wav"
+ITEM.sound = "stalkersound/inv_bandage.mp3"
 ITEM.weight = 0.05
 
 ITEM.functions.use = {

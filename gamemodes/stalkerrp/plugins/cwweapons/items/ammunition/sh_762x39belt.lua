@@ -8,5 +8,5 @@ ITEM.category = "Ammunition"
 ITEM.price = 4800
 ITEM.flag = "4"
 ITEM.ammoAmount = 100
-ITEM.weight = 0.025
+ITEM.weight = 1.7
 ITEM.isAmmo = true

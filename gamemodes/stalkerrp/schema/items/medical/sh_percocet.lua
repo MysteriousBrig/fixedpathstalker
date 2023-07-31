@@ -1,14 +1,14 @@
 ITEM.name = "Percocet"
 ITEM.description = "A bottle of prescription painkillers."
-ITEM.longdesc = "A pill bottle with some heavy painkillers inside. Percocet is a known opiate, and thus carries harmful side-effects both long term and short term. Use absolutely when needed and in moderation. This specific drug is produced by the Civil Worker's Union, despite its adverse effects it is known to be a heavily restricted, prescription-based treatment for Upper-Tier Loyalists."
+ITEM.longdesc = "A pill bottle with some heavy painkillers inside. Percocet is a known opiate, and thus carries harmful side-effects both long term and short term. Use absolutely when needed and in moderation."
 ITEM.model = "models/hlvr/props/bottles/medicine_bottle_2.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.category = "Medical"
 ITEM.quantity = 3
-ITEM.price = "4000"
+ITEM.price = "800"
 ITEM.flag = "1"
-ITEM.sound = "items/smallmedkit1.wav"
+ITEM.sound = "stalker/interface/inv_eat_pills_effect.ogg"
 ITEM.weight = 0.05
 
 ITEM.functions.use = {

@@ -8,7 +8,7 @@ ITEM.category = "Medical"
 ITEM.price = "350"
 ITEM.flag = "1"
 ITEM.quantity = 2
-ITEM.sound = "items/smallmedkit1.wav"
+ITEM.sound = "stalkersound/inv_bandage.mp3"
 ITEM.weight = 0.05
 
 ITEM.functions.use = {

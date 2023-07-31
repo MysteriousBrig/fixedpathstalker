@@ -9,5 +9,5 @@ ITEM.longdesc = "The 7.62x51 NATO round is a military variant of the .308 round 
 ITEM.price = 2500
 ITEM.flag = "3"
 ITEM.img = Material("vgui/hud/762x51.png")
-ITEM.weight = 0.033
+ITEM.weight = 1
 ITEM.isAmmo = true

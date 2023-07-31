@@ -9,5 +9,5 @@ ITEM.longdesc = "The 12.7×55mm cartridge is used in some Russian firearms such 
 ITEM.price = 9000
 ITEM.img = Material("vgui/hud/556x45.png")
 ITEM.flag = "4"
-ITEM.weight = 0.02
+ITEM.weight = 0.4
 ITEM.isAmmo = true

@@ -1,14 +1,14 @@
 ITEM.name = "Propofol Autoinjector"
 ITEM.description = "A one use injector for immediate gradual pain relief."
-ITEM.longdesc = "A regenerative Stimulant developed by the Russian Military for field-use. Propofol is a short-term regenerative drug that was utilized during the Xenian Crisis to keep Soldiers on their feet despite being heavily wounded. It is known to have adverse side-effects."
+ITEM.longdesc = "A prototype regenerative Stimulant developed by the Russian Military for field-use. Propofol is a short-term regenerative drug that was developed to keep Soldiers on their feet despite being heavily wounded. It is known to have adverse side-effects."
 ITEM.model = "models/carlsmei/escapefromtarkov/medical/propital.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.category = "Medical"
 ITEM.quantity = 1
-ITEM.price = "4000"
+ITEM.price = "3000"
 ITEM.flag = "1"
-ITEM.sound = "items/smallmedkit1.wav"
+ITEM.sound = "stalker/interface/inv_syringe.ogg"
 ITEM.weight = 0.05
 
 ITEM.functions.use = {

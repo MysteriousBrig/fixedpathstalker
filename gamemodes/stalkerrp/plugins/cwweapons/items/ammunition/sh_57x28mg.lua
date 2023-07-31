@@ -7,5 +7,5 @@ ITEM.longdesc = "The FN 5.7x28mm is a high velocity cartridge designed and manuf
 ITEM.price = 1950
 ITEM.flag = "A"
 ITEM.img = Material("vgui/hud/57x28.png")
-ITEM.weight = 0.008
+ITEM.weight = 0.12
 ITEM.isAmmo = true

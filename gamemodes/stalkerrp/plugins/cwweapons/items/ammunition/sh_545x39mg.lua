@@ -9,5 +9,5 @@ ITEM.longdesc = "Military 5.45x39 7H10 caliber is an improved piercing round for
 ITEM.price = 1500
 ITEM.flag = "3"
 ITEM.img = Material("vgui/hud/545x39.png")
-ITEM.weight = 0.015
+ITEM.weight = 0.4
 ITEM.isAmmo = true

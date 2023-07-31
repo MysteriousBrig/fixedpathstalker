@@ -8,5 +8,5 @@ ITEM.price = 900
 ITEM.flag = "A"
 ITEM.width = 1
 ITEM.img = Material("vgui/hud/45acp.png")
-ITEM.weight = 0.035
+ITEM.weight = 0.35
 ITEM.isAmmo = true

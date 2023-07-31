@@ -1,6 +1,6 @@
 ITEM.name = "G.O.A.T Stimulant"
 ITEM.description = "A strange cocktail mix of drugs."
-ITEM.longdesc = "Gabapentin, Oxycodone, Autoimmune Trigger Stimulant. This Cocktail of Anti-Seizure medication, painkillers, stimulants, and other dangerous substances in a highly dangerous mixture. It is unknown who produced such an injector, however its effects are known to be very diverse and at times, fatal."
+ITEM.longdesc = "Gabapentin, Oxycodone, Autoimmune Trigger Stimulant. This Cocktail of Anti-Seizure medication, painkillers, stimulants, and other dangerous substances in a highly volatile mixture. It is unknown who produced such an injector, however its effects are known to be very diverse and at times, fatal."
 ITEM.model = "models/carlsmei/escapefromtarkov/medical/zagustin.mdl"
 ITEM.width = 1
 ITEM.height = 1
@@ -8,7 +8,7 @@ ITEM.category = "Medical"
 ITEM.quantity = 1
 ITEM.price = "5000"
 ITEM.flag = "1"
-ITEM.sound = "items/smallmedkit1.wav"
+ITEM.sound = "stalker/voice/die4.ogg"
 ITEM.weight = 0.05
 
 ITEM.functions.use = {

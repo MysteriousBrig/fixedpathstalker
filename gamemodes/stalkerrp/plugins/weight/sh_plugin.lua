@@ -4,7 +4,7 @@ PLUGIN.description = "Allows for weight to be added to items."
 
 ix.weight = ix.weight or {}
 
-ix.config.Add("maxWeight", 25, "The maximum weight in Kilograms someone can carry in their inventory.", nil, {
+ix.config.Add("maxWeight", 20, "The maximum weight in Kilograms someone can carry in their inventory.", nil, {
 	data = {min = 1, max = 100},
 	category = "Weight"
 })
@@ -34,7 +34,7 @@ function ix.weight.WeightString(weight, imperial)
 	end
 end
 
-local StrhMulti = 0.6 -- multiplier goes from 0.1 to 1
+local StrhMulti = 1 -- multiplier goes from 0.1 to 1
 
 function ix.weight.CanCarry(weight, carry) -- Calculate if you are able to carry something.
 	local max = ix.config.Get("maxWeight", 30) + ix.config.Get("maxOverWeight", 5)

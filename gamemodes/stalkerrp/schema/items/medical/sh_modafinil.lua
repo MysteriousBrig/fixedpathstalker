@@ -5,10 +5,10 @@ ITEM.model = "models/carlsmei/escapefromtarkov/medical/analgin.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.category = "Medical"
-ITEM.quantity = 4
-ITEM.price = "1250"
+ITEM.quantity = 3
+ITEM.price = "750"
 ITEM.flag = "1"
-ITEM.sound = "items/smallmedkit1.wav"
+ITEM.sound = "stalker/interface/inv_eat_pills_effect.ogg"
 ITEM.weight = 0.05
 
 ITEM.functions.use = {

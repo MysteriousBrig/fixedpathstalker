@@ -9,5 +9,5 @@ ITEM.longdesc = "A standard-issue NATO 5.56x45 caliber round specially designed 
 ITEM.price = 1200
 ITEM.img = Material("vgui/hud/556x45.png")
 ITEM.flag = "3"
-ITEM.weight = 0.016
+ITEM.weight = 0.4
 ITEM.isAmmo = true
