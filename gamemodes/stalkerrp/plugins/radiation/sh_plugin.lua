@@ -43,9 +43,12 @@ function playerMeta:radDebuffHandler(debuff)
 	-- Handle all buffs/debuffs here and call in each rad level check further down.
 	if debuff == "NONE" then
 		char:RemoveBoost("minorrad", "fortitude")
+		char:RemoveBoost("minorrad", "reflex")
+		char:RemoveBoost("minorrad", "strength")
 
 		char:RemoveBoost("advancedrad", "fortitude")
 		char:RemoveBoost("advancedrad", "reflex")
+		char:RemoveBoost("advancedrad", "strength")
 
 		char:RemoveBoost("criticalrad", "fortitude")
 		char:RemoveBoost("criticalrad", "reflex")
@@ -54,13 +57,17 @@ function playerMeta:radDebuffHandler(debuff)
 		char:RemoveBoost("deadlyrad", "fortitude")
 		char:RemoveBoost("deadlyrad", "reflex")
 		char:RemoveBoost("deadlyrad", "strength")
+		char:RemoveBoost("deadlyrad", "observation")
 	end
 
 	if debuff == "MINOR" then
-		char:AddBoost("minorrad", "fortitude", -1)
+		char:AddBoost("minorrad", "fortitude", -10)
+		char:AddBoost("minorrad", "reflex", -10)
+		char:AddBoost("minorrad", "strength", -10)
 
 		char:RemoveBoost("advancedrad", "fortitude")
 		char:RemoveBoost("advancedrad", "reflex")
+		char:RemoveBoost("advancedrad", "strength")
 
 		char:RemoveBoost("criticalrad", "fortitude")
 		char:RemoveBoost("criticalrad", "reflex")
@@ -69,36 +76,45 @@ function playerMeta:radDebuffHandler(debuff)
 		char:RemoveBoost("deadlyrad", "fortitude")
 		char:RemoveBoost("deadlyrad", "reflex")
 		char:RemoveBoost("deadlyrad", "strength")
+		char:RemoveBoost("deadlyrad", "observation")
 	end
 
 	if debuff == "ADVANCED" then
 		char:RemoveBoost("minorrad", "fortitude")
+		char:RemoveBoost("minorrad", "reflex")
+		char:RemoveBoost("minorrad", "strength")
 
-		char:AddBoost("advancedrad", "fortitude", -2)
-		char:AddBoost("advancedrad", "reflex", -1)
+		char:AddBoost("advancedrad", "fortitude", -20)
+		char:AddBoost("advancedrad", "reflex", -20)
+		char:AddBoost("advancedrad", "strength", -20)
 
 		char:RemoveBoost("criticalrad", "fortitude")
 		char:RemoveBoost("criticalrad", "reflex")
 		char:RemoveBoost("criticalrad", "strength")
-
+		
 		char:RemoveBoost("deadlyrad", "fortitude")
 		char:RemoveBoost("deadlyrad", "reflex")
 		char:RemoveBoost("deadlyrad", "strength")
+		char:RemoveBoost("deadlyrad", "observation")
 	end
 
 	if debuff == "CRITICAL" then
 		char:RemoveBoost("minorrad", "fortitude")
+		char:RemoveBoost("minorrad", "reflex")
+		char:RemoveBoost("minorrad", "strength")
 
 		char:RemoveBoost("advancedrad", "fortitude")
 		char:RemoveBoost("advancedrad", "reflex")
+		char:RemoveBoost("advancedrad", "strength")
 
-		char:AddBoost("criticalrad", "fortitude", -3)
-		char:AddBoost("criticalrad", "reflex", -2)
-		char:AddBoost("criticalrad", "strength", -1)
+		char:AddBoost("criticalrad", "fortitude", -40)
+		char:AddBoost("criticalrad", "reflex", -40)
+		char:AddBoost("criticalrad", "strength", -40)
 
 		char:RemoveBoost("deadlyrad", "fortitude")
 		char:RemoveBoost("deadlyrad", "reflex")
 		char:RemoveBoost("deadlyrad", "strength")
+		char:RemoveBoost("deadlyrad", "observation")
 	end
 
 	if debuff == "DEADLY" then
@@ -111,9 +127,10 @@ function playerMeta:radDebuffHandler(debuff)
 		char:RemoveBoost("criticalrad", "reflex")
 		char:RemoveBoost("criticalrad", "strength")
 
-		char:AddBoost("deadlyrad", "fortitude", -3)
-		char:AddBoost("deadlyrad", "reflex", -2)
-		char:AddBoost("deadlyrad", "strength", -2)
+		char:AddBoost("deadlyrad", "fortitude", -40)
+		char:AddBoost("deadlyrad", "reflex", -40)
+		char:AddBoost("deadlyrad", "strength", -40)
+		char:AddBoost("deadlyrad", "observation", -40)
 	end
 
 
@@ -303,7 +320,7 @@ ix.command.Add("CharCheckRadiation", {
 		ix.type.character,
 	},
 	OnRun = function(self, client, target)
-		return target .. " has " .. target:GetCharacter():GetRads() .. " rads."
+		return target:GetName() .. " has " .. target:GetRads() .. " rads."
 
 	end
 })
