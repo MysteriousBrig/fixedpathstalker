@@ -20,10 +20,6 @@ function CHAR:CanCarry(item)
 	return ix.weight.CanCarry(item:GetWeight(), (self:GetData("carry", 0) - math.Clamp((self:GetAttribute("strength", 0) * StrhMulti), 0, 60 )))
 end
 
-function CHAR:AddCarry(item)
-	self:SetData("carry", math.max(self:GetData("carry", 0) + item:GetWeight(), 0))
-end
-
 function CHAR:RemoveCarry(item)
     local strengthModifier = self:GetAttribute("strength", 0) * StrhMulti
     self:SetData("carry", math.max(self:GetData("carry", 0) - item:GetWeight(), 0) + strengthModifier)
