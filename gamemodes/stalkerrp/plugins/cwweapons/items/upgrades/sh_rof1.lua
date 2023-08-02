@@ -1,6 +1,7 @@
 ITEM.name = "Rate of Fire Upgrade 1"
 ITEM.description = "Increases the Rate of Fire of a firearm by a small margin."
 ITEM.category = "Upgrades"
+ITEM.isGenericUpgrade = true
 ITEM.model = "models/Items/BoxSRounds.mdl"
 ITEM.width = 2
 ITEM.height = 1
