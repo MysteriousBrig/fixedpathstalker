@@ -230,18 +230,9 @@ function ITEM:GetDescription()
 	end
 	
 	if upgrades then
-		for _,upg in pairs(upgrades) do
-			for cal,dmglist in pairs(calibers) do
-				if string.match(upg[2],cal) then
-					if self.barrel == "short" then
-						dmg = dmglist.short
-					elseif self.barrel == "medium" then
-						dmg = dmglist.medium
-					elseif self.barrel == "long" then
-						dmg = dmglist.long
-					end
-				end
-			end
+		str = str .. "Upgrades Installed:\n"
+		for k,v in pairs(upgrades) do
+			str = str ..v .. "\n"
 		end
 	end
 	
