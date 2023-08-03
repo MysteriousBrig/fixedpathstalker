@@ -1,10 +1,10 @@
-ITEM.name = "Cup Of Coffee"
+ITEM.name = "Cup Of Tea"
 ITEM.model = "models/kek1ch/drink_crow.mdl"
-ITEM.thirst = 25
-ITEM.description = "A nice hot cup of chocolaty hot coco."
-ITEM.longdesc = "Might be made using water... maybe powdered milk if you're lucky... maybe."
+ITEM.thirst = 15
+ITEM.description = "A steaming cup of tea."
+ITEM.longdesc = "What kind of tea? Depends on the kind steeped in it. Taste it to find out."
 ITEM.quantity = 2
-ITEM.price = 65
+ITEM.price = 50
 ITEM.width = 1
 ITEM.height = 1
 ITEM.cookable = false
@@ -12,7 +12,6 @@ ITEM.sound = "stalkersound/inv_flask.mp3"
 ITEM.flag = "5"
 ITEM:Hook("use", function(item)
 	item.player:EmitSound(item.sound or "items/battery_pickup.wav")
-	item.player:AddBuff("buff_radiationremoval", 10, { amount = 0.5 })
 	ix.chat.Send(item.player, "iteminternal", "takes a swig of their "..item.name..".", false)
 end)
 ITEM.weight = 0.1

@@ -49,7 +49,7 @@ ITEM.functions.use = {
 	OnRun = function(item)
 		local quantity = item:GetData("quantity", item.quantity)
 		item.player:AddBuff("buff_slowheal", 20, { amount = item.restore })
-		item.player:AddBuff("buff_radiationremoval", 10, { amount = item.radrem })
+		item.player:addRadiation(-200)
 		ix.chat.Send(item.player, "iteminternal", "opens a "..item.name.." and uses it.", false)
 		stopBleed(item)
 		quantity = quantity - 1

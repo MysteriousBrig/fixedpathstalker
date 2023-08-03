@@ -11,7 +11,6 @@ ITEM.sound = "stalkersound/inv_drink_beak.ogg"
 ITEM.cookable = false
 ITEM.flag = "5"
 ITEM:Hook("use", function(item)
-	item.player:AddBuff("debuff_radiation", 10, { amount = 0.5 })
 	item.player:AddBuff("buff_staminarestore", 20, { amount = 0.5 })
 	ix.chat.Send(item.player, "iteminternal", "takes a swig of their "..item.name..".", false)
 	item.player:addRadiation(10)

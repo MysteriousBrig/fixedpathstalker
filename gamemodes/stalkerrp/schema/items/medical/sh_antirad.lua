@@ -34,7 +34,7 @@ ITEM.functions.use = {
 	icon = "icon16/stalker/swallow.png",
 	OnRun = function(item)
 		local quantity = item:GetData("quantity", item.quantity)
-		item.player:AddBuff("buff_radiationremoval", 8, { amount = 5 })
+		item.player:addRadiation(-200)
 		ix.chat.Send(item.player, "iteminternal", "swallows some "..item.name..".", false)
 		quantity = quantity - 1
 

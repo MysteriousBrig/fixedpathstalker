@@ -229,22 +229,6 @@ function ITEM:GetDescription()
 		end
 	end
 	
-	if upgrades then
-		for _,upg in pairs(upgrades) do
-			for cal,dmglist in pairs(calibers) do
-				if string.match(upg[2],cal) then
-					if self.barrel == "short" then
-						dmg = dmglist.short
-					elseif self.barrel == "medium" then
-						dmg = dmglist.medium
-					elseif self.barrel == "long" then
-						dmg = dmglist.long
-					end
-				end
-			end
-		end
-	end
-	
 
 	if (self.entity) or self:GetData("durability") == nil then
 		return (self.description .. "\n \nDurability: " .. (math.floor(self:GetData("durability", 10000))/100) .. "%") --Durability is 10000/100
@@ -273,6 +257,15 @@ function ITEM:GetDescription()
 				end
             end
         end
+
+		
+		if (upgrades) then
+			str = str .. "\n\nUpgrades Installed:\n"
+			for k,v in pairs(upgrades) do
+				str = str ..v[2].. "\n"
+			end
+		end
+	
         return (str .. "\n \nDurability: " .. (math.floor(self:GetData("durability", 10000))/100) .. "%")
 	end
 end
@@ -763,7 +756,7 @@ ITEM.functions.RemoveUpgrade = {
 			return false
 		end
 		
-		if item.player:GetChar():HasFlags("2") then
+		if item.player:GetChar():HasFlags("7") then
 			return (!IsValid(item.entity))
 		end
 		

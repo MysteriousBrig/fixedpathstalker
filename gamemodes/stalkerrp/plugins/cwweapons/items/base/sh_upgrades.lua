@@ -114,6 +114,71 @@ local function attachment(item, data)
     return false
 end
 
+local function attachmentGeneric(item, data)
+    local client = item.player
+    local char = client:GetChar()
+    local inv = char:GetInv()
+    local items = inv:GetItems()
+    local target
+    for k, invItem in pairs(items) do
+        if data then
+            if (invItem:GetID() == data[1]) then
+                target = invItem
+                break
+            end
+        end
+    end
+    if (!target) then
+        client:NotifyLocalized("No Weapon Found")
+
+        return false
+    else
+        local class = target.class
+        local SWEP = weapons.Get(class)
+
+        if (target.isCW) then
+            -- Insert Weapon Filter here if you just want to create weapon specific shit. 
+            local atts = SWEP.Attachments
+            local mods = target:GetData("upgrades", {})
+            
+            if (atts) then		                                
+                -- Is the Weapon Slot Filled?
+                if (mods[item.slot]) then
+                    client:NotifyLocalized("Attachment already fills this slot")
+
+                    return false
+                end
+
+                local pokemon
+
+              
+                
+                curPrice = target:GetData("RealPrice")
+        	    if !curPrice then
+        		    curPrice = target.price
+        		end
+                
+		
+                target:SetData("RealPrice", (curPrice + item.price))
+                mods[item.slot] = {item.uniqueID, item.name}
+                target:SetData("upgrades", mods)
+				local itemweight = item.weight or 0
+                local targetweight = target:GetData("weight",0)
+                local totweight = itemweight + targetweight
+                target:SetData("weight", totweight)
+				client:EmitSound("cw/holster4.wav")
+
+                return true
+            else
+                client:NotifyLocalized("notCW")
+            end
+        end
+    end
+
+    client:NotifyLocalized("No Weapon Found")
+    return false
+end
+
 ITEM.functions.Upgrade = {
     name = "Upgrade",
     tip = "Upgrade the specified weapon.",
@@ -129,7 +194,12 @@ ITEM.functions.Upgrade = {
     end,
 	
     OnRun = function(item, data)
+
+        if (item.isGenericUpgrade) then
+        return attachmentGeneric(item, data)
+        else    
 		return attachment(item, data)
+        end 
 	end,
     
     isMulti = true,

@@ -1,12 +1,14 @@
 ITEM.name = "Rate of Fire Upgrade 1"
 ITEM.description = "Increases the Rate of Fire of a firearm by a small margin."
 ITEM.category = "Upgrades"
+ITEM.isGenericUpgrade = true
 ITEM.model = "models/Items/BoxSRounds.mdl"
 ITEM.width = 2
 ITEM.height = 1
 ITEM.price = 2000
 ITEM.slot = 5
 ITEM.isAttachment = true
+
 ITEM.attSearch = { "fn_rof1", }
 ITEM.weight = 0.35
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/firerate.png")

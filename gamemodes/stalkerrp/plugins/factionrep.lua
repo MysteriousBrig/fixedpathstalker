@@ -76,10 +76,10 @@ ix.command.Add("MyFactionRep", {
         if (char:GetDutyRep() <= -15 and char:GetDutyRep() > -30) then
             str = str .. "Awful\n" .. awfulstring .. "\n\n"
         end
-        if (char:GetDutyRep() <= -5 and char:GetDutyRep() > -15) then
+        if (char:GetDutyRep() <= 0 and char:GetDutyRep() > -15) then
             str = str .. "Bad\n" .. badstring .. "\n\n"
         end
-        if (char:GetDutyRep() <= 5 and char:GetDutyRep() > -5) then
+        if (char:GetDutyRep() <= 5 and char:GetDutyRep() > 0) then
             str = str .. "Neutral\n" .. neutralstring .. "\n\n"
         end
         if (char:GetDutyRep() >= 5 and char:GetDutyRep() < 15)  then
@@ -100,10 +100,10 @@ ix.command.Add("MyFactionRep", {
         if (char:GetFreedomRep() <= -15 and char:GetFreedomRep() > -30) then
             str = str .. "Awful\n" .. awfulstring .. "\n\n"
         end
-        if (char:GetFreedomRep() <= -5 and char:GetFreedomRep() > -15) then
+        if (char:GetFreedomRep() <= 0 and char:GetFreedomRep() > -15) then
             str = str .. "Bad\n" .. badstring .. "\n\n"
         end
-        if (char:GetFreedomRep() <= 5 and char:GetFreedomRep() > -5) then
+        if (char:GetFreedomRep() <= 5 and char:GetFreedomRep() >  0) then
             str = str .. "Neutral\n" .. neutralstring .. "\n\n"
         end
         if (char:GetFreedomRep() >= 5 and char:GetFreedomRep() < 15)  then
@@ -124,10 +124,10 @@ ix.command.Add("MyFactionRep", {
         if (char:GetArmyRep() <= -15 and char:GetArmyRep() > -30) then
             str = str .. "Awful\n" .. awfulstring .. "\n\n"
         end
-        if (char:GetArmyRep() <= -5 and char:GetArmyRep() > -15) then
+        if (char:GetArmyRep() <= 0 and char:GetArmyRep() > -15) then
             str = str .. "Bad\n" .. badstring .. "\n\n"
         end
-        if (char:GetArmyRep() <= 5 and char:GetArmyRep() > -5) then
+        if (char:GetArmyRep() <= 5 and char:GetArmyRep() > 0) then
             str = str .. "Neutral\n" .. neutralstring .. "\n\n"
         end
         if (char:GetArmyRep() >= 5 and char:GetArmyRep() < 15)  then
@@ -148,10 +148,10 @@ ix.command.Add("MyFactionRep", {
          if (char:GetEcoRep() <= -15 and char:GetEcoRep() > -30) then
              str = str .. "Awful\n" .. awfulstring .. "\n\n"
          end
-         if (char:GetEcoRep() <= -5 and char:GetEcoRep() > -15) then
+         if (char:GetEcoRep() <= 0 and char:GetEcoRep() > -15) then
              str = str .. "Bad\n" .. badstring .. "\n\n"
          end
-         if (char:GetEcoRep() <= 5 and char:GetEcoRep() > -5) then
+         if (char:GetEcoRep() <= 5 and char:GetEcoRep() > 0) then
              str = str .. "Neutral\n" .. neutralstring .. "\n\n"
          end
          if (char:GetEcoRep() >= 5 and char:GetEcoRep() < 15)  then
@@ -172,10 +172,10 @@ ix.command.Add("MyFactionRep", {
          if (char:GetMobRep() <= -15 and char:GetMobRep() > -30) then
              str = str .. "Awful\n" .. awfulstring .. "\n\n"
          end
-         if (char:GetMobRep() <= -5 and char:GetMobRep() > -15) then
+         if (char:GetMobRep() <= 0 and char:GetMobRep() > -15) then
              str = str .. "Bad\n" .. badstring .. "\n\n"
          end
-         if (char:GetMobRep() <= 5 and char:GetMobRep() > -5) then
+         if (char:GetMobRep() <= 5 and char:GetMobRep() > 0) then
              str = str .. "Neutral\n" .. neutralstring .. "\n\n"
          end
          if (char:GetMobRep() >= 5 and char:GetMobRep() < 15)  then
@@ -196,10 +196,10 @@ ix.command.Add("MyFactionRep", {
         if (char:GetMercRep() <= -15 and char:GetMercRep() > -30) then
             str = str .. "Awful\n" .. awfulstring .. "\n\n"
         end
-        if (char:GetMercRep() <= -5 and char:GetMercRep() > -15) then
+        if (char:GetMercRep() <= 0 and char:GetMercRep() > -15) then
             str = str .. "Bad\n" .. badstring .. "\n\n"
         end
-        if (char:GetMercRep() <= 5 and char:GetMercRep() > -5) then
+        if (char:GetMercRep() <= 5 and char:GetMercRep() > 0) then
             str = str .. "Neutral\n" .. neutralstring .. "\n\n"
         end
         if (char:GetMercRep() >= 5 and char:GetMercRep() < 15)  then

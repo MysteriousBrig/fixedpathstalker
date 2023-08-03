@@ -34,7 +34,7 @@ ITEM.functions.use = {
 	icon = "icon16/stalker/heal.png",
 	OnRun = function(item)
 		local quantity = item:GetData("quantity", item.quantity)
-		item.player:AddBuff("buff_radiationremoval", 4, { amount = 1 })
+		item.player:addRadiation(-5)
 
 		ix.chat.Send(item.player, "iteminternal", "smokes a cigarette.", false)
 
