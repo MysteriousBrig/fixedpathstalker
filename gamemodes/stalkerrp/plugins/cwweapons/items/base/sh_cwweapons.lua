@@ -229,13 +229,6 @@ function ITEM:GetDescription()
 		end
 	end
 	
-	if upgrades then
-		str = str .. "Upgrades Installed:\n"
-		for k,v in pairs(upgrades) do
-			str = str ..v .. "\n"
-		end
-	end
-	
 
 	if (self.entity) or self:GetData("durability") == nil then
 		return (self.description .. "\n \nDurability: " .. (math.floor(self:GetData("durability", 10000))/100) .. "%") --Durability is 10000/100
@@ -264,6 +257,15 @@ function ITEM:GetDescription()
 				end
             end
         end
+
+		
+		if (upgrades) then
+			str = str .. "\n\nUpgrades Installed:\n"
+			for k,v in pairs(upgrades) do
+				str = str ..v[2].. "\n"
+			end
+		end
+	
         return (str .. "\n \nDurability: " .. (math.floor(self:GetData("durability", 10000))/100) .. "%")
 	end
 end
@@ -754,7 +756,7 @@ ITEM.functions.RemoveUpgrade = {
 			return false
 		end
 		
-		if item.player:GetChar():HasFlags("2") then
+		if item.player:GetChar():HasFlags("7") then
 			return (!IsValid(item.entity))
 		end
 		

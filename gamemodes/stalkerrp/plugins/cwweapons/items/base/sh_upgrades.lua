@@ -157,6 +157,7 @@ local function attachmentGeneric(item, data)
         	    if !curPrice then
         		    curPrice = target.price
         		end
+                
 		
                 target:SetData("RealPrice", (curPrice + item.price))
                 mods[item.slot] = {item.uniqueID, item.name}
