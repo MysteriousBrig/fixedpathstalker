@@ -179,7 +179,7 @@ SWEP.WMAng = Vector(-10, 0, 180)
 SWEP.Spawnable			= CustomizableWeaponry_KK.ins2.isContentMounted4(SWEP)
 SWEP.AdminSpawnable		= CustomizableWeaponry_KK.ins2.isContentMounted4(SWEP)
 
-SWEP.Primary.ClipSize		= 20
+SWEP.Primary.ClipSize		= 30
 SWEP.Primary.DefaultClip	= 0
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x39MM"
