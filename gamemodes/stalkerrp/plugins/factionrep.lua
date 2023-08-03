@@ -60,7 +60,7 @@ ix.command.Add("MyFactionRep", {
 		local str = ""
         local char = client:GetCharacter()
 
-        local excellentstring = "You've done a great many good for this faction, and many of its leaders and rank-and-file know your name. You are effectively a brother or sister-in-arms, and they will help you when they can if you are in need."
+        local excellentstring = "You've done a great service for this faction and are a known basis with its leaders. Many if not all of its services are offered to you and at times the faction's dedicated assistance may be able to be requested."
         local greatstring = "You've been a consistent ally to this faction, and some of its key figures know your name. You are very welcome in their territories and may be able to request their aid."
         local goodstring = "You've helped out this faction a few times and some of the folks involved in these occassions have a positive outlook on you. You may be allowed in their territories and to partake in some of their offerings."
         local neutralstring = "This faction has no clue who you are, but generally will leave you alone unless provoked."
