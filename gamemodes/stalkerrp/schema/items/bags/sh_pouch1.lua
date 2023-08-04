@@ -1,4 +1,4 @@
-ITEM.name = "Leather Pouch"
+ITEM.name = "Carry Pouch"
 ITEM.description = "A rough leather pouch for carrying small items."
 ITEM.carryweight = 1
 ITEM.width = 1
