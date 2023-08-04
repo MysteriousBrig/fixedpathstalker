@@ -1,5 +1,6 @@
 ITEM.name = "Rate of Fire Upgrade 1"
-ITEM.description = "Increases the Rate of Fire of a firearm by a small margin."
+ITEM.description = "A set of lightened weapon parts used to upgrade a firearm's fire rate a little."
+ITEM.longdesc = "A set of quality parts such as lightened bolts and pumps that allow a weapon to cycle faster. \n\nBoosts weapon ROF by given amount depending on which fire mode it's capable of:\nManual Action (bolt, pump): +1\nSemi-Automatic: +2\nFullly Automatic: +3"
 ITEM.category = "Upgrades"
 ITEM.isGenericUpgrade = true
 ITEM.model = "models/Items/BoxSRounds.mdl"
