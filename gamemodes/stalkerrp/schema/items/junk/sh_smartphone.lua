@@ -1,6 +1,6 @@
-ITEM.name = "Smart Phone"
-ITEM.model = "models/kek1ch/iphone.mdl"
-ITEM.description = "A working smartphone. Has no signal. Compared to a PDA has no Stalkernet access, HD audio, HD camera and ability to use modern smartphone apps. Rather fragile, but could be worth something."
+ITEM.name = "Broken Smart Phone"
+ITEM.model = "models/illusion/eftcontainers/gphonex.mdl"
+ITEM.description = "A busted up Smartphone that won't even turn on. Still, with a few replacement parts it could be tuned up into a refurbished penny or few. A fair find, and sadly sourced from Tourist corpses usually."
 ITEM.category = "junk"
 ITEM.flag = "1"
 ITEM.price = 1800

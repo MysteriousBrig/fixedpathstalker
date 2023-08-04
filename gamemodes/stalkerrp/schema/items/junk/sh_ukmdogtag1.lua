@@ -1,5 +1,5 @@
 ITEM.name = "Lost UKM Dogtags"
-ITEM.model = "models/kek1ch/identity_card.mdl"
+ITEM.model = "models/mosi/fallout4/props/junk/holotag.mdl"
 ITEM.description = "Assortment of UKM dogtags of low-rank soldiers, identifying them as deceased and lost to the zone. Returning them could be worth something."
 ITEM.category = "junk"
 ITEM.flag = "1"

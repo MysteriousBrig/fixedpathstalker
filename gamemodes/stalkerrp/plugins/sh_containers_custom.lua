@@ -163,3 +163,10 @@ ix.container.Register("models/hgn/srp/items/backpack-2.mdl", {
 	width = 3,
 	height = 3
 })
+
+ix.container.Register("models/illusion/eftcontainers/ammocase.mdl", {
+	name = "Ammo Case",
+	description = "A small, plastic ammo case.",
+	width = 3,
+	height = 2
+})
