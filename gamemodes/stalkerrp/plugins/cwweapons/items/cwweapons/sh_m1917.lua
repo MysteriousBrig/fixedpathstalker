@@ -1,11 +1,11 @@
-ITEM.name = "M1917 Revolver"
-ITEM.description= "A 6-shot revolver chambered in .45 ACP."
-ITEM.longdesc = "The IMI Desert Eagle is a semi-automatic handgun notable for chambering the largest centerfire cartridge of any magazine fed, self-loading pistol. It has a unique design with a triangular barrel and large muzzle.\nThe Desert Eagle uses a gas-operated mechanism normally found in rifles, as opposed to the short recoil or blow-back designs most commonly seen in semi-automatic pistols.\nThe advantage of the gas operation is that it allows the use of far more powerful cartridges than traditional semi-automatic pistol designs.\nThus it allows the Desert Eagle to compete in an area that had previously been dominated by magnum revolvers.\n\nAmmo: .50AE\nMagazine Capacity: 7\n\n-This weapon is a Secondary, meaning it may be used even when Stunned.\n\n-Shots per round: 3"
+ITEM.name = "SW M1917 Revolver"
+ITEM.description= "A World War-era 6-shot revolver chambered in .45 ACP."
+ITEM.longdesc = "The Smith and Wesson Model 1917 was developed late into the First World War and produced both by Colt and Smith and Wesson, this model being the latter. Even after the war, it enjoyed a considerable following by police and civillian shooters alike for decades before newer models superseceded it. \n\nAmmo: .45 ACP\nMagazine Capacity: 6\n\n-This weapon is a Secondary, meaning it may be used even when Stunned.\n\n-Shots per round: 4"
 ITEM.model = "models/khrcw2/doipack/w_sw1917.mdl"
 ITEM.class = "doi_atow_sw1917"
 ITEM.weaponCategory = "sidearm"
 ITEM.width = 2
-ITEM.price = 40000
+ITEM.price = 3500
 ITEM.height = 1 
 ITEM.Range = 50
 ITEM.Pen = 7
