@@ -759,7 +759,7 @@ function ITEM:GetDescription()
 		
 		for k,v in pairs(resistances) do
 			if k == "Fall" then
-				str = str.."\n".."Impact"..": "..(v*10)
+				str = str.."\n".."Impact".."T"..(v*10)
 			else
 				str = str.."\n"..k..": ".. "T".. (v*10)
 			end
