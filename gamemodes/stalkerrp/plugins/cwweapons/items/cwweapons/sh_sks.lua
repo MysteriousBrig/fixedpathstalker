@@ -1,6 +1,6 @@
 ITEM.name = "SKS"
 ITEM.description= "An old Russian semi-automatic rifle chambered for 7.62x39mm."
-ITEM.longdesc = "The SKS is a Soviet semi-automatic carbine chambered for the 7.62x39mm round, designed in 1943 by Sergei Gavrilovich Simonov.\nThe SKS is currently popular on the civilian surplus market as a hunting and marksmanship semi-automatic rifle in many countries, including the Zone.\n\nAmmo: 7.62x39mm \nMagazine Capacity: 10\n\n-Shots per round: 3"
+ITEM.longdesc = "The SKS is a Soviet semi-automatic carbine chambered for the 7.62x39mm round, designed in 1943 by Sergei Gavrilovich Simonov.\nThe SKS is currently popular on the civilian surplus market as a hunting and marksmanship semi-automatic rifle in many countries, including the Zone.\n\nAmmo: 7.62x39mm \nMagazine Capacity: 10\n\n-Shots per round: 2"
 ITEM.model = "models/silver/stalker/weapons/w_sks.mdl"
 ITEM.class = "cw_sil_sks"
 ITEM.weaponCategory = "primary"
