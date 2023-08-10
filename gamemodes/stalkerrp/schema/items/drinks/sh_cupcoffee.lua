@@ -1,8 +1,8 @@
 ITEM.name = "Cup Of Coffee"
 ITEM.model = "models/kek1ch/drink_crow.mdl"
-ITEM.thirst = 25
+ITEM.thirst = 20
 ITEM.description = "A nice hot cup of joe."
-ITEM.quantity = 2
+ITEM.quantity = 1
 ITEM.price = 50
 ITEM.width = 1
 ITEM.height = 1

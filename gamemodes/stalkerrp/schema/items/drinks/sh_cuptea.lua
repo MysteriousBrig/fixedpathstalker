@@ -1,9 +1,9 @@
 ITEM.name = "Cup Of Tea"
 ITEM.model = "models/kek1ch/drink_crow.mdl"
-ITEM.thirst = 15
+ITEM.thirst = 20
 ITEM.description = "A steaming cup of tea."
 ITEM.longdesc = "What kind of tea? Depends on the kind steeped in it. Taste it to find out."
-ITEM.quantity = 2
+ITEM.quantity = 1
 ITEM.price = 50
 ITEM.width = 1
 ITEM.height = 1

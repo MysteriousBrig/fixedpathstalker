@@ -59,12 +59,12 @@ if(SERVER) then
 			itemInfo.armor = true
 			
 			itemInfo.dura = item:GetData("durability", 100)
-			itemInfo.impact = customData.impact or item.res["Impact"]
+			itemInfo.impact = customData.impact or item.res["Fall"]
 			itemInfo.shock = customData.shock or item.res["Shock"]
 			itemInfo.burn = customData.burn or item.res["Burn"]
 			itemInfo.chemical = customData.chemical or item.res["Chemical"]
-			itemInfo.psi = customData.chemical or item.res["Psi"]
-			itemInfo.radiation = customData.chemical or item.res["Radiation"]
+			itemInfo.psi = customData.psi or item.res["Psi"]
+			itemInfo.radiation = customData.radiation or item.res["Radiation"]
 
 		end
 
@@ -442,7 +442,7 @@ else
 			-- Psi
 
 			local psiL = vgui.Create("DLabel", scroll)
-			psiL:SetText(" Radiation")
+			psiL:SetText(" Psi")
 			psiL:Dock(TOP)
 
 			psiC = vgui.Create("DTextEntry", scroll)

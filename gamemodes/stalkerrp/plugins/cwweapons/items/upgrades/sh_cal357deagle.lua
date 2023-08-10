@@ -1,5 +1,6 @@
 ITEM.name = ".357 Conversion Kit for Desert Eagle"
-ITEM.description = "A set of magazines, receivers, and barrels for changing a Desert Eagle into .357, lowering its raw firepower but making its recoil more managable and offering a bigger mag."
+ITEM.description = "A set of magazines, receivers, and barrels for changing a Desert Eagle into .357."
+ITEM.longdesc = "With a change of barrel and receiver, a .50 AE Desert Eagle can fire the smaller .357, giving it less stopping power but a larger capacity and less recoil."
 ITEM.category = "Upgrades"
 ITEM.model = "models/Items/BoxSRounds.mdl"
 ITEM.width = 2
