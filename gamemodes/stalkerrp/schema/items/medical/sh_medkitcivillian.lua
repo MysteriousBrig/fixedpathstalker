@@ -1,4 +1,4 @@
-ITEM.name = "Basic First Aid Kit"
+ITEM.name = "Civillian First Aid Kit"
 ITEM.description = "A common first aid kit with basic tools."
 ITEM.longdesc = "A civillian grade medkit that anybody could purchase, stored in cars or closets to deal with minor everyday injury. Still has its uses in a combat scenario."
 ITEM.model = "models/illusion/eftcontainers/carmedkit.mdl"
